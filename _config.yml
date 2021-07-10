@@ -10,5 +10,5 @@ defaults:
   - scope:
       path: "/Oscars"
     values:
-      layout: "default"
+      layout: circularstackedbarplot"
       title: "Oscar-Winning Films (in all categories)"
