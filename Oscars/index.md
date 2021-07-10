@@ -1,0 +1,56 @@
+<svg width="960" height="960" class="center"></svg>
+<div id="tooltip" class="center"><h3>Oscar Winning Films:<br/>Percentage Seen<br/>by Year Released</h3></div>
+<script>
+var svg = d3.select("svg"),
+    width = +svg.attr("width"),
+    height = +svg.attr("height"),
+    innerRadius = 130,
+    outerRadius = Math.min(width, height) / 2,
+    g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+
+var x = d3.scaleBand()
+    .range([0, 2 * Math.PI])
+    .align(0);
+
+var y = d3.scaleRadial()
+    .range([innerRadius, outerRadius]);
+
+var z = d3.scaleOrdinal()
+    .range(["#A1F0D0", "#436356", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+
+var tooltip = d3.select('#tooltip');
+
+d3.csv("https://jacobmgreer.github.io/IMDB-Tracker/Oscars/OscarsSummary.csv", function(d, i, columns) {
+  for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
+  d.total = t;
+  return d;
+}, function(error, data) {
+  if (error) throw error;
+
+  x.domain(data.map(function(d) { return d.ItemYear; }));
+  y.domain([0, d3.max(data, function(d) { return d.total; })]);
+  z.domain(data.columns.slice(1));
+
+  g.append("g")
+    .selectAll("g")
+    .data(d3.stack().keys(data.columns.slice(1))(data))
+    .enter().append("g")
+      .attr("fill", function(d) { return z(d.key); })
+    .selectAll("path")
+    .data(function(d) { return d; })
+    .enter().append("path")
+      .attr("d", d3.arc()
+          .innerRadius(function(d) { return y(d[0]); })
+          .outerRadius(function(d) { return y(d[1]); })
+          .startAngle(function(d) { return x(d.data.ItemYear); })
+          .endAngle(function(d) { return x(d.data.ItemYear) + x.bandwidth(); })
+          .padAngle(0.01)
+          .padRadius(innerRadius))
+    .on('mouseover', function(d) {
+      tooltip
+        .style('display', 'block')
+        .html('<h1> ' + d.data.ItemYear + '</h1>');
+    })
+   .on('mouseout', function(d) {tooltip.html('<h3>Oscar Winning Films:<br/>Percentage Seen<br/>by Year Released</h3>');});
+});
+</script>
