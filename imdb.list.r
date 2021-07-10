@@ -87,7 +87,7 @@ summarize(
   Y = n_distinct(IMDBid[Seen == "Yes"]),
   N = n_distinct(IMDBid[Seen == "No"])) %>%
 select(ItemYear, Y, N) %>%
-write.csv(.,"OscarsSummary.csv", row.names = FALSE)
+write.csv(.,"Oscars/OscarsSummary.csv", row.names = FALSE)
 
 ## NYT-1000 Data for CSV
 NYT1000 <- IMDBcombinedNYT1000 %>% 
@@ -96,6 +96,6 @@ NYT1000 <- IMDBcombinedNYT1000 %>%
     Y = n_distinct(IMDBid[Seen == "Yes"]),
     N = n_distinct(IMDBid[Seen == "No"])) %>%
   select(ItemYear, Y, N) %T>%
-  write.csv(.,"NYT1000Summary.csv", row.names = FALSE)
+  write.csv(.,"NYT1000/NYT1000Summary.csv", row.names = FALSE)
 
 rm(i, page, link, IMDBnextlink)
