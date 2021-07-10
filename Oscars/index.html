@@ -13,7 +13,11 @@
     .center h3, .center h1 {text-align: center;}
     </style>
     <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="https://jacobmgreer.github.io/IMDB-Tracker/js/d3-scale-radial.j"></script>
+    <script src="https://jacobmgreer.github.io/IMDB-Tracker/js/d3-scale-radial.js"></script>
+  </head>
+  <body>
+    <svg width="960" height="960" class="center"></svg>
+    <div id="tooltip" class="center"><h3>Oscar Winning Films:<br/>Percentage Seen<br/>by Year Released</h3></div>
     <script>
     var svg = d3.select("svg"),
         width = +svg.attr("width"),
@@ -68,9 +72,5 @@
        .on('mouseout', function(d) {tooltip.html('<h3>Oscar Winning Films:<br/>Percentage Seen<br/>by Year Released</h3>');});
     });
     </script>
-  </head>
-  <body>
-    <svg width="960" height="960" class="center"></svg>
-    <div id="tooltip" class="center"><h3>Oscar Winning Films:<br/>Percentage Seen<br/>by Year Released</h3></div>
   </body>
 </html>
