@@ -1,8 +1,3 @@
----
-title: "Percentage Seen of 'The New York Times: The Essential 1,000 Films to See'
-layout: circularstackedbarplot
----
-
 <svg width="960" height="960" class="center"></svg>
 <div id="tooltip" class="center"><h3>The New York Times<br/>Essential 1,000 Films:<br/>Percentage Seen<br/>by Year Released</h3></div>
 <script>

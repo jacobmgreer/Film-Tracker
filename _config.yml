@@ -5,7 +5,7 @@ defaults:
   - scope:
       path: "/NYT1000"
     values:
-      layout: "default"
+      layout: "circularstackedbarplot"
       title: "The New York Times' Essential 1,000 Films To See"
   - scope:
       path: "/Oscars"
