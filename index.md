@@ -3,6 +3,6 @@ title: Homepage of IMDB Tracker
 layout: default
 ---
 
-<a href="/Oscars">Oscar Winners</a>
+<p><a href="/Oscars">Oscar Winners</a></p>
 
-<a href="/NYT1000">NYT's Essential 1,000 Films to See</a>
+<p><a href="/NYT1000">NYT's Essential 1,000 Films to See</a></p>
