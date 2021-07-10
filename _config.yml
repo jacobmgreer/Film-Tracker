@@ -1,0 +1,14 @@
+name: IMDB Tracker
+description: Track an IMDB user's reviews against an IMDB list.
+
+defaults:
+  - scope:
+      path: "/NYT1000"
+    values:
+      layout: "default"
+      title: "The New York Times' Essential 1,000 Films To See"
+  - scope:
+      path: "/Oscars"
+    values:
+      layout: "default"
+      title: "Oscar-Winning Films (in all categories)"
