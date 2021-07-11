@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{% if page.title %}{{ page.title }}{% endif %}</title>
+    <title>{{ site.name }} - {% if page.title %}{{ page.title }}{% endif %}</title>
     <link rel="stylesheet" href="https://jacobmgreer.github.io/Same-Old-Same-Old/extras/bootstrap/css/bootstrap.min.css">
     <script src="https://jacobmgreer.github.io/Same-Old-Same-Old/extras/jquery.min.js"></script>
     <script src="https://jacobmgreer.github.io/Same-Old-Same-Old/extras/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://jacobmgreer.github.io/Same-Old-Same-Old/extras/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://underscorejs.org/underscore-min.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
   </head>
 
   <body>
@@ -23,57 +24,14 @@
       <div class="row">
         <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
           <br/><br/>
-          <h4>Oscar Winners Available on Amazon Prime</h4>
+          <h4>{% if page.title %}{{ page.title }}{% endif %}</h4>
           <div class="table-prime"></div>
           <br clear="all"/><br/>
         </main>
       </div>
     </div>
 
-<script src="https://d3js.org/d3.v3.min.js"></script>
-<script type="text/javascript"charset="utf-8">
-var tabulate = function (data,columns) {
-  var table = d3.select('.table-prime')
-                .append('table')
-                .classed('table', true)
-                .classed('table-striped', true)
-                .classed('table-responsive', true)
-  var thead = table.append('thead')
-  var tbody = table.append('tbody')
-
-  thead.append('tr')
-    .selectAll('th')
-      .data(columns)
-      .enter()
-    .append('th')
-      .attr('scope', 'col')
-      .text(function (d) { return d })
-
-  var rows = tbody.selectAll('tr')
-      .data(data)
-      .enter()
-    .append('tr')
-
-  var cells = rows.selectAll('td')
-      .data(function(row) {
-        return columns.map(function (column) {
-          return { column: column, value: row[column] }
-        })
-      })
-      .enter()
-    .append('td')
-      .text(function (d) { return d.value })
-
-  return table;
-}
-
-d3.csv('https://jacobmgreer.github.io/IMDB-Tracker/Oscars/OscarsData.csv',function (data) {
-  var columns = ['ItemTitle','IMDBid','ItemYear','ItemRuntime','Seen']
-  var data = data.filter(element => element.Prime === "Y")
-  // var data = data.filter(element => element.Seen === "No")
-  tabulate(data,columns)
-})
-</script>
+    {{ content }}
 
   </body>
 </html>
