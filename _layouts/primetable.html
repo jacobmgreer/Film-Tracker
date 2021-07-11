@@ -70,7 +70,7 @@ var tabulate = function (data,columns) {
 d3.csv('https://jacobmgreer.github.io/IMDB-Tracker/Oscars/OscarsData.csv',function (data) {
   var columns = ['ItemTitle','IMDBid','ItemYear','ItemRuntime','Seen']
   var data = data.filter(element => element.Prime === "Y")
-  var data = data.filter(element => element.Seen === "No")
+  // var data = data.filter(element => element.Seen === "No")
   tabulate(data,columns)
 })
 </script>
