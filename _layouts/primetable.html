@@ -35,7 +35,7 @@
 var tabulate = function (data,columns) {
   var table = d3.select('.table-prime')
                 .append('table')
-                //.classed('table-sm', true)
+                .classed('table', true)
                 .classed('table-striped', true)
                 .classed('table-responsive', true)
   var thead = table.append('thead')
