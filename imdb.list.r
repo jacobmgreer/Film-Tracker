@@ -72,11 +72,13 @@ for (i in 1:ceiling(IMDBratingscount/100)) {
 IMDBcombinedNYT1000 <- 
   left_join(IMDBlist, IMDBratings %>% select(IMDBid, Rating, Rated.Date), by="IMDBid") %>%
   mutate(Seen = ifelse(is.na(Rating), "No", "Yes")) %>%
-  left_join(., Prime.Available %>% select(IMDBid, Type) %>% mutate(Prime = "Y"), by="IMDBid")
+  left_join(., Prime.Available %>% select(IMDBid, Type) %>% mutate(Prime = "Y"), by="IMDBid") %T>%
+  write.csv(.,"NYT1000/NYT1000Data.csv", row.names = FALSE)
 IMDBcombinedOscars <- 
   left_join(IMDBoscars, IMDBratings %>% select(IMDBid, Rating, Rated.Date), by="IMDBid") %>%
   mutate(Seen = ifelse(is.na(Rating), "No", "Yes")) %>%
-  left_join(., Prime.Available %>% select(IMDBid, Type) %>% mutate(Prime = "Y"), by="IMDBid")
+  left_join(., Prime.Available %>% select(IMDBid, Type) %>% mutate(Prime = "Y"), by="IMDBid") %T>%
+  write.csv(.,"Oscars/OscarsData.csv", row.names = FALSE)
 
 ## Oscar Data for CSV
 IMDBcombinedOscars %>% 

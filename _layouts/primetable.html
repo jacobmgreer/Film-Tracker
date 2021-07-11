@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{% if page.title %}{{ page.title }}{% endif %}</title>
+    <link rel="stylesheet" href="https://jacobmgreer.github.io/Same-Old-Same-Old/extras/bootstrap/css/bootstrap.min.css">
+    <script src="https://jacobmgreer.github.io/Same-Old-Same-Old/extras/jquery.min.js"></script>
+    <script src="http://d3js.org/d3.v3.min.js"></script>
+    <script src="https://jacobmgreer.github.io/Same-Old-Same-Old/extras/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://jacobmgreer.github.io/Same-Old-Same-Old/extras/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://underscorejs.org/underscore-min.js"></script>
+    <style>
+    table {
+        border-collapse: collapse;
+        border: 2px black solid;
+        font: 12px sans-serif;
+    }
+
+    td {
+        border: 1px black solid;
+        padding: 5px;
+    }
+    </style>
+  </head>
+
+  <body>
+    <header class="d-flex flex-column flex-md-row align-items-md-center p-5 bg-info">
+      <div class="site-info">
+        <h1 class="site-name">{{ site.name }}</h1>
+        <p class="site-description">{{ site.description }}</p>
+      </div>
+    </header>
+
+
+<div class="container-fluid">
+  <div class="row">
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <br/><br/>
+      <h4>Movies on Prime</h4>
+      <div class="table-responsive">
+          {{ content }}
+      </div>
+    </main>
+  </div>
+</div>
+
+
+  </body>
+</html>
