@@ -45,7 +45,11 @@
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script type="text/javascript"charset="utf-8">
 var tabulate = function (data,columns) {
-  var table = d3.select('.table-prime').append('table').classed('table-sm', true).classed('table-striped', true)
+  var table = d3.select('.table-prime')
+                .append('table')
+                //.classed('table-sm', true)
+                .classed('table-striped', true)
+                .classed('table-responsive', true)
   var thead = table.append('thead')
   var tbody = table.append('tbody')
 
