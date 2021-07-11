@@ -100,4 +100,4 @@ NYT1000 <- IMDBcombinedNYT1000 %>%
   select(ItemYear, Y, N) %T>%
   write.csv(.,"NYT1000/NYT1000Summary.csv", row.names = FALSE)
 
-rm(i, page, link, IMDBnextlink)
+rm(i, page, link, IMDBnextlink, required)

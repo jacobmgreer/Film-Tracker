@@ -49,4 +49,4 @@ Prime.Documentary.Available <- Prime.Documentary.Available %>% mutate(Type = "Do
 
 Prime.Available <- rbind(Prime.Documentary.Available, Prime.Films.Available) %>% arrange(ItemYear)
 
-rm(Primenextlink, page, link, i)
+rm(Primenextlink, page, link, i, required)
