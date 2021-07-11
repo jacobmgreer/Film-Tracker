@@ -74,7 +74,7 @@ var tabulate = function (data,columns) {
 }
 
 d3.csv('https://jacobmgreer.github.io/IMDB-Tracker/Oscars/OscarsData.csv',function (data) {
-  var columns = ['ItemTable','IMDBid','ItemYear','ItemRuntime','Rating','Seen','Prime']
+  var columns = ['ItemTitle','IMDBid','ItemYear','ItemRuntime','Rating','Seen','Prime']
   tabulate(data,columns)
 })
 </script>
