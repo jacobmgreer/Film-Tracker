@@ -46,7 +46,7 @@ var tabulate = function (data,columns) {
       .data(columns)
       .enter()
     .append('th')
-      .attr('scope', 'row')
+      .attr('scope', 'col')
       .text(function (d) { return d })
 
   var rows = tbody.selectAll('tr')
