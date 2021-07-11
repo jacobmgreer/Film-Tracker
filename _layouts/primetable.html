@@ -32,18 +32,34 @@
     </header>
 
 
-<div class="container-fluid">
-  <div class="row">
-    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-      <br/><br/>
-      <h4>Movies on Prime</h4>
-      <div class="table-responsive">
-          {{ content }}
+    <div class="container-fluid">
+      <div class="row">
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+          <br/><br/>
+          <h4>Movies on Prime</h4>
+          <div class="table-prime"></div>
+        </main>
       </div>
-    </main>
-  </div>
-</div>
+    </div>
 
+
+<script type="text/javascript"charset="utf-8">
+    d3.text("https://jacobmgreer.github.io/IMDB-Tracker/Oscars/OscarsData.csv", function(data) {
+        var parsedCSV = d3.csv.parseRows(data);
+
+        var container = d3.select(".table-prime")
+            .append("table")
+
+            .selectAll("tr")
+                .data(parsedCSV).enter()
+                .append("tr")
+
+            .selectAll("td")
+                .data(function(d) { return d; }).enter()
+                .append("td")
+                .text(function(d) { return d; });
+    });
+</script>
 
   </body>
 </html>
