@@ -1,56 +1,111 @@
-<svg width="960" height="960" class="center"></svg>
-<div id="tooltip" class="center"><h3>The New York Times<br/>Essential 1,000 Films:<br/>Percentage Seen<br/>by Year Released</h3></div>
-<script>
-var svg = d3.select("svg"),
-    width = +svg.attr("width"),
-    height = +svg.attr("height"),
-    innerRadius = 130,
-    outerRadius = Math.min(width, height) / 2,
-    g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
+---
+title: "NYT's Essential 1,000 Films to See"
+layout: circularstackedbarplot
+---
 
-var x = d3.scaleBand()
-    .range([0, 2 * Math.PI])
-    .align(0);
+<div class="container-fluid" style="height:960px;">
+  <svg width="960" height="960" class="center"></svg>
+  <div id="tooltip" class="center"><h3>The New York Times<br/>Essential 1,000 Films:<br/>Percentage Seen<br/>by Year Released</h3></div>
+  <script>
+  var svg = d3.select("svg"),
+      width = +svg.attr("width"),
+      height = +svg.attr("height"),
+      innerRadius = 130,
+      outerRadius = Math.min(width, height) / 2,
+      g = svg.append("g").attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 
-var y = d3.scaleRadial()
-    .range([innerRadius, outerRadius]);
+  var x = d3.scaleBand()
+      .range([0, 2 * Math.PI])
+      .align(0);
 
-var z = d3.scaleOrdinal()
-    .range(["#B2BBD6", "#2E3957", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+  var y = d3.scaleRadial()
+      .range([innerRadius, outerRadius]);
 
-var tooltip = d3.select('#tooltip');
+  var z = d3.scaleOrdinal()
+      .range(["#B2BBD6", "#2E3957", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
 
-d3.csv("https://jacobmgreer.github.io/IMDB-Tracker/NYT1000/NYT1000Summary.csv", function(d, i, columns) {
-  for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
-  d.total = t;
-  return d;
-}, function(error, data) {
-  if (error) throw error;
+  var tooltip = d3.select('#tooltip');
 
-  x.domain(data.map(function(d) { return d.ItemYear; }));
-  y.domain([0, d3.max(data, function(d) { return d.total; })]);
-  z.domain(data.columns.slice(1));
+  d3.csv("https://jacobmgreer.github.io/IMDB-Tracker/NYT1000/NYT1000Summary.csv", function(d, i, columns) {
+    for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
+    d.total = t;
+    return d;
+  }, function(error, data) {
+    if (error) throw error;
 
-  g.append("g")
-    .selectAll("g")
-    .data(d3.stack().keys(data.columns.slice(1))(data))
-    .enter().append("g")
-      .attr("fill", function(d) { return z(d.key); })
-    .selectAll("path")
-    .data(function(d) { return d; })
-    .enter().append("path")
-      .attr("d", d3.arc()
-          .innerRadius(function(d) { return y(d[0]); })
-          .outerRadius(function(d) { return y(d[1]); })
-          .startAngle(function(d) { return x(d.data.ItemYear); })
-          .endAngle(function(d) { return x(d.data.ItemYear) + x.bandwidth(); })
-          .padAngle(0.01)
-          .padRadius(innerRadius))
-    .on('mouseover', function(d) {
-      tooltip
-        .style('display', 'block')
-        .html('<h1> ' + d.data.ItemYear + '</h1>');
-    })
-   .on('mouseout', function(d) {tooltip.html('<h3>The New York Times<br/>Essential 1,000 Films:<br/>Percentage Seen<br/>by Year Released</h3>');});
-});
-</script>
+    x.domain(data.map(function(d) { return d.ItemYear; }));
+    y.domain([0, d3.max(data, function(d) { return d.total; })]);
+    z.domain(data.columns.slice(1));
+
+    g.append("g")
+      .selectAll("g")
+      .data(d3.stack().keys(data.columns.slice(1))(data))
+      .enter().append("g")
+        .attr("fill", function(d) { return z(d.key); })
+      .selectAll("path")
+      .data(function(d) { return d; })
+      .enter().append("path")
+        .attr("d", d3.arc()
+            .innerRadius(function(d) { return y(d[0]); })
+            .outerRadius(function(d) { return y(d[1]); })
+            .startAngle(function(d) { return x(d.data.ItemYear); })
+            .endAngle(function(d) { return x(d.data.ItemYear) + x.bandwidth(); })
+            .padAngle(0.01)
+            .padRadius(innerRadius))
+      .on('mouseover', function(d) {
+        tooltip
+          .style('display', 'block')
+          .html('<h1> ' + d.data.ItemYear + '</h1>');
+      })
+     .on('mouseout', function(d) {tooltip.html('<h3>The New York Times<br/>Essential 1,000 Films:<br/>Percentage Seen<br/>by Year Released</h3>');});
+  });
+  </script>
+</div>
+
+<div class="container-fluid">
+  <script type="text/javascript"charset="utf-8">
+  var tabulate = function (data,columns) {
+    var table = d3.select('.table-prime')
+                  .append('table')
+                  .classed('table', true)
+                  .classed('table-striped', true)
+    var thead = table.append('thead')
+    var tbody = table.append('tbody')
+
+    thead.append('tr')
+      .selectAll('th')
+        .data(columns)
+        .enter()
+      .append('th')
+        .attr('scope', 'col')
+        .text(function (d) { return d })
+
+    var rows = tbody.selectAll('tr')
+        .data(data)
+        .enter()
+      .append('tr')
+
+    var cells = rows.selectAll('td')
+        .data(function(row) {
+          return columns.map(function (column) {
+            return { column: column, value: row[column] }
+          })
+        })
+        .enter()
+      .append('td')
+        .text(function (d) { return d.value })
+
+    return table;
+  }
+
+  d3.csv('https://jacobmgreer.github.io/IMDB-Tracker/NYT1000/NYT1000Data.csv',function (data) {
+    var columns = ['ItemTitle','IMDBid','ItemYear','ItemRuntime','Seen']
+    var data = data.filter(element => element.Prime === "Y")
+    // var data = data.filter(element => element.Seen === "No")
+    tabulate(data,columns)
+  })
+  </script>
+  <h1 class="display-3">New York Times' Essential 1,000 films on Prime</h1>
+  <div class="table-prime"></div>
+  <br clear="all"/><br/>
+</div>
