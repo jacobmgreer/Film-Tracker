@@ -1,4 +1,4 @@
-required <- c("rvest", "tidyverse", "magrittr")
+required <- c("rvest", "tidyverse", "magrittr", "jsonlite", "qdapRegex")
 lapply(required, require, character.only = TRUE)
 
 ## load IMDB List
@@ -99,5 +99,21 @@ NYT1000 <- IMDBcombinedNYT1000 %>%
     N = n_distinct(IMDBid[Seen == "No"])) %>%
   select(ItemYear, Y, N) %T>%
   write.csv(.,"NYT1000/NYT1000Summary.csv", row.names = FALSE)
+
+## IMDb Check-ins
+IMDBcheckins <-
+  read_html("https://www.imdb.com/user/ur28723514/checkins?sort=date_added%2Cdesc&view=grid") %>%
+  toString %>% 
+  ex_between(., "jacobmgreer's Check-Ins\",\"description\":{\"html\":\"\"},\"items\":", "],\"facets\":") %>%
+  gsub("[", "", ., fixed=TRUE) %>%
+  gsub("]", "", ., fixed=TRUE) %>%
+  toJSON %>%
+  gsub("\\\"", "\"", ., fixed=TRUE) %>%
+  gsub("[\"", "[", ., fixed=TRUE) %>%
+  gsub("\"]", "]", ., fixed=TRUE) %>%
+  fromJSON %>%
+  flatten %>%
+  select(-itemId,-description.html,-position) %>%
+  rename(IMDBid = const)
 
 rm(i, page, link, IMDBnextlink, required)

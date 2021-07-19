@@ -8,7 +8,7 @@
 "My Octopus Teacher","tt12888462","2020","85 min","7","Rated on 09 Jul 2021","Yes",NA,NA
 "If Anything Happens I Love You","tt11768948","2020","13 min",NA,NA,"No",NA,NA
 "Colette","tt11643154","2020","24 min",NA,NA,"No",NA,NA
-"Minari","tt10633456","2020","115 min",NA,NA,"No",NA,NA
+"Minari","tt10633456","2020","115 min","9","Rated on 18 Jul 2021","Yes",NA,NA
 "Mank","tt10618286","2020","131 min","7","Rated on 09 Jul 2021","Yes",NA,NA
 "Ma Rainey's Black Bottom","tt10514222","2020","94 min","7","Rated on 09 Jul 2021","Yes",NA,NA
 "Another Round","tt10288566","2020","117 min",NA,NA,"No",NA,NA
@@ -79,7 +79,7 @@
 "Stutterer","tt4817576","2015","12 min",NA,NA,"No",NA,NA
 "Son of Saul","tt3808342","2015","107 min",NA,NA,"No",NA,NA
 "Bridge of Spies","tt3682448","2015","142 min","6","Rated on 09 Jul 2021","Yes","Feature Film","Y"
-"The Hateful Eight","tt3460252","2015","168 min",NA,NA,"No",NA,NA
+"The Hateful Eight","tt3460252","2015","168 min","6","Rated on 14 Jul 2021","Yes",NA,NA
 "Room","tt3170832","2015","118 min","7","Rated on 09 Jul 2021","Yes",NA,NA
 "Amy","tt2870648","2015","128 min",NA,NA,"No",NA,NA
 "Spectre","tt2379713","2015","148 min","4","Rated on 09 Jul 2021","Yes",NA,NA
@@ -133,7 +133,7 @@
 "Skyfall","tt1074638","2012","143 min","8","Rated on 09 Jul 2021","Yes",NA,NA
 "Silver Linings Playbook","tt1045658","2012","122 min","9","Rated on 09 Jul 2021","Yes",NA,NA
 "Argo","tt1024648","2012","120 min","6","Rated on 09 Jul 2021","Yes",NA,NA
-"Life of Pi","tt0454876","2012","127 min",NA,NA,"No",NA,NA
+"Life of Pi","tt0454876","2012","127 min","5","Rated on 14 Jul 2021","Yes",NA,NA
 "Lincoln","tt0443272","2012","150 min",NA,NA,"No",NA,NA
 "The Shore","tt2201259","2011","29 min",NA,NA,"No",NA,NA
 "Undefeated","tt1860355","2011","113 min",NA,NA,"No",NA,NA
@@ -158,7 +158,7 @@
 "Inception","tt1375666","2010","148 min","8","Rated on 09 Jul 2021","Yes",NA,NA
 "In a Better World","tt1340107","2010","118 min",NA,NA,"No",NA,NA
 "The Social Network","tt1285016","2010","120 min","6","Rated on 09 Jul 2021","Yes",NA,NA
-"Alice in Wonderland","tt1014759","2010","108 min",NA,NA,"No",NA,NA
+"Alice in Wonderland","tt1014759","2010","108 min","4","Rated on 14 Jul 2021","Yes",NA,NA
 "The Fighter","tt0964517","2010","116 min",NA,NA,"No",NA,NA
 "Black Swan","tt0947798","2010","108 min","9","Rated on 09 Jul 2021","Yes","Feature Film","Y"
 "The Wolfman","tt0780653","2010","103 min",NA,NA,"No",NA,NA
@@ -277,7 +277,7 @@
 "Adaptation.","tt0268126","2002","115 min","5","Rated on 09 Jul 2021","Yes","Feature Film","Y"
 "Road to Perdition","tt0257044","2002","117 min","6","Rated on 09 Jul 2021","Yes","Feature Film","Y"
 "The Pianist","tt0253474","2002","150 min","8","Rated on 09 Jul 2021","Yes",NA,NA
-"The Lord of the Rings: The Two Towers","tt0167261","2002","179 min",NA,NA,"No",NA,NA
+"The Lord of the Rings: The Two Towers","tt0167261","2002","179 min","7","Rated on 14 Jul 2021","Yes",NA,NA
 "Frida","tt0120679","2002","123 min",NA,NA,"No",NA,NA
 "Murder on a Sunday Morning","tt0307197","2001","111 min",NA,NA,"No",NA,NA
 "Monster's Ball","tt0285742","2001","111 min",NA,NA,"No",NA,NA
@@ -307,15 +307,15 @@
 "Almost Famous","tt0181875","2000","122 min","9","Rated on 09 Jul 2021","Yes",NA,NA
 "Traffic","tt0181865","2000","147 min","5","Rated on 09 Jul 2021","Yes","Feature Film","Y"
 "Gladiator","tt0172495","2000","155 min","6","Rated on 09 Jul 2021","Yes",NA,NA
-"How the Grinch Stole Christmas","tt0170016","2000","104 min",NA,NA,"No",NA,NA
+"How the Grinch Stole Christmas","tt0170016","2000","104 min","4","Rated on 14 Jul 2021","Yes",NA,NA
 "U-571","tt0141926","2000","116 min",NA,NA,"No",NA,NA
 "King Gimp","tt0239528","1999","39 min",NA,NA,"No",NA,NA
 "One Day in September","tt0230591","1999","94 min",NA,NA,"No",NA,NA
 "The Old Man and the Sea","tt0207639","1999","20 min",NA,NA,"No",NA,NA
 "All About My Mother","tt0185125","1999","101 min",NA,NA,"No",NA,NA
 "The Personals","tt0176018","1999","40 min",NA,NA,"No",NA,NA
-"Girl, Interrupted","tt0172493","1999","127 min",NA,NA,"No",NA,NA
-"Boys Don't Cry","tt0171804","1999","118 min",NA,NA,"No",NA,NA
+"Girl, Interrupted","tt0172493","1999","127 min","6","Rated on 15 Jul 2021","Yes",NA,NA
+"Boys Don't Cry","tt0171804","1999","118 min","8","Rated on 15 Jul 2021","Yes",NA,NA
 "American Beauty","tt0169547","1999","122 min","9","Rated on 09 Jul 2021","Yes",NA,NA
 "Sleepy Hollow","tt0162661","1999","105 min","6","Rated on 09 Jul 2021","Yes",NA,NA
 "Topsy-Turvy","tt0151568","1999","160 min",NA,NA,"No",NA,NA
@@ -328,7 +328,7 @@
 "The Last Days","tt0174852","1998","87 min",NA,NA,"No",NA,NA
 "Shakespeare in Love","tt0138097","1998","123 min","6","Rated on 09 Jul 2021","Yes",NA,NA
 "Elizabeth","tt0127536","1998","124 min","6","Rated on 09 Jul 2021","Yes",NA,NA
-"What Dreams May Come","tt0120889","1998","113 min",NA,NA,"No",NA,NA
+"What Dreams May Come","tt0120889","1998","113 min","4","Rated on 15 Jul 2021","Yes",NA,NA
 "Saving Private Ryan","tt0120815","1998","169 min","9","Rated on 09 Jul 2021","Yes",NA,NA
 "The Red Violin","tt0120802","1998","130 min",NA,NA,"No","Feature Film","Y"
 "The Prince of Egypt","tt0120794","1998","99 min","6","Rated on 09 Jul 2021","Yes",NA,NA
@@ -371,7 +371,7 @@
 "Leaving Las Vegas","tt0113627","1995","111 min",NA,NA,"No","Feature Film","Y"
 "Dead Man Walking","tt0112818","1995","122 min",NA,NA,"No",NA,NA
 "A Close Shave","tt0112691","1995","30 min",NA,NA,"No",NA,NA
-"Braveheart","tt0112573","1995","178 min",NA,NA,"No","Feature Film","Y"
+"Braveheart","tt0112573","1995","178 min","7","Rated on 15 Jul 2021","Yes","Feature Film","Y"
 "Babe","tt0112431","1995","91 min","6","Rated on 09 Jul 2021","Yes",NA,NA
 "Apollo 13","tt0112384","1995","140 min","8","Rated on 09 Jul 2021","Yes",NA,NA
 "Antonia's Line","tt0112379","1995","102 min",NA,NA,"No",NA,NA
@@ -396,7 +396,7 @@
 "Black Rider","tt0108056","1993","12 min",NA,NA,"No",NA,NA
 "Schindler's List","tt0108052","1993","195 min","8","Rated on 09 Jul 2021","Yes",NA,NA
 "The Piano","tt0107822","1993","121 min",NA,NA,"No",NA,NA
-"Philadelphia","tt0107818","1993","125 min",NA,NA,"No","Feature Film","Y"
+"Philadelphia","tt0107818","1993","125 min","7","Rated on 14 Jul 2021","Yes","Feature Film","Y"
 "Mrs. Doubtfire","tt0107614","1993","125 min","6","Rated on 09 Jul 2021","Yes",NA,NA
 "Jurassic Park","tt0107290","1993","127 min","9","Rated on 09 Jul 2021","Yes",NA,NA
 "I Am a Promise: the Children of Stanton Elementary School","tt0107177","1993","89 min",NA,NA,"No",NA,NA
@@ -409,7 +409,7 @@
 "A River Runs Through It","tt0105265","1992","123 min","8","Rated on 09 Jul 2021","Yes",NA,NA
 "The Panama Deception","tt0105089","1992","91 min",NA,NA,"No",NA,NA
 "Omnibus","tt0105051","1992","8 min",NA,NA,"No",NA,NA
-"My Cousin Vinny","tt0104952","1992","120 min",NA,NA,"No",NA,NA
+"My Cousin Vinny","tt0104952","1992","120 min","5","Rated on 14 Jul 2021","Yes",NA,NA
 "Mona Lisa Descending a Staircase","tt0104908","1992","7 min",NA,NA,"No",NA,NA
 "The Last of the Mohicans","tt0104691","1992","112 min",NA,NA,"No",NA,NA
 "Indochine","tt0104507","1992","160 min",NA,NA,"No",NA,NA
@@ -430,7 +430,7 @@
 "In the Shadow of the Stars","tt0102114","1991","93 min",NA,NA,"No",NA,NA
 "The Fisher King","tt0101889","1991","137 min",NA,NA,"No","Feature Film","Y"
 "Deadly Deception: General Electric, Nuclear Weapons and Our Environment","tt0101683","1991","27 min",NA,NA,"No",NA,NA
-"City Slickers","tt0101587","1991","113 min",NA,NA,"No",NA,NA
+"City Slickers","tt0101587","1991","113 min","4","Rated on 14 Jul 2021","Yes",NA,NA
 "Bugsy","tt0101516","1991","136 min",NA,NA,"No",NA,NA
 "Beauty and the Beast","tt0101414","1991","84 min","8","Rated on 09 Jul 2021","Yes",NA,NA
 "Days of Waiting","tt0099372","1991","28 min",NA,NA,"No",NA,NA
@@ -441,7 +441,7 @@
 "Goodfellas","tt0099685","1990","146 min",NA,NA,"No",NA,NA
 "Ghost","tt0099653","1990","127 min","7","Rated on 09 Jul 2021","Yes",NA,NA
 "Dick Tracy","tt0099422","1990","105 min",NA,NA,"No",NA,NA
-"Dances with Wolves","tt0099348","1990","181 min",NA,NA,"No",NA,NA
+"Dances with Wolves","tt0099348","1990","181 min","7","Rated on 15 Jul 2021","Yes",NA,NA
 "Cyrano de Bergerac","tt0099334","1990","137 min",NA,NA,"No",NA,NA
 "American Dream","tt0099028","1990","98 min",NA,NA,"No",NA,NA
 "The Lunch Date","tt0100076","1989","12 min",NA,NA,"No",NA,NA
@@ -454,7 +454,7 @@
 "Henry V","tt0097499","1989","137 min",NA,NA,"No",NA,NA
 "Glory","tt0097441","1989","122 min",NA,NA,"No",NA,NA
 "Driving Miss Daisy","tt0097239","1989","99 min","7","Rated on 09 Jul 2021","Yes",NA,NA
-"Dead Poets Society","tt0097165","1989","128 min",NA,NA,"No",NA,NA
+"Dead Poets Society","tt0097165","1989","128 min","7","Rated on 14 Jul 2021","Yes",NA,NA
 "Common Threads: Stories from the Quilt","tt0097099","1989","79 min",NA,NA,"No",NA,NA
 "Born on the Fourth of July","tt0096969","1989","145 min",NA,NA,"No",NA,NA
 "Batman","tt0096895","1989","126 min","6","Rated on 09 Jul 2021","Yes",NA,NA
@@ -781,7 +781,7 @@
 "The Pink Phink","tt0058472","1964","7 min",NA,NA,"No",NA,NA
 "Nine from Little Rock","tt0058410","1964","20 min",NA,NA,"No",NA,NA
 "The Night of the Iguana","tt0058404","1964","125 min",NA,NA,"No",NA,NA
-"My Fair Lady","tt0058385","1964","170 min",NA,NA,"No",NA,NA
+"My Fair Lady","tt0058385","1964","170 min","8","Rated on 14 Jul 2021","Yes",NA,NA
 "Le monde sans soleil","tt0058364","1964","93 min",NA,NA,"No",NA,NA
 "Mary Poppins","tt0058331","1964","139 min","9","Rated on 09 Jul 2021","Yes",NA,NA
 "Goldfinger","tt0058150","1964","110 min","6","Rated on 09 Jul 2021","Yes",NA,NA
@@ -798,7 +798,7 @@
 "It's a Mad Mad Mad Mad World","tt0057193","1963","210 min",NA,NA,"No","Feature Film","Y"
 "Irma la Douce","tt0057187","1963","147 min",NA,NA,"No",NA,NA
 "Yesterday, Today and Tomorrow","tt0057171","1963","119 min",NA,NA,"No",NA,NA
-"Hud","tt0057163","1963","112 min",NA,NA,"No","Feature Film","Y"
+"Hud","tt0057163","1963","112 min","8","Rated on 14 Jul 2021","Yes","Feature Film","Y"
 "The Critic","tt0056965","1963","4 min",NA,NA,"No",NA,NA
 "Cleopatra","tt0056937","1963","192 min",NA,NA,"No",NA,NA
 "Chagall","tt0056920","1963","25 min",NA,NA,"No",NA,NA
@@ -874,7 +874,7 @@
 "The Defiant Ones","tt0051525","1958","96 min",NA,NA,"No",NA,NA
 "The Big Country","tt0051411","1958","166 min",NA,NA,"No",NA,NA
 "Ama Girls","tt0051339","1958","29 min",NA,NA,"No",NA,NA
-"Mon Oncle","tt0050706","1958","116 min",NA,NA,"No",NA,NA
+"Mon Oncle","tt0050706","1958","116 min","7","Rated on 14 Jul 2021","Yes",NA,NA
 "The Wetback Hound","tt0051187","1957","18 min",NA,NA,"No",NA,NA
 "The Three Faces of Eve","tt0051077","1957","91 min",NA,NA,"No",NA,NA
 "Sayonara","tt0050933","1957","147 min",NA,NA,"No",NA,NA
