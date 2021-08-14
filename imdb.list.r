@@ -1,50 +1,6 @@
 required <- c("rvest", "tidyverse", "magrittr", "jsonlite", "qdapRegex")
 lapply(required, require, character.only = TRUE)
 
-## load IMDB List
-# IMDBlistcount <-
-#   read_html("https://www.imdb.com/list/ls505489207/") %>%
-#   html_nodes(., '#main > div > div.lister.list.detail.sub-list > div.header.filmosearch > div > div.desc.lister-total-num-results') %>%
-#   html_text(.) %>%
-#   parse_number(.)
-# IMDBlist <- data.frame()
-# for (i in 1:ceiling(IMDBlistcount/100)) {
-#   link <- read_html(paste0('https://www.imdb.com/list/ls505489207/?page=',i))
-#   page <-
-#     data.frame(
-#       ItemTitle= link %>% html_nodes(.,'.lister-item-header a:first-of-type') %>% html_text(.) %>% gsub("^\\s+|\\s+$", "", .),
-#       IMDBid= link %>% html_nodes(.,'.lister-item-image') %>% html_attr("data-tconst"),
-#       ItemYear= link %>% html_nodes(.,'.lister-item-header span.lister-item-year:nth-child(3)') %>% html_text(.) %>% sub('.*(\\d{4}).*', '\\1', .),
-#       ItemRuntime= link %>% html_nodes(.,'.lister-item-header + p span.runtime') %>% html_text(.)
-#     )
-#   IMDBlist <- rbind(IMDBlist, page)
-# }
-
-# ## load Oscar Winners on IMDB
-# IMDBoscarscount <-
-#   read_html("https://www.imdb.com/search/title/?groups=oscar_winner&sort=year,desc") %>%
-#   html_nodes(., '#main > div > div.nav > div.desc > span:nth-child(1)') %>%
-#   html_text(.) %>%
-#   gsub(".{8}$|.*of ", "", .) %>%
-#   parse_number(.)
-# IMDBnextlink <- 'https://www.imdb.com/search/title/?groups=oscar_winner&sort=year,desc'
-# IMDBoscars <- data.frame()
-# for (i in 1:ceiling(IMDBoscarscount/50)) {
-#   link <- read_html(IMDBnextlink)
-#   
-#   page <- 
-#     data.frame(
-#       ItemTitle= link %>% html_nodes(.,'.lister-item-header a:first-of-type') %>% html_text(.) %>% gsub("^\\s+|\\s+$", "", .),
-#       IMDBid= link %>% html_nodes(.,'div.lister-item-content > h3 > a:first-of-type') %>% html_attr("href") %>% substr(., 8, nchar(.)-16),
-#       ItemYear= link %>% html_nodes(.,'.lister-item-header span.lister-item-year:nth-child(3)') %>% html_text(.) %>% sub('.*(\\d{4}).*', '\\1', .),
-#       ItemRuntime= link %>% html_nodes(.,'.lister-item-header + p span.runtime') %>% html_text(.)
-#     )
-#   IMDBoscars <- rbind(IMDBoscars, page)
-#   
-#   IMDBnextlink <- paste0("https://www.imdb.com",link %>% html_nodes(.,'#main > div > div.desc > a.next-page') %>% html_attr("href"))
-# } 
-
-
 ## load Personal Ratings on IMDB
 IMDBratingscount <-
   read_html("https://www.imdb.com/user/ur28723514/ratings/") %>%
@@ -99,42 +55,5 @@ NYT1000 <- IMDBcombinedNYT1000 %>%
     N = n_distinct(IMDBid[Seen == "No"])) %>%
   select(ItemYear, Y, N) %T>%
   write.csv(.,"NYT1000/NYT1000Summary.csv", row.names = FALSE)
-
-# ## IMDb Check-ins
-# IMDBcheckins <-
-#   read_html("https://www.imdb.com/user/ur28723514/checkins?sort=date_added%2Cdesc&view=grid") %>%
-#   toString %>%
-#   ex_between(., "jacobmgreer's Check-Ins\",\"description\":{\"html\":\"\"},\"items\":", "],\"facets\":") %>%
-#   gsub("[", "", ., fixed=TRUE) %>%
-#   gsub("]", "", ., fixed=TRUE) %>%
-#   toJSON %>%
-#   gsub("\\\"", "\"", ., fixed=TRUE) %>%
-#   gsub("[\"", "[", ., fixed=TRUE) %>%
-#   gsub("\"]", "]", ., fixed=TRUE) %>%
-#   fromJSON %>%
-#   flatten %>%
-#   select(-itemId,-description.html,-position) %>%
-#   rename(IMDBid = const)
-# IMDBcheckins.genres <-
-#   read_html("https://www.imdb.com/user/ur28723514/checkins?sort=date_added%2Cdesc&view=grid") %>%
-#   toString %>%
-#   ex_between(., "\"genres\",\"facets\":[", "]},\"RELEASE_DATE\"") %>%
-#   gsub("[", "", ., fixed=TRUE) %>%
-#   gsub("]", "", ., fixed=TRUE) %>%
-#   toJSON %>%
-#   gsub("\\\"", "\"", ., fixed=TRUE) %>%
-#   gsub("[\"", "[", ., fixed=TRUE) %>%
-#   gsub("\"]", "]", ., fixed=TRUE) %>%
-#   fromJSON %>%
-#   select(label, count)
-# IMDBcheckins.details <-
-#   read_html("https://www.imdb.com/user/ur28723514/checkins?sort=date_added%2Cdesc&view=grid") %>%
-#   toString %>%
-#   ex_between(., "\"titles\":", "});") %>%
-#   toJSON %>%
-#   gsub("\\\"", "\"", ., fixed=TRUE) %>%
-#   gsub("[[\"", "{\"watchlist\":[", ., fixed=TRUE) %>%
-#   gsub("\"]]", "]}", ., fixed=TRUE) %>%
-#   fromJSON
 
 rm(i, page, link, IMDBnextlink, required)
