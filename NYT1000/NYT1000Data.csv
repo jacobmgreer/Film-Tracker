@@ -10,7 +10,7 @@
 "The African Queen","tt0043265","1951","105 min","8","Rated on 09 Jul 2021","Yes","Feature Film","Y"
 "L'Age d'Or","tt0021577","1930","63 min",NA,NA,"No",NA,NA
 "Aguirre, the Wrath of God","tt0068182","1972","95 min",NA,NA,"No",NA,NA
-"A.I. Artificial Intelligence","tt0212720","2001","146 min","4","Rated on 09 Jul 2021","Yes","Feature Film","Y"
+"A.I. Artificial Intelligence","tt0212720","2001","146 min","4","Rated on 09 Jul 2021","Yes",NA,NA
 "Airplane!","tt0080339","1980","88 min",NA,NA,"No",NA,NA
 "Aladdin","tt0103639","1992","90 min","6","Rated on 09 Jul 2021","Yes",NA,NA
 "Alexander Nevsky","tt0029850","1938","112 min",NA,NA,"No",NA,NA
@@ -38,10 +38,10 @@
 "The Angry Silence","tt0053602","1960","95 min",NA,NA,"No",NA,NA
 "Anna and the King of Siam","tt0038303","1946","128 min",NA,NA,"No",NA,NA
 "Anna Christie","tt0020641","1930","89 min",NA,NA,"No",NA,NA
-"Annie Hall","tt0075686","1977","93 min",NA,NA,"No",NA,NA
+"Annie Hall","tt0075686","1977","93 min",NA,NA,"No","Feature Film","Y"
 "The Apartment","tt0053604","1960","125 min","8","Rated on 09 Jul 2021","Yes","Feature Film","Y"
 "Apocalypse Now","tt0078788","1979","147 min","9","Rated on 09 Jul 2021","Yes",NA,NA
-"Apollo 13","tt0112384","1995","140 min","8","Rated on 09 Jul 2021","Yes",NA,NA
+"Apollo 13","tt0112384","1995","140 min","8","Rated on 09 Jul 2021","Yes","Feature Film","Y"
 "The Apostle","tt0118632","1997","134 min",NA,NA,"No",NA,NA
 "L'Argent","tt0085180","1983","85 min",NA,NA,"No",NA,NA
 "Ashes and Diamonds","tt0052080","1958","103 min",NA,NA,"No",NA,NA
@@ -156,7 +156,7 @@
 "Chariots of Fire","tt0082158","1981","125 min",NA,NA,"No",NA,NA
 "Charley Varrick","tt0069865","1973","111 min",NA,NA,"No",NA,NA
 "Chicago","tt0299658","2002","113 min","7","Rated on 09 Jul 2021","Yes",NA,NA
-"Chicken Run","tt0120630","2000","84 min","7","Rated on 09 Jul 2021","Yes","Feature Film","Y"
+"Chicken Run","tt0120630","2000","84 min","7","Rated on 09 Jul 2021","Yes",NA,NA
 "La Chienne","tt0021739","1931","95 min",NA,NA,"No",NA,NA
 "Chinatown","tt0071315","1974","130 min",NA,NA,"No","Feature Film","Y"
 "Chloe in the Afternoon","tt0068205","1972","97 min",NA,NA,"No",NA,NA
@@ -167,7 +167,7 @@
 "Claire's Knee","tt0065772","1970","105 min",NA,NA,"No",NA,NA
 "The Clockmaker of St. Paul","tt0071622","1974","105 min",NA,NA,"No",NA,NA
 "A Clockwork Orange","tt0066921","1971","136 min","10","Rated on 09 Jul 2021","Yes",NA,NA
-"Close Encounters of the Third Kind","tt0075860","1977","138 min",NA,NA,"No",NA,NA
+"Close Encounters of the Third Kind","tt0075860","1977","138 min","8","Rated on 14 Aug 2021","Yes",NA,NA
 "Close-Up","tt0100234","1990","98 min",NA,NA,"No",NA,NA
 "Clueless","tt0112697","1995","97 min","7","Rated on 09 Jul 2021","Yes",NA,NA
 "Coal Miner's Daughter","tt0080549","1980","124 min",NA,NA,"No",NA,NA
@@ -304,7 +304,7 @@
 "The Fortune Cookie","tt0060424","1966","125 min",NA,NA,"No","Feature Film","Y"
 "The 400 Blows","tt0053198","1959","99 min",NA,NA,"No",NA,NA
 "Frankenstein","tt0021884","1931","70 min","7","Rated on 09 Jul 2021","Yes",NA,NA
-"The French Connection","tt0067116","1971","104 min",NA,NA,"No","Feature Film","Y"
+"The French Connection","tt0067116","1971","104 min",NA,NA,"No",NA,NA
 "Frenzy","tt0068611","1972","116 min","7","Rated on 09 Jul 2021","Yes",NA,NA
 "Friendly Persuasion","tt0049233","1956","137 min",NA,NA,"No",NA,NA
 "From Here to Eternity","tt0045793","1953","118 min",NA,NA,"No",NA,NA
@@ -329,7 +329,7 @@
 "Georgy Girl","tt0060453","1966","99 min",NA,NA,"No",NA,NA
 "Get Carter","tt0067128","1971","112 min",NA,NA,"No",NA,NA
 "Get Out Your Handkerchiefs","tt0078122","1978","108 min",NA,NA,"No",NA,NA
-"Ghost World","tt0162346","2001","111 min","7","Rated on 09 Jul 2021","Yes",NA,NA
+"Ghost World","tt0162346","2001","111 min","7","Rated on 09 Jul 2021","Yes","Feature Film","Y"
 "Giant","tt0049261","1956","201 min","7","Rated on 09 Jul 2021","Yes",NA,NA
 "Gigi","tt0051658","1958","115 min",NA,NA,"No",NA,NA
 "Gimme Shelter","tt0065780","1970","91 min",NA,NA,"No",NA,NA
@@ -337,7 +337,7 @@
 "Girl with a Suitcase","tt0054225","1961","96 min",NA,NA,"No",NA,NA
 "The Gleaners & I","tt0247380","2000","82 min",NA,NA,"No",NA,NA
 "The Goalie's Anxiety at the Penalty Kick","tt0066773","1972","101 min",NA,NA,"No",NA,NA
-"The Go-Between","tt0067144","1971","116 min",NA,NA,"No","Feature Film","Y"
+"The Go-Between","tt0067144","1971","116 min",NA,NA,"No",NA,NA
 "The Godfather","tt0068646","1972","175 min","8","Rated on 09 Jul 2021","Yes",NA,NA
 "The Godfather: Part II","tt0071562","1974","202 min","9","Rated on 09 Jul 2021","Yes",NA,NA
 "Going My Way","tt0036872","1944","126 min",NA,NA,"No",NA,NA
@@ -346,7 +346,7 @@
 "The Good, the Bad and the Ugly","tt0060196","1966","178 min",NA,NA,"No",NA,NA
 "The Good Earth","tt0028944","1937","138 min",NA,NA,"No",NA,NA
 "Goodbye, Mr. Chips","tt0031385","1939","114 min",NA,NA,"No",NA,NA
-"Goodfellas","tt0099685","1990","146 min",NA,NA,"No",NA,NA
+"Goodfellas","tt0099685","1990","146 min","9","Rated on 07 Aug 2021","Yes",NA,NA
 "Gosford Park","tt0280707","2001","131 min","6","Rated on 09 Jul 2021","Yes",NA,NA
 "The Graduate","tt0061722","1967","106 min","8","Rated on 09 Jul 2021","Yes",NA,NA
 "Grand Hotel","tt0022958","1932","112 min",NA,NA,"No",NA,NA
@@ -421,14 +421,14 @@
 "In the Heat of the Night","tt0061811","1967","110 min",NA,NA,"No",NA,NA
 "The Informer","tt0026529","1935","91 min",NA,NA,"No",NA,NA
 "Inherit the Wind","tt0053946","1960","128 min",NA,NA,"No","Feature Film","Y"
-"The Insider","tt0140352","1999","157 min",NA,NA,"No",NA,NA
+"The Insider","tt0140352","1999","157 min",NA,NA,"No","Feature Film","Y"
 "Internal Affairs","tt0099850","1990","115 min",NA,NA,"No",NA,NA
 "The Ipcress File","tt0059319","1965","109 min",NA,NA,"No",NA,NA
 "It Happened One Night","tt0025316","1934","105 min",NA,NA,"No",NA,NA
 "It's a Gift","tt0025318","1934","68 min",NA,NA,"No",NA,NA
 "It's a Wonderful Life","tt0038650","1946","130 min","8","Rated on 09 Jul 2021","Yes","Feature Film","Y"
 "Jailhouse Rock","tt0050556","1957","96 min",NA,NA,"No",NA,NA
-"Jaws","tt0073195","1975","124 min","9","Rated on 09 Jul 2021","Yes",NA,NA
+"Jaws","tt0073195","1975","124 min","9","Rated on 09 Jul 2021","Yes","Feature Film","Y"
 "The Jazz Singer","tt0018037","1927","88 min",NA,NA,"No",NA,NA
 "Jean de Florette","tt0091288","1986","120 min",NA,NA,"No",NA,NA
 "Jerry Maguire","tt0116695","1996","139 min","7","Rated on 09 Jul 2021","Yes",NA,NA
@@ -462,7 +462,7 @@
 "The Last Emperor","tt0093389","1987","163 min",NA,NA,"No",NA,NA
 "The Last Metro","tt0080610","1980","131 min",NA,NA,"No",NA,NA
 "The Last Picture Show","tt0067328","1971","118 min",NA,NA,"No",NA,NA
-"The Last Seduction","tt0110308","1994","110 min",NA,NA,"No","Feature Film","Y"
+"The Last Seduction","tt0110308","1994","110 min",NA,NA,"No",NA,NA
 "Last Tango in Paris","tt0070849","1972","129 min",NA,NA,"No",NA,NA
 "The Last Temptation of Christ","tt0095497","1988","164 min",NA,NA,"No",NA,NA
 "The Last Waltz","tt0077838","1978","117 min",NA,NA,"No",NA,NA
@@ -478,7 +478,7 @@
 "The Life and Death of Colonel Blimp","tt0036112","1943","163 min",NA,NA,"No",NA,NA
 "Life Is Sweet","tt0100024","1990","103 min",NA,NA,"No",NA,NA
 "The Life of Emile Zola","tt0029146","1937","116 min",NA,NA,"No",NA,NA
-"Life with Father","tt0039566","1947","118 min",NA,NA,"No",NA,NA
+"Life with Father","tt0039566","1947","118 min",NA,NA,"No","Feature Film","Y"
 "Como agua para chocolate","tt0103994","1992","105 min",NA,NA,"No",NA,NA
 "Lili","tt0046000","1953","81 min",NA,NA,"No",NA,NA
 "Little Big Man","tt0065988","1970","139 min",NA,NA,"No","Feature Film","Y"
@@ -496,7 +496,7 @@
 "Lola Montès","tt0048308","1955","116 min",NA,NA,"No",NA,NA
 "Lolita","tt0056193","1962","153 min","8","Rated on 09 Jul 2021","Yes",NA,NA
 "Lone Star","tt0116905","1996","135 min",NA,NA,"No",NA,NA
-"The Loneliness of the Long Distance Runner","tt0056194","1962","104 min",NA,NA,"No",NA,NA
+"The Loneliness of the Long Distance Runner","tt0056194","1962","104 min",NA,NA,"No","Feature Film","Y"
 "Long Day's Journey Into Night","tt0056196","1962","174 min",NA,NA,"No",NA,NA
 "The Long Goodbye","tt0070334","1973","112 min",NA,NA,"No",NA,NA
 "The Long Good Friday","tt0081070","1980","114 min",NA,NA,"No",NA,NA
@@ -558,7 +558,7 @@
 "Minnie and Moskowitz","tt0067433","1971","114 min",NA,NA,"No",NA,NA
 "The Miracle of Morgan's Creek","tt0037077","1943","98 min",NA,NA,"No",NA,NA
 "Miracle on 34th Street","tt0039628","1947","96 min","7","Rated on 09 Jul 2021","Yes",NA,NA
-"The Miracle Worker","tt0056241","1962","106 min",NA,NA,"No","Feature Film","Y"
+"The Miracle Worker","tt0056241","1962","106 min",NA,NA,"No",NA,NA
 "Les Misérables","tt0026725","1935","108 min",NA,NA,"No",NA,NA
 "The Misfits","tt0055184","1961","125 min",NA,NA,"No",NA,NA
 "Missing","tt0084335","1982","122 min",NA,NA,"No",NA,NA
@@ -587,7 +587,7 @@
 "My Beautiful Laundrette","tt0091578","1985","97 min",NA,NA,"No","Feature Film","Y"
 "My Darling Clementine","tt0038762","1946","97 min",NA,NA,"No",NA,NA
 "My Dinner with Andre","tt0082783","1981","110 min",NA,NA,"No",NA,NA
-"My Fair Lady","tt0058385","1964","170 min","8","Rated on 14 Jul 2021","Yes",NA,NA
+"My Fair Lady","tt0058385","1964","170 min","7","Rated on 10 Aug 2021","Yes",NA,NA
 "My Left Foot","tt0097937","1989","103 min",NA,NA,"No",NA,NA
 "My Life as a Dog","tt0089606","1985","101 min",NA,NA,"No",NA,NA
 "My Man Godfrey","tt0028010","1936","94 min",NA,NA,"No","Feature Film","Y"
@@ -603,7 +603,7 @@
 "Never on Sunday","tt0054198","1960","97 min",NA,NA,"No",NA,NA
 "Night Moves","tt0073453","1975","100 min",NA,NA,"No",NA,NA
 "The Night of the Hunter","tt0048424","1955","92 min","9","Rated on 09 Jul 2021","Yes",NA,NA
-"Night of the Living Dead","tt0063350","1968","96 min",NA,NA,"No","Feature Film","Y"
+"Night of the Living Dead","tt0063350","1968","96 min",NA,NA,"No",NA,NA
 "A Night to Remember","tt0051994","1958","123 min",NA,NA,"No",NA,NA
 "A Nightmare on Elm Street","tt0087800","1984","91 min","8","Rated on 09 Jul 2021","Yes",NA,NA
 "1900","tt0074084","1976","317 min",NA,NA,"No",NA,NA
@@ -635,7 +635,7 @@
 "Rome, Open City","tt0038890","1945","103 min",NA,NA,"No",NA,NA
 "Operation Crossbow","tt0059549","1965","115 min",NA,NA,"No",NA,NA
 "The Opposite of Sex","tt0120777","1997","105 min",NA,NA,"No","Feature Film","Y"
-"Ordinary People","tt0081283","1980","124 min",NA,NA,"No",NA,NA
+"Ordinary People","tt0081283","1980","124 min","8","Rated on 22 Jul 2021","Yes",NA,NA
 "Ossessione","tt0035160","1943","140 min",NA,NA,"No",NA,NA
 "Othello","tt0045251","1951","90 min",NA,NA,"No","Feature Film","Y"
 "Our Town","tt0032881","1940","90 min",NA,NA,"No","Feature Film","Y"
@@ -697,7 +697,7 @@
 "The Quiet Man","tt0045061","1952","129 min",NA,NA,"No","Feature Film","Y"
 "Raging Bull","tt0081398","1980","129 min",NA,NA,"No","Feature Film","Y"
 "Indiana Jones and the Raiders of the Lost Ark","tt0082971","1981","115 min","9","Rated on 09 Jul 2021","Yes",NA,NA
-"Rain Man","tt0095953","1988","133 min","8","Rated on 09 Jul 2021","Yes","Feature Film","Y"
+"Rain Man","tt0095953","1988","133 min","8","Rated on 09 Jul 2021","Yes",NA,NA
 "Raise the Red Lantern","tt0101640","1991","125 min",NA,NA,"No","Feature Film","Y"
 "Raising Arizona","tt0093822","1987","94 min",NA,NA,"No",NA,NA
 "Ran","tt0089881","1985","162 min",NA,NA,"No",NA,NA
@@ -709,7 +709,7 @@
 "Rebel Without a Cause","tt0048545","1955","111 min","8","Rated on 09 Jul 2021","Yes",NA,NA
 "Three Colors: Red","tt0111495","1994","99 min",NA,NA,"No",NA,NA
 "The Red Badge of Courage","tt0043961","1951","69 min",NA,NA,"No",NA,NA
-"Red River","tt0040724","1948","133 min",NA,NA,"No",NA,NA
+"Red River","tt0040724","1948","133 min",NA,NA,"No","Feature Film","Y"
 "The Red Shoes","tt0040725","1948","135 min",NA,NA,"No",NA,NA
 "Reds","tt0082979","1981","195 min",NA,NA,"No",NA,NA
 "The Remains of the Day","tt0107943","1993","134 min",NA,NA,"No",NA,NA
@@ -729,7 +729,7 @@
 "RoboCop","tt0093870","1987","102 min","6","Rated on 09 Jul 2021","Yes",NA,NA
 "Rocco and His Brothers","tt0054248","1960","179 min",NA,NA,"No",NA,NA
 "Roger & Me","tt0098213","1989","91 min",NA,NA,"No",NA,NA
-"Roman Holiday","tt0046250","1953","118 min","8","Rated on 09 Jul 2021","Yes","Feature Film","Y"
+"Roman Holiday","tt0046250","1953","118 min","10","Rated on 31 Jul 2021","Yes","Feature Film","Y"
 "Romeo and Juliet","tt0028203","1936","125 min",NA,NA,"No",NA,NA
 "Romeo and Juliet","tt0063518","1968","138 min",NA,NA,"No","Feature Film","Y"
 "Room at the Top","tt0053226","1959","115 min",NA,NA,"No",NA,NA
@@ -776,7 +776,7 @@
 "Shadow of a Doubt","tt0036342","1943","108 min","7","Rated on 09 Jul 2021","Yes",NA,NA
 "Shaft","tt0067741","1971","100 min",NA,NA,"No",NA,NA
 "Shakespeare in Love","tt0138097","1998","123 min","6","Rated on 09 Jul 2021","Yes",NA,NA
-"Shane","tt0046303","1953","118 min",NA,NA,"No","Feature Film","Y"
+"Shane","tt0046303","1953","118 min",NA,NA,"No",NA,NA
 "She Wore a Yellow Ribbon","tt0041866","1949","104 min",NA,NA,"No",NA,NA
 "Sherman's March","tt0091943","1985","157 min",NA,NA,"No",NA,NA
 "She's Gotta Have It","tt0091939","1986","84 min",NA,NA,"No",NA,NA
@@ -842,7 +842,7 @@
 "Strangers on a Train","tt0044079","1951","101 min",NA,NA,"No",NA,NA
 "Straw Dogs","tt0067800","1971","113 min",NA,NA,"No",NA,NA
 "A Streetcar Named Desire","tt0044081","1951","122 min","9","Rated on 09 Jul 2021","Yes",NA,NA
-"Stroszek","tt0075276","1977","115 min",NA,NA,"No","Feature Film","Y"
+"Stroszek","tt0075276","1977","115 min",NA,NA,"No",NA,NA
 "Suddenly, Last Summer","tt0053318","1959","114 min",NA,NA,"No",NA,NA
 "The Sugarland Express","tt0072226","1974","110 min",NA,NA,"No",NA,NA
 "Sullivan's Travels","tt0034240","1941","90 min",NA,NA,"No",NA,NA
