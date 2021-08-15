@@ -1,4 +1,4 @@
-required <- c("rvest", "tidyverse", "magrittr", "jsonlite", "qdapRegex")
+required <- c("rvest", "tidyverse", "magrittr", "jsonlite", "qdapRegex", "omdbapi")
 lapply(required, require, character.only = TRUE)
 
 ## load Personal Ratings on IMDB
@@ -23,6 +23,7 @@ for (i in 1:ceiling(IMDBratingscount/100)) {
   
   IMDBnextlink <- paste0("https://www.imdb.com",link %>% html_nodes(.,'#ratings-container > div.footer.filmosearch > div > div > a.flat-button.lister-page-next.next-page') %>% html_attr("href"))
 } 
+
 
 ## combine IMDBlists with IMDBratings
 IMDBcombinedNYT1000 <- 
