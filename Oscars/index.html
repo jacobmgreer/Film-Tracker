@@ -99,7 +99,7 @@ layout: circularstackedbarplot
 
   d3.csv('https://jacobmgreer.github.io/IMDB-Tracker/Oscars/OscarsData.csv',function (data) {
     var columns = ['ItemTitle','IMDBid','ItemYear','ItemRuntime','Seen']
-    var data = data.filter(element => element.Netflix === "Y")
+    var data = data.filter(element => element.Netflix === "Netflix")
     // var data = data.filter(element => element.Seen === "No")
     tabulate(data,columns)
   })
