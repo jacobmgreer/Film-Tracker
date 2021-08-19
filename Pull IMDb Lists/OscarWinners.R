@@ -25,4 +25,4 @@ for (i in 1:ceiling(IMDBoscarscount/50)) {
   IMDBnextlink <- paste0("https://www.imdb.com",link %>% html_nodes(.,'#main > div > div.desc > a.next-page') %>% html_attr("href"))
 }
 
-rm(i, page, link, IMDBnextlink, required)
+rm(i, page, link, IMDBnextlink, required, IMDBoscarscount)

@@ -2,16 +2,15 @@ required <- c("rvest", "tidyverse", "magrittr", "jsonlite", "qdapRegex")
 lapply(required, require, character.only = TRUE)
 
 ## load Personal Ratings on IMDB
-IMDBratingscount <-
-  read_html("https://www.imdb.com/user/ur28723514/ratings/") %>%
+nextlink <- 'https://www.imdb.com/user/ur28723514/ratings/'
+count <-
+  read_html(nextlink) %>%
   html_nodes(., '#lister-header-current-size') %>%
   html_text(.) %>%
   parse_number(.)
-IMDBnextlink <- 'https://www.imdb.com/user/ur28723514/ratings/'
 IMDBratings <- data.frame()
-for (i in 1:ceiling(IMDBratingscount/100)) {
-  link <- read_html(IMDBnextlink)
-  
+for (i in 1:ceiling(count/100)) {
+  link <- read_html(nextlink)
   page <- 
     data.frame(
       ItemTitle= link %>% html_nodes(.,'.lister-item-header a:first-of-type') %>% html_text(.) %>% gsub("^\\s+|\\s+$", "", .),
@@ -20,40 +19,62 @@ for (i in 1:ceiling(IMDBratingscount/100)) {
       Rated.Date= link %>% html_nodes(.,'div.ipl-rating-widget + p') %>% html_text(.)
     )
   IMDBratings <- rbind(IMDBratings, page)
-  
-  IMDBnextlink <- paste0("https://www.imdb.com",link %>% html_nodes(.,'#ratings-container > div.footer.filmosearch > div > div > a.flat-button.lister-page-next.next-page') %>% html_attr("href"))
+  nextlink <- paste0("https://www.imdb.com",link %>% html_nodes(.,'#ratings-container > div.footer.filmosearch > div > div > a.flat-button.lister-page-next.next-page') %>% html_attr("href"))
 } 
 
+## Streaming Availability
+
+Streaming.Films <- 
+  rbind(
+    Films.on.HBOMax %>% mutate(Service = "HBOMax"), 
+    Films.on.Netflix %>% mutate(Service = "Netflix")) %>%
+  rbind(., 
+    Films.on.Prime %>% mutate(Service = "Amazon Prime")) %>%
+  mutate(Type = "Feature Film") %>%
+  spread(Service, Service)
+Streaming.Docs <- 
+  rbind(
+    Docs.on.HBOMax %>% mutate(Service = "HBOMax"), 
+    Docs.on.Netflix %>% mutate(Service = "Netflix")) %>%
+  rbind(., 
+    Docs.on.Prime %>% mutate(Service = "Amazon Prime")) %>%
+  mutate(Type = "Documentary") %>%
+  spread(Service, Service)
+Streaming.Available <- 
+  rbind(Streaming.Docs, Streaming.Films)
+
 ## combine IMDBlists with IMDBratings
+
 IMDBcombinedNYT1000 <- 
-  left_join(IMDBlist, IMDBratings %>% select(IMDBid, Rating, Rated.Date), by="IMDBid") %>%
+  left_join(IMDBnyt1000, IMDBratings %>% select(IMDBid, Rating, Rated.Date), by="IMDBid") %>%
   mutate(Seen = ifelse(is.na(Rating), "No", "Yes")) %>%
-  left_join(., Prime.Available %>% select(IMDBid, Type) %>% mutate(Prime = "Y"), by="IMDBid") %T>%
+  left_join(., Streaming.Available, by="IMDBid") %T>%
   write.csv(.,"NYT1000/NYT1000Data.csv", row.names = FALSE)
+  
 IMDBcombinedOscars <- 
   left_join(IMDBoscars, IMDBratings %>% select(IMDBid, Rating, Rated.Date), by="IMDBid") %>%
   mutate(Seen = ifelse(is.na(Rating), "No", "Yes")) %>%
-  left_join(., Prime.Available %>% select(IMDBid, Type) %>% mutate(Prime = "Y"), by="IMDBid") %T>%
+  left_join(., Streaming.Available, by="IMDBid") %T>%
   write.csv(.,"Oscars/OscarsData.csv", row.names = FALSE)
 
 ## Oscar Data for CSV
-IMDBcombinedOscars %>% 
-mutate(Decade = floor(as.numeric(ItemYear)/10)*10) %>%
-filter(ItemYear != "2021") %>%
-group_by(ItemYear = as.numeric(ItemYear)) %>% 
-summarize(
-  Y = n_distinct(IMDBid[Seen == "Yes"]),
-  N = n_distinct(IMDBid[Seen == "No"])) %>%
-select(ItemYear, Y, N) %>%
-write.csv(.,"Oscars/OscarsSummary.csv", row.names = FALSE)
-
-## NYT-1000 Data for CSV
-NYT1000 <- IMDBcombinedNYT1000 %>% 
+  IMDBcombinedOscars %>% 
+  #mutate(Decade = floor(as.numeric(ItemYear)/10)*10) %>%
+  filter(ItemYear != "2021") %>%
   group_by(ItemYear = as.numeric(ItemYear)) %>% 
   summarize(
     Y = n_distinct(IMDBid[Seen == "Yes"]),
     N = n_distinct(IMDBid[Seen == "No"])) %>%
-  select(ItemYear, Y, N) %T>%
+  select(ItemYear, Y, N) %>%
+  write.csv(.,"Oscars/OscarsSummary.csv", row.names = FALSE)
+
+## NYT-1000 Data for CSV
+  IMDBcombinedNYT1000 %>% 
+  group_by(ItemYear = as.numeric(ItemYear)) %>% 
+  summarize(
+    Y = n_distinct(IMDBid[Seen == "Yes"]),
+    N = n_distinct(IMDBid[Seen == "No"])) %>%
+  select(ItemYear, Y, N) %>%
   write.csv(.,"NYT1000/NYT1000Summary.csv", row.names = FALSE)
 
-rm(i, page, link, IMDBnextlink, required)
+rm(i, page, link, nextlink, required, count)
