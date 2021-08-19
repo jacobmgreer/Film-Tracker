@@ -9,3 +9,5 @@ Oscars/.DS_Store
 Oscars/.DS_Store
 .DS_Store
 *.tsv
+image.R
+OMDBpull.R
