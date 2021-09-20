@@ -25,19 +25,13 @@ for (i in 1:ceiling(count/100)) {
 ## Streaming Availability
 
 Streaming.Films <- 
-  rbind(
-    Films.on.HBOMax %>% mutate(Service = "HBOMax"), 
-    Films.on.Netflix %>% mutate(Service = "Netflix")) %>%
-  rbind(., 
-    Films.on.Prime %>% mutate(Service = "Amazon Prime")) %>%
+  Films.on.Prime %>% 
+  mutate(Service = "Amazon Prime") %>%
   mutate(Type = "Feature Film") %>%
   spread(Service, Service)
 Streaming.Docs <- 
-  rbind(
-    Docs.on.HBOMax %>% mutate(Service = "HBOMax"), 
-    Docs.on.Netflix %>% mutate(Service = "Netflix")) %>%
-  rbind(., 
-    Docs.on.Prime %>% mutate(Service = "Amazon Prime")) %>%
+  Docs.on.Prime %>% 
+  mutate(Service = "Amazon Prime") %>%
   mutate(Type = "Documentary") %>%
   spread(Service, Service)
 Streaming.Available <- 
