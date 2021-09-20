@@ -103,7 +103,7 @@ layout: circularstackedbarplot
 
   d3.csv('https://jacobmgreer.github.io/IMDB-Tracker/Oscars/OscarsData.csv',function (data) {
     var data = data.filter(element => element.Prime === "Prime")
-    var columns = ['ItemTitle','IMDBid','ItemYear','ItemRuntime','Seen']
+    var columns = ['ItemTitle','ItemYear','ItemRuntime','Seen']
     tabulate('.table-prime',data,columns)
   })
   </script>
