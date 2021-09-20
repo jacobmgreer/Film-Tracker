@@ -92,8 +92,10 @@ layout: circularstackedbarplot
         })
       .enter()
       .append('td')
-      .text(function (d) { 
-      	if (d.column === "ItemTitle") {return d.link + d.value}
+      .html(function (d) { 
+      	if (d.column === "ItemTitle") {
+        	return "<a href=\"https://www.imdb.com/title/" + d.link + "\">" + d.value + "</a>"
+        }
         else {return d.value}})
       
     return table;
