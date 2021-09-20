@@ -1,0 +1,365 @@
+"ItemTitle","IMDBid","ItemYear","ItemRuntime","Rating","Rated.Date","Decade","Seen","Type","Prime"
+"The Ballad of Narayama","tt0051980","1958","98 min",NA,NA,"1950s","No",NA,NA
+"Veronika Voss","tt0084654","1982","104 min",NA,NA,"1980s","No",NA,NA
+"Monsieur Hire","tt0097904","1989","81 min",NA,NA,"1980s","No",NA,NA
+"The Spirit of the Beehive","tt0070040","1973","98 min",NA,NA,"1970s","No",NA,NA
+"Mulholland Dr.","tt0166924","2001","147 min","7","Rated on 09 Jul 2021","2000s","Yes",NA,NA
+"The Life of Oharu","tt0045112","1952","133 min",NA,NA,"1950s","No",NA,NA
+"Cléo from 5 to 7","tt0055852","1962","90 min",NA,NA,"1960s","No",NA,NA
+"Spirited Away","tt0245429","2001","125 min","8","Rated on 09 Jul 2021","2000s","Yes",NA,NA
+"The Pledge","tt0237572","2001","124 min",NA,NA,"2000s","No",NA,NA
+"French Cancan","tt0046998","1955","102 min",NA,NA,"1950s","No",NA,NA
+"The Collector","tt0061495","1967","89 min",NA,NA,"1960s","No",NA,NA
+"La Cérémonie","tt0112769","1995","112 min",NA,NA,"1990s","No",NA,NA
+"Diary of a Lost Girl","tt0020475","1929","79 min",NA,NA,"1920s","No",NA,NA
+"Hara-Kiri","tt0056058","1962","133 min",NA,NA,"1960s","No",NA,NA
+"Smiles of a Summer Night","tt0048641","1955","109 min",NA,NA,"1950s","No",NA,NA
+"Ivan the Terrible, Part I","tt0037824","1944","95 min",NA,NA,"1940s","No",NA,NA
+"Ivan the Terrible, Part II","tt0051790","1958","88 min",NA,NA,"1950s","No",NA,NA
+"The Killing","tt0049406","1956","84 min",NA,NA,"1950s","No","Feature Film","Prime"
+"The Man Who Shot Liberty Valance","tt0056217","1962","123 min",NA,NA,"1960s","No",NA,NA
+"Contact","tt0118884","1997","150 min","9","Rated on 14 Jul 2021","1990s","Yes",NA,NA
+"Departures","tt1069238","2008","130 min",NA,NA,"2000s","No",NA,NA
+"A Man Escaped","tt0049902","1956","101 min",NA,NA,"1950s","No",NA,NA
+"Shadow of a Doubt","tt0036342","1943","108 min","7","Rated on 09 Jul 2021","1940s","Yes",NA,NA
+"Nosferatu the Vampyre","tt0079641","1979","107 min",NA,NA,"1970s","No",NA,NA
+"The Match Factory Girl","tt0098532","1990","69 min",NA,NA,"1990s","No",NA,NA
+"Stagecoach","tt0031971","1939","96 min",NA,NA,"1930s","No","Feature Film","Prime"
+"Se7en","tt0114369","1995","127 min","6","Rated on 09 Jul 2021","1990s","Yes",NA,NA
+"A.I. Artificial Intelligence","tt0212720","2001","146 min","4","Rated on 09 Jul 2021","2000s","Yes",NA,NA
+"Badlands","tt0069762","1973","94 min",NA,NA,"1970s","No",NA,NA
+"An Autumn Afternoon","tt0056444","1962","113 min",NA,NA,"1960s","No",NA,NA
+"Pale Flower","tt0056327","1964","96 min",NA,NA,"1960s","No",NA,NA
+"Diary of a Country Priest","tt0042619","1951","95 min",NA,NA,"1950s","No",NA,NA
+"Heart of Glass","tt0074626","1976","94 min",NA,NA,"1970s","No",NA,NA
+"Senso","tt0047469","1954","123 min",NA,NA,"1950s","No",NA,NA
+"Shoah","tt0090015","1985","566 min",NA,NA,"1980s","No",NA,NA
+"Superman","tt0078346","1978","143 min","6","Rated on 14 Jul 2021","1970s","Yes",NA,NA
+"Red Beard","tt0058888","1965","185 min",NA,NA,"1960s","No",NA,NA
+"The Circus","tt0018773","1928","72 min",NA,NA,"1920s","No",NA,NA
+"Lost in Translation","tt0335266","2003","102 min","6","Rated on 09 Jul 2021","2000s","Yes",NA,NA
+"Mystery Train","tt0097940","1989","110 min",NA,NA,"1980s","No",NA,NA
+"The Only Son","tt0027752","1936","87 min",NA,NA,"1930s","No",NA,NA
+"Come and See","tt0091251","1985","142 min",NA,NA,"1980s","No",NA,NA
+"Metropolis","tt0017136","1927","153 min","10","Rated on 11 Jul 2021","1920s","Yes",NA,NA
+"Viridiana","tt0055601","1961","90 min",NA,NA,"1960s","No",NA,NA
+"The Big Lebowski","tt0118715","1998","117 min",NA,NA,"1990s","No",NA,NA
+"Pink Floyd: The Wall","tt0084503","1982","95 min",NA,NA,"1980s","No",NA,NA
+"Make Way for Tomorrow","tt0029192","1937","91 min",NA,NA,"1930s","No",NA,NA
+"The Hairdresser's Husband","tt0100112","1990","82 min",NA,NA,"1990s","No",NA,NA
+"Caché (Hidden)","tt0387898","2005","117 min",NA,NA,"2000s","No",NA,NA
+"Eternal Sunshine of the Spotless Mind","tt0338013","2004","108 min","5","Rated on 09 Jul 2021","2000s","Yes",NA,NA
+"25th Hour","tt0307901","2002","135 min",NA,NA,"2000s","No",NA,NA
+"The Red Shoes","tt0040725","1948","135 min",NA,NA,"1940s","No",NA,NA
+"My American Uncle","tt0081176","1980","125 min",NA,NA,"1980s","No",NA,NA
+"Léon Morin, Priest","tt0055082","1961","117 min",NA,NA,"1960s","No",NA,NA
+"Richard III","tt0114279","1995","110 min",NA,NA,"1990s","No",NA,NA
+"The Grey Zone","tt0252480","2001","108 min",NA,NA,"2000s","No","Feature Film","Prime"
+"Barry Lyndon","tt0072684","1975","185 min","7","Rated on 09 Jul 2021","1970s","Yes",NA,NA
+"Spring, Summer, Fall, Winter... and Spring","tt0374546","2003","103 min",NA,NA,"2000s","No",NA,NA
+"In a Lonely Place","tt0042593","1950","94 min",NA,NA,"1950s","No","Feature Film","Prime"
+"Souls for Sale","tt0014497","1923","90 min",NA,NA,"1920s","No",NA,NA
+"Rio Bravo","tt0053221","1959","141 min",NA,NA,"1950s","No",NA,NA
+"Man with a Movie Camera","tt0019760","1929","68 min",NA,NA,"1920s","No",NA,NA
+"Tender Mercies","tt0086423","1983","92 min",NA,NA,"1980s","No",NA,NA
+"The Cabinet of Dr. Caligari","tt0010323","1920","67 min","9","Rated on 11 Jul 2021","1920s","Yes",NA,NA
+"The Thief of Bagdad","tt0033152","1940","106 min",NA,NA,"1940s","No",NA,NA
+"Chop Shop","tt0990404","2007","84 min",NA,NA,"2000s","No",NA,NA
+"The Beautiful Troublemaker","tt0101428","1991","238 min",NA,NA,"1990s","No",NA,NA
+"Withnail & I","tt0094336","1987","107 min",NA,NA,"1980s","No",NA,NA
+"Exotica","tt0109759","1994","103 min",NA,NA,"1990s","No",NA,NA
+"The Double Life of Véronique","tt0101765","1991","98 min",NA,NA,"1990s","No",NA,NA
+"Waking Life","tt0243017","2001","99 min",NA,NA,"2000s","No",NA,NA
+"Secrets & Lies","tt0117589","1996","136 min",NA,NA,"1990s","No",NA,NA
+"After Hours","tt0088680","1985","97 min",NA,NA,"1980s","No",NA,NA
+"Mon Oncle Antoine","tt0067439","1971","104 min",NA,NA,"1970s","No",NA,NA
+"The Silence","tt0057611","1963","96 min",NA,NA,"1960s","No",NA,NA
+"Magnolia","tt0175880","1999","188 min",NA,NA,"1990s","No",NA,NA
+"A Prairie Home Companion","tt0420087","2006","105 min",NA,NA,"2000s","No",NA,NA
+"The Last Temptation of Christ","tt0095497","1988","164 min",NA,NA,"1980s","No",NA,NA
+"Baraka","tt0103767","1992","96 min",NA,NA,"1990s","No",NA,NA
+"The Godfather: Part II","tt0071562","1974","202 min","9","Rated on 09 Jul 2021","1970s","Yes",NA,NA
+"Adaptation.","tt0268126","2002","115 min","5","Rated on 09 Jul 2021","2000s","Yes",NA,NA
+"L.A. Confidential","tt0119488","1997","138 min",NA,NA,"1990s","No","Feature Film","Prime"
+"Mephisto","tt0082736","1981","144 min",NA,NA,"1980s","No",NA,NA
+"Dog Day Afternoon","tt0072890","1975","125 min",NA,NA,"1970s","No",NA,NA
+"Through a Glass Darkly","tt0055499","1961","90 min",NA,NA,"1960s","No",NA,NA
+"Cool Hand Luke","tt0061512","1967","127 min","7","Rated on 09 Jul 2021","1960s","Yes",NA,NA
+"The Triumph of the Will","tt0025913","1935","110 min",NA,NA,"1930s","No",NA,NA
+"Rocco and His Brothers","tt0054248","1960","179 min",NA,NA,"1960s","No",NA,NA
+"My Man Godfrey","tt0028010","1936","94 min",NA,NA,"1930s","No","Feature Film","Prime"
+"Johnny Guitar","tt0047136","1954","110 min",NA,NA,"1950s","No","Feature Film","Prime"
+"Ordet","tt0048452","1955","126 min",NA,NA,"1950s","No",NA,NA
+"Diva","tt0082269","1981","117 min",NA,NA,"1980s","No",NA,NA
+"Vengeance Is Mine","tt0079182","1979","139 min",NA,NA,"1970s","No",NA,NA
+"What Ever Happened to Baby Jane?","tt0056687","1962","134 min","9","Rated on 09 Jul 2021","1960s","Yes",NA,NA
+"The Best Years of Our Lives","tt0036868","1946","170 min",NA,NA,"1940s","No",NA,NA
+"Mishima: A Life in Four Chapters","tt0089603","1985","120 min",NA,NA,"1980s","No",NA,NA
+"Winter Light","tt0057358","1963","81 min",NA,NA,"1960s","No",NA,NA
+"The Enigma of Kaspar Hauser","tt0071691","1974","110 min",NA,NA,"1970s","No",NA,NA
+"Blade Runner","tt0083658","1982","117 min","9","Rated on 14 Jul 2021","1980s","Yes",NA,NA
+"Sansho the Bailiff","tt0047445","1954","124 min",NA,NA,"1950s","No",NA,NA
+"El Topo","tt0067866","1970","125 min",NA,NA,"1970s","No",NA,NA
+"Babel","tt0449467","2006","143 min","6","Rated on 09 Jul 2021","2000s","Yes",NA,NA
+"The Great Dictator","tt0032553","1940","125 min",NA,NA,"1940s","No",NA,NA
+"Werckmeister Harmonies","tt0249241","2000","145 min",NA,NA,"2000s","No",NA,NA
+"Pan's Labyrinth","tt0457430","2006","118 min","9","Rated on 09 Jul 2021","2000s","Yes",NA,NA
+"Ace in the Hole","tt0043338","1951","111 min",NA,NA,"1950s","No","Feature Film","Prime"
+"Killer of Sheep","tt0076263","1978","80 min",NA,NA,"1970s","No",NA,NA
+"WR: Mysteries of the Organism","tt0067958","1971","84 min",NA,NA,"1970s","No",NA,NA
+"Moolaadé","tt0416991","2004","124 min",NA,NA,"2000s","No",NA,NA
+"Cabiria","tt0003740","1914","148 min",NA,NA,"1910s","No",NA,NA
+"The Shining","tt0081505","1980","146 min","9","Rated on 09 Jul 2021","1980s","Yes",NA,NA
+"Chimes at Midnight","tt0059012","1965","115 min",NA,NA,"1960s","No",NA,NA
+"Army of Shadows","tt0064040","1969","145 min",NA,NA,"1960s","No",NA,NA
+"Au Revoir les Enfants","tt0092593","1987","104 min",NA,NA,"1980s","No",NA,NA
+"The Long Goodbye","tt0070334","1973","112 min",NA,NA,"1970s","No",NA,NA
+"Ripley's Game","tt0265651","2002","110 min",NA,NA,"2000s","No",NA,NA
+"Night Moves","tt0073453","1975","100 min",NA,NA,"1970s","No",NA,NA
+"Cat People","tt0034587","1942","73 min","8","Rated on 11 Jul 2021","1940s","Yes",NA,NA
+"Samurai Rebellion","tt0061847","1967","128 min",NA,NA,"1960s","No",NA,NA
+"The River","tt0043972","1951","99 min",NA,NA,"1950s","No",NA,NA
+"Inherit the Wind","tt0053946","1960","128 min",NA,NA,"1960s","No","Feature Film","Prime"
+"My Fair Lady","tt0058385","1964","170 min","7","Rated on 10 Aug 2021","1960s","Yes",NA,NA
+"Forbidden Games","tt0043686","1952","86 min",NA,NA,"1950s","No",NA,NA
+"Atlantic City","tt0080388","1980","104 min",NA,NA,"1980s","No",NA,NA
+"Dark City","tt0118929","1998","100 min",NA,NA,"1990s","No",NA,NA
+"Crumb","tt0109508","1994","119 min",NA,NA,"1990s","No",NA,NA
+"Top Hat","tt0027125","1935","101 min","6","Rated on 09 Jul 2021","1930s","Yes",NA,NA
+"The Dead","tt0092843","1987","83 min",NA,NA,"1980s","No","Feature Film","Prime"
+"Nanook of the North","tt0013427","1922","78 min","7","Rated on 17 Sep 2021","1920s","Yes",NA,NA
+"Crimes and Misdemeanors","tt0097123","1989","104 min",NA,NA,"1980s","No",NA,NA
+"Fitzcarraldo","tt0083946","1982","158 min",NA,NA,"1980s","No",NA,NA
+"The Age of Innocence","tt0106226","1993","139 min",NA,NA,"1990s","No",NA,NA
+"Leolo","tt0104782","1992","107 min",NA,NA,"1990s","No",NA,NA
+"The Terrorist","tt0169302","1998","95 min",NA,NA,"1990s","No",NA,NA
+"Safety Last!","tt0014429","1923","74 min",NA,NA,"1920s","No",NA,NA
+"Woodstock","tt0066580","1970","184 min",NA,NA,"1970s","No",NA,NA
+"Rebel Without a Cause","tt0048545","1955","111 min","8","Rated on 09 Jul 2021","1950s","Yes",NA,NA
+"Howards End","tt0104454","1992","142 min",NA,NA,"1990s","No",NA,NA
+"Faust","tt0016847","1926","107 min","6","Rated on 11 Jul 2021","1920s","Yes",NA,NA
+"The Marriage of Maria Braun","tt0079095","1979","120 min",NA,NA,"1970s","No",NA,NA
+"Yojimbo","tt0055630","1961","110 min",NA,NA,"1960s","No",NA,NA
+"The Band Wagon","tt0045537","1953","112 min",NA,NA,"1950s","No",NA,NA
+"After Dark, My Sweet","tt0098994","1990","114 min",NA,NA,"1990s","No",NA,NA
+"Paths of Glory","tt0050825","1957","88 min",NA,NA,"1950s","No",NA,NA
+"Late Spring","tt0041154","1949","108 min",NA,NA,"1940s","No",NA,NA
+"Groundhog Day","tt0107048","1993","101 min","7","Rated on 15 Jul 2021","1990s","Yes",NA,NA
+"The Scarlet Empress","tt0025746","1934","104 min",NA,NA,"1930s","No",NA,NA
+"The Phantom of the Opera","tt0016220","1925","93 min",NA,NA,"1920s","No","Feature Film","Prime"
+"Fanny and Alexander","tt0083922","1982","188 min",NA,NA,"1980s","No",NA,NA
+"The Big Red One","tt0080437","1980","113 min",NA,NA,"1980s","No",NA,NA
+"A Woman's Tale","tt0103282","1991","93 min",NA,NA,"1990s","No",NA,NA
+"The Battle of Algiers","tt0058946","1966","121 min",NA,NA,"1960s","No",NA,NA
+"Easy Rider","tt0064276","1969","95 min",NA,NA,"1960s","No",NA,NA
+"Three Women","tt0075612","1977","124 min",NA,NA,"1970s","No",NA,NA
+"Playtime","tt0062136","1967","155 min",NA,NA,"1960s","No",NA,NA
+"Pixote","tt0082912","1980","128 min",NA,NA,"1980s","No",NA,NA
+"Last Tango in Paris","tt0070849","1972","129 min",NA,NA,"1970s","No",NA,NA
+"El Norte","tt0085482","1983","141 min",NA,NA,"1980s","No",NA,NA
+"Out of the Past","tt0039689","1947","97 min",NA,NA,"1940s","No",NA,NA
+"The Last Picture Show","tt0067328","1971","118 min",NA,NA,"1970s","No",NA,NA
+"Jules and Jim","tt0055032","1962","105 min",NA,NA,"1960s","No",NA,NA
+"The Big Heat","tt0045555","1953","89 min",NA,NA,"1950s","No",NA,NA
+"Leaving Las Vegas","tt0113627","1995","111 min",NA,NA,"1990s","No","Feature Film","Prime"
+"Victim","tt0055597","1961","90 min",NA,NA,"1960s","No",NA,NA
+"Ugetsu","tt0046478","1953","96 min",NA,NA,"1950s","No",NA,NA
+"Sunrise","tt0018455","1927","94 min",NA,NA,"1920s","No",NA,NA
+"Au Hasard Balthazar","tt0060138","1966","95 min",NA,NA,"1960s","No",NA,NA
+"The Color Purple","tt0088939","1985","154 min",NA,NA,"1980s","No",NA,NA
+"The Gospel According to St. Matthew","tt0058715","1964","137 min",NA,NA,"1960s","No","Feature Film","Prime"
+"The Rules of the Game","tt0031885","1939","110 min",NA,NA,"1930s","No",NA,NA
+"West Side Story","tt0055614","1961","153 min","7","Rated on 09 Jul 2021","1960s","Yes",NA,NA
+"Touchez Pas au Grisbi","tt0046451","1954","83 min",NA,NA,"1950s","No",NA,NA
+"The Man Who Laughs","tt0019130","1928","110 min",NA,NA,"1920s","No",NA,NA
+"Amarcord","tt0071129","1973","123 min","8","Rated on 11 Jul 2021","1970s","Yes",NA,NA
+"Mean Streets","tt0070379","1973","112 min",NA,NA,"1970s","No",NA,NA
+"Strangers on a Train","tt0044079","1951","101 min",NA,NA,"1950s","No",NA,NA
+"Taxi Driver","tt0075314","1976","114 min","9","Rated on 09 Jul 2021","1970s","Yes",NA,NA
+"The Manchurian Candidate","tt0056218","1962","126 min",NA,NA,"1960s","No",NA,NA
+"Le Boucher","tt0064106","1970","93 min",NA,NA,"1970s","No",NA,NA
+"Tokyo Story","tt0046438","1953","136 min",NA,NA,"1950s","No","Feature Film","Prime"
+"Alien","tt0078748","1979","117 min","9","Rated on 09 Jul 2021","1970s","Yes",NA,NA
+"The Treasure of the Sierra Madre","tt0040897","1948","126 min",NA,NA,"1940s","No",NA,NA
+"Scarface","tt0086250","1983","170 min",NA,NA,"1980s","No",NA,NA
+"The Leopard","tt0057091","1963","186 min",NA,NA,"1960s","No",NA,NA
+"Santa Sangre","tt0098253","1989","123 min",NA,NA,"1980s","No",NA,NA
+"The Adventures of Robin Hood","tt0029843","1938","102 min",NA,NA,"1930s","No",NA,NA
+"The Good, the Bad and the Ugly","tt0060196","1966","178 min",NA,NA,"1960s","No",NA,NA
+"A Year of the Quiet Sun","tt0088009","1984","106 min",NA,NA,"1980s","No",NA,NA
+"Breathless","tt0053472","1960","90 min",NA,NA,"1960s","No",NA,NA
+"Moonstruck","tt0093565","1987","102 min","8","Rated on 09 Jul 2021","1980s","Yes",NA,NA
+"Mon Oncle","tt0050706","1958","116 min","7","Rated on 14 Jul 2021","1950s","Yes",NA,NA
+"Bob le Flambeur","tt0047892","1956","98 min",NA,NA,"1950s","No",NA,NA
+"A Sunday in the Country","tt0088318","1984","90 min",NA,NA,"1980s","No",NA,NA
+"Raise the Red Lantern","tt0101640","1991","125 min",NA,NA,"1990s","No","Feature Film","Prime"
+"The Birth of a Nation","tt0004972","1915","195 min",NA,NA,"1910s","No",NA,NA
+"Five Easy Pieces","tt0065724","1970","98 min",NA,NA,"1970s","No",NA,NA
+"One Flew Over the Cuckoo's Nest","tt0073486","1975","133 min",NA,NA,"1970s","No",NA,NA
+"Three Colors: Blue","tt0108394","1993","94 min",NA,NA,"1990s","No",NA,NA
+"Lan feng zheng","tt0107358","1993","140 min",NA,NA,"1990s","No",NA,NA
+"Solaris","tt0069293","1972","167 min","9","Rated on 14 Jul 2021","1970s","Yes",NA,NA
+"The Thin Man","tt0025878","1934","91 min","7","Rated on 09 Jul 2021","1930s","Yes",NA,NA
+"Paris, Texas","tt0087884","1984","145 min",NA,NA,"1980s","No",NA,NA
+"Goodfellas","tt0099685","1990","146 min","9","Rated on 07 Aug 2021","1990s","Yes",NA,NA
+"The Life and Death of Colonel Blimp","tt0036112","1943","163 min",NA,NA,"1940s","No",NA,NA
+"Don't Look Now","tt0069995","1973","110 min",NA,NA,"1970s","No",NA,NA
+"12 Angry Men","tt0050083","1957","96 min","9","Rated on 09 Jul 2021","1950s","Yes",NA,NA
+"The Wild Bunch","tt0065214","1969","135 min",NA,NA,"1960s","No",NA,NA
+"Kind Hearts and Coronets","tt0041546","1949","106 min",NA,NA,"1940s","No",NA,NA
+"Rififi","tt0048021","1955","118 min",NA,NA,"1950s","No",NA,NA
+"Cries & Whispers","tt0069467","1972","91 min",NA,NA,"1970s","No",NA,NA
+"Unforgiven","tt0105695","1992","130 min",NA,NA,"1990s","No",NA,NA
+"The Firemen's Ball","tt0061781","1967","73 min",NA,NA,"1960s","No",NA,NA
+"Stroszek","tt0075276","1977","115 min",NA,NA,"1970s","No",NA,NA
+"The Hustler","tt0054997","1961","134 min","6","Rated on 19 Sep 2021","1960s","Yes",NA,NA
+"In Cold Blood","tt0061809","1967","134 min",NA,NA,"1960s","No",NA,NA
+"JFK","tt0102138","1991","189 min",NA,NA,"1990s","No",NA,NA
+"Annie Hall","tt0075686","1977","93 min",NA,NA,"1970s","No","Feature Film","Prime"
+"Rashomon","tt0042876","1950","88 min",NA,NA,"1950s","No",NA,NA
+"The Grapes of Wrath","tt0032551","1940","129 min",NA,NA,"1940s","No",NA,NA
+"Umberto D.","tt0045274","1952","89 min",NA,NA,"1950s","No",NA,NA
+"Amadeus","tt0086879","1984","160 min","8","Rated on 09 Jul 2021","1980s","Yes",NA,NA
+"Patton","tt0066206","1970","172 min",NA,NA,"1970s","No","Feature Film","Prime"
+"The Right Stuff","tt0086197","1983","193 min","8","Rated on 09 Jul 2021","1980s","Yes",NA,NA
+"The Fall of the House of Usher","tt0018770","1928","63 min","8","Rated on 09 Jul 2021","1920s","Yes",NA,NA
+"Say Anything","tt0098258","1989","100 min","6","Rated on 09 Jul 2021","1980s","Yes",NA,NA
+"King Kong","tt0024216","1933","100 min","8","Rated on 09 Jul 2021","1930s","Yes",NA,NA
+"Laura","tt0037008","1944","88 min","8","Rated on 09 Jul 2021","1940s","Yes",NA,NA
+"Children of Paradise","tt0037674","1945","189 min",NA,NA,"1940s","No",NA,NA
+"My Neighbor Totoro","tt0096283","1988","86 min","8","Rated on 17 Sep 2021","1980s","Yes",NA,NA
+"A Tale of Winter","tt0104008","1992","114 min",NA,NA,"1990s","No",NA,NA
+"The Searchers","tt0049730","1956","119 min",NA,NA,"1950s","No",NA,NA
+"The Earrings of Madame De...","tt0046022","1953","105 min",NA,NA,"1950s","No",NA,NA
+"Bring Me the Head of Alfredo Garcia","tt0071249","1974","112 min",NA,NA,"1970s","No",NA,NA
+"Snow White and the Seven Dwarfs","tt0029583","1937","83 min","7","Rated on 09 Jul 2021","1930s","Yes",NA,NA
+"Lawrence of Arabia","tt0056172","1962","228 min","9","Rated on 09 Jul 2021","1960s","Yes",NA,NA
+"Seven Samurai","tt0047478","1954","207 min",NA,NA,"1950s","No",NA,NA
+"Juliet of the Spirits","tt0059229","1965","137 min",NA,NA,"1960s","No",NA,NA
+"Hoop Dreams","tt0110057","1994","170 min",NA,NA,"1990s","No",NA,NA
+"The Apartment","tt0053604","1960","125 min","8","Rated on 09 Jul 2021","1960s","Yes","Feature Film","Prime"
+"Do the Right Thing","tt0097216","1989","120 min",NA,NA,"1980s","No","Feature Film","Prime"
+"Pulp Fiction","tt0110912","1994","154 min","8","Rated on 09 Jul 2021","1990s","Yes",NA,NA
+"Schindler's List","tt0108052","1993","195 min","8","Rated on 09 Jul 2021","1990s","Yes",NA,NA
+"Vivre Sa Vie","tt0056663","1962","85 min",NA,NA,"1960s","No",NA,NA
+"Fargo","tt0116282","1996","98 min","8","Rated on 11 Jul 2021","1990s","Yes",NA,NA
+"The Maltese Falcon","tt0033870","1941","100 min","8","Rated on 09 Jul 2021","1940s","Yes",NA,NA
+"Manhattan","tt0079522","1979","96 min",NA,NA,"1970s","No",NA,NA
+"The Silence of the Lambs","tt0102926","1991","118 min","9","Rated on 09 Jul 2021","1990s","Yes",NA,NA
+"Pather Panchali","tt0048473","1955","125 min",NA,NA,"1950s","No",NA,NA
+"Aparajito","tt0048956","1956","110 min",NA,NA,"1950s","No","Feature Film","Prime"
+"The World of Apu","tt0052572","1959","105 min",NA,NA,"1950s","No",NA,NA
+"The Conversation","tt0071360","1974","113 min",NA,NA,"1970s","No",NA,NA
+"This Is Spinal Tap","tt0088258","1984","82 min",NA,NA,"1980s","No",NA,NA
+"Persona","tt0060827","1966","83 min",NA,NA,"1960s","No",NA,NA
+"A Christmas Story","tt0085334","1983","93 min","6","Rated on 14 Jul 2021","1980s","Yes",NA,NA
+"The Bank Dick","tt0032234","1940","72 min",NA,NA,"1940s","No",NA,NA
+"Beat the Devil","tt0046414","1953","89 min",NA,NA,"1950s","No","Feature Film","Prime"
+"L'Atalante","tt0024844","1934","89 min",NA,NA,"1930s","No",NA,NA
+"Network","tt0074958","1976","121 min",NA,NA,"1970s","No",NA,NA
+"Planes, Trains & Automobiles","tt0093748","1987","93 min","6","Rated on 14 Jul 2021","1980s","Yes",NA,NA
+"Ran","tt0089881","1985","162 min",NA,NA,"1980s","No",NA,NA
+"Romeo and Juliet","tt0063518","1968","138 min",NA,NA,"1960s","No","Feature Film","Prime"
+"Shane","tt0046303","1953","118 min",NA,NA,"1950s","No",NA,NA
+"The Producers","tt0063462","1967","88 min","7","Rated on 09 Jul 2021","1960s","Yes",NA,NA
+"Nashville","tt0073440","1975","160 min",NA,NA,"1970s","No",NA,NA
+"Jaws","tt0073195","1975","124 min","9","Rated on 09 Jul 2021","1970s","Yes",NA,NA
+"Duck Soup","tt0023969","1933","69 min",NA,NA,"1930s","No",NA,NA
+"The Discreet Charm of the Bourgeoisie","tt0068361","1972","102 min",NA,NA,"1970s","No","Feature Film","Prime"
+"All About Eve","tt0042192","1950","138 min",NA,NA,"1950s","No",NA,NA
+"8½","tt0056801","1963","138 min",NA,NA,"1960s","No",NA,NA
+"Orpheus","tt0041719","1950","112 min",NA,NA,"1950s","No",NA,NA
+"Indiana Jones and the Raiders of the Lost Ark","tt0082971","1981","115 min","9","Rated on 09 Jul 2021","1980s","Yes",NA,NA
+"Un Chien Andalou","tt0020530","1929","16 min",NA,NA,"1920s","No",NA,NA
+"The Seventh Seal","tt0050976","1957","96 min",NA,NA,"1950s","No",NA,NA
+"Dekalog","tt0092337","1990","572 min",NA,NA,"1990s","No",NA,NA
+"Grave of the Fireflies","tt0095327","1988","89 min","9","Rated on 11 Jul 2021","1980s","Yes",NA,NA
+"The Last Laugh","tt0015064","1924","90 min",NA,NA,"1920s","No",NA,NA
+"Rear Window","tt0047396","1954","112 min","9","Rated on 09 Jul 2021","1950s","Yes",NA,NA
+"Broken Blossoms or the Yellow Man and the Girl","tt0009968","1919","90 min",NA,NA,"1910s","No","Feature Film","Prime"
+"Chinatown","tt0071315","1974","130 min",NA,NA,"1970s","No",NA,NA
+"Some Like It Hot","tt0053291","1959","121 min","8","Rated on 09 Jul 2021","1950s","Yes",NA,NA
+"Beauty and the Beast","tt0038348","1946","93 min",NA,NA,"1940s","No",NA,NA
+"Greed","tt0015881","1924","140 min",NA,NA,"1920s","No",NA,NA
+"Apocalypse Now","tt0078788","1979","147 min","9","Rated on 09 Jul 2021","1970s","Yes",NA,NA
+"The Shawshank Redemption","tt0111161","1994","142 min","8","Rated on 09 Jul 2021","1990s","Yes",NA,NA
+"House of Games","tt0093223","1987","102 min",NA,NA,"1980s","No",NA,NA
+"McCabe & Mrs. Miller","tt0067411","1971","120 min",NA,NA,"1970s","No",NA,NA
+"La Grande Illusion","tt0028950","1937","113 min",NA,NA,"1930s","No",NA,NA
+"Yellow Submarine","tt0063823","1968","85 min","6","Rated on 09 Jul 2021","1960s","Yes",NA,NA
+"Dracula","tt0021814","1931","75 min","8","Rated on 09 Jul 2021","1930s","Yes",NA,NA
+"Great Expectations","tt0038574","1946","118 min",NA,NA,"1940s","No","Feature Film","Prime"
+"The 400 Blows","tt0053198","1959","99 min",NA,NA,"1950s","No",NA,NA
+"Belle de Jour","tt0061395","1967","100 min",NA,NA,"1960s","No",NA,NA
+"Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb","tt0057012","1964","95 min","8","Rated on 19 Sep 2021","1960s","Yes",NA,NA
+"Star Wars: Episode IV - A New Hope","tt0076759","1977","121 min","8","Rated on 09 Jul 2021","1970s","Yes",NA,NA
+"Sunset Blvd.","tt0043014","1950","110 min","8","Rated on 09 Jul 2021","1950s","Yes","Feature Film","Prime"
+"My Dinner with Andre","tt0082783","1981","110 min",NA,NA,"1980s","No",NA,NA
+"Last Year at Marienbad","tt0054632","1961","94 min",NA,NA,"1960s","No",NA,NA
+"Peeping Tom","tt0054167","1960","101 min",NA,NA,"1960s","No","Feature Film","Prime"
+"The Bridge on the River Kwai","tt0050212","1957","161 min","7","Rated on 16 Sep 2021","1950s","Yes","Feature Film","Prime"
+"Aguirre, the Wrath of God","tt0068182","1972","95 min",NA,NA,"1970s","No",NA,NA
+"On the Waterfront","tt0047296","1954","108 min",NA,NA,"1950s","No","Feature Film","Prime"
+"Saturday Night Fever","tt0076666","1977","118 min","7","Rated on 09 Jul 2021","1970s","Yes",NA,NA
+"Bicycle Thieves","tt0040522","1948","89 min",NA,NA,"1940s","No",NA,NA
+"Singin' in the Rain","tt0045152","1952","103 min",NA,NA,"1950s","No",NA,NA
+"Goldfinger","tt0058150","1964","110 min","6","Rated on 09 Jul 2021","1960s","Yes",NA,NA
+"Jalsaghar","tt0051792","1958","95 min",NA,NA,"1950s","No",NA,NA
+"The Bride of Frankenstein","tt0026138","1935","75 min","9","Rated on 11 Jul 2021","1930s","Yes",NA,NA
+"It's a Wonderful Life","tt0038650","1946","130 min","8","Rated on 09 Jul 2021","1940s","Yes","Feature Film","Prime"
+"Double Indemnity","tt0036775","1944","107 min",NA,NA,"1940s","No",NA,NA
+"Psycho","tt0054215","1960","109 min","8","Rated on 09 Jul 2021","1960s","Yes",NA,NA
+"Pinocchio","tt0032910","1940","88 min","7","Rated on 09 Jul 2021","1940s","Yes",NA,NA
+"Blow-Up","tt0060176","1966","111 min",NA,NA,"1960s","No",NA,NA
+"Trouble in Paradise","tt0023622","1932","83 min",NA,NA,"1930s","No",NA,NA
+"Touch of Evil","tt0052311","1958","95 min",NA,NA,"1950s","No",NA,NA
+"Nights of Cabiria","tt0050783","1957","110 min",NA,NA,"1950s","No",NA,NA
+"Bonnie and Clyde","tt0061418","1967","111 min","8","Rated on 17 Sep 2021","1960s","Yes",NA,NA
+"Picnic at Hanging Rock","tt0073540","1975","115 min",NA,NA,"1970s","No",NA,NA
+"Battleship Potemkin","tt0015648","1925","66 min",NA,NA,"1920s","No",NA,NA
+"Yankee Doodle Dandy","tt0035575","1942","126 min",NA,NA,"1940s","No",NA,NA
+"Detour","tt0037638","1945","68 min",NA,NA,"1940s","No","Feature Film","Prime"
+"Gone with the Wind","tt0031381","1939","238 min",NA,NA,"1930s","No",NA,NA
+"Pandora's Box","tt0018737","1929","109 min",NA,NA,"1920s","No",NA,NA
+"Raging Bull","tt0081398","1980","129 min",NA,NA,"1980s","No","Feature Film","Prime"
+"Citizen Kane","tt0033467","1941","119 min","8","Rated on 09 Jul 2021","1940s","Yes",NA,NA
+"Swing Time","tt0028333","1936","103 min",NA,NA,"1930s","No",NA,NA
+"Wings of Desire","tt0093191","1987","128 min",NA,NA,"1980s","No",NA,NA
+"Red River","tt0040724","1948","133 min",NA,NA,"1940s","No","Feature Film","Prime"
+"Woman in the Dunes","tt0058625","1964","147 min",NA,NA,"1960s","No",NA,NA
+"Written on the Wind","tt0049966","1956","99 min",NA,NA,"1950s","No",NA,NA
+"A Woman Under the Influence","tt0072417","1974","155 min",NA,NA,"1970s","No",NA,NA
+"Day for Night","tt0070460","1973","116 min",NA,NA,"1970s","No",NA,NA
+"City Lights","tt0021749","1931","87 min",NA,NA,"1930s","No",NA,NA
+"Days of Heaven","tt0077405","1978","94 min",NA,NA,"1970s","No",NA,NA
+"The Lady Eve","tt0033804","1941","94 min","6","Rated on 09 Jul 2021","1940s","Yes",NA,NA
+"Gates of Heaven","tt0077598","1978","85 min",NA,NA,"1970s","No",NA,NA
+"My Darling Clementine","tt0038762","1946","97 min",NA,NA,"1940s","No",NA,NA
+"Sweet Smell of Success","tt0051036","1957","96 min",NA,NA,"1950s","No",NA,NA
+"Notorious","tt0038787","1946","102 min","7","Rated on 09 Jul 2021","1940s","Yes",NA,NA
+"Nosferatu","tt0013442","1922","94 min","8","Rated on 17 Sep 2021","1920s","Yes",NA,NA
+"Pickpocket","tt0053168","1959","76 min",NA,NA,"1950s","No",NA,NA
+"Body Heat","tt0082089","1981","113 min",NA,NA,"1980s","No",NA,NA
+"M","tt0022100","1931","99 min","9","Rated on 09 Jul 2021","1930s","Yes",NA,NA
+"The General","tt0017925","1926","67 min",NA,NA,"1920s","No","Feature Film","Prime"
+"Le Samouraï","tt0062229","1967","101 min",NA,NA,"1960s","No",NA,NA
+"The Big Sleep","tt0038355","1946","114 min","7","Rated on 09 Jul 2021","1940s","Yes",NA,NA
+"Being There","tt0078841","1979","130 min",NA,NA,"1970s","No",NA,NA
+"The Exterminating Angel","tt0056732","1962","95 min",NA,NA,"1960s","No",NA,NA
+"Ali: Fear Eats the Soul","tt0071141","1974","92 min",NA,NA,"1970s","No",NA,NA
+"Walkabout","tt0067959","1971","100 min",NA,NA,"1970s","No",NA,NA
+"Floating Weeds","tt0053390","1959","119 min",NA,NA,"1950s","No",NA,NA
+"2001: A Space Odyssey","tt0062622","1968","149 min","10","Rated on 09 Jul 2021","1960s","Yes",NA,NA
+"The Godfather","tt0068646","1972","175 min","8","Rated on 09 Jul 2021","1970s","Yes",NA,NA
+"The Passion of Joan of Arc","tt0019254","1928","114 min",NA,NA,"1920s","No",NA,NA
+"L'Avventura","tt0053619","1960","144 min",NA,NA,"1960s","No",NA,NA
+"The Sweet Life","tt0053779","1960","174 min",NA,NA,"1960s","No",NA,NA
+"The Wizard of Oz","tt0032138","1939","102 min","10","Rated on 09 Jul 2021","1930s","Yes",NA,NA
+"The Third Man","tt0041959","1949","93 min",NA,NA,"1940s","No",NA,NA
+"The Night of the Hunter","tt0048424","1955","92 min","9","Rated on 09 Jul 2021","1950s","Yes",NA,NA
+"Monsieur Hulot's Holiday","tt0046487","1953","83 min",NA,NA,"1950s","No",NA,NA
+"A Hard Day's Night","tt0058182","1964","87 min","8","Rated on 09 Jul 2021","1960s","Yes",NA,NA
+"Vertigo","tt0052357","1958","128 min","8","Rated on 09 Jul 2021","1950s","Yes",NA,NA
+"Ikiru","tt0044741","1952","143 min",NA,NA,"1950s","No",NA,NA
+"E.T. the Extra-Terrestrial","tt0083866","1982","115 min","8","Rated on 09 Jul 2021","1980s","Yes",NA,NA
+"Casablanca","tt0034583","1942","102 min","9","Rated on 09 Jul 2021","1940s","Yes",NA,NA

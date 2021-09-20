@@ -1,0 +1,101 @@
+"ItemTitle","IMDBid","ItemYear","ItemRuntime","Rating","Rated.Date","Decade","Seen","Type","Prime"
+"Citizen Kane","tt0033467","1941","119 min","8","Rated on 09 Jul 2021","1940s","Yes",NA,NA
+"Casablanca","tt0034583","1942","102 min","9","Rated on 09 Jul 2021","1940s","Yes",NA,NA
+"The Godfather","tt0068646","1972","175 min","8","Rated on 09 Jul 2021","1970s","Yes",NA,NA
+"Gone with the Wind","tt0031381","1939","238 min",NA,NA,"1930s","No",NA,NA
+"Lawrence of Arabia","tt0056172","1962","228 min","9","Rated on 09 Jul 2021","1960s","Yes",NA,NA
+"The Wizard of Oz","tt0032138","1939","102 min","10","Rated on 09 Jul 2021","1930s","Yes",NA,NA
+"The Graduate","tt0061722","1967","106 min","8","Rated on 09 Jul 2021","1960s","Yes",NA,NA
+"On the Waterfront","tt0047296","1954","108 min",NA,NA,"1950s","No","Feature Film","Prime"
+"Schindler's List","tt0108052","1993","195 min","8","Rated on 09 Jul 2021","1990s","Yes",NA,NA
+"Singin' in the Rain","tt0045152","1952","103 min",NA,NA,"1950s","No",NA,NA
+"It's a Wonderful Life","tt0038650","1946","130 min","8","Rated on 09 Jul 2021","1940s","Yes","Feature Film","Prime"
+"Sunset Blvd.","tt0043014","1950","110 min","8","Rated on 09 Jul 2021","1950s","Yes","Feature Film","Prime"
+"The Bridge on the River Kwai","tt0050212","1957","161 min","7","Rated on 16 Sep 2021","1950s","Yes","Feature Film","Prime"
+"Some Like It Hot","tt0053291","1959","121 min","8","Rated on 09 Jul 2021","1950s","Yes",NA,NA
+"Star Wars: Episode IV - A New Hope","tt0076759","1977","121 min","8","Rated on 09 Jul 2021","1970s","Yes",NA,NA
+"All About Eve","tt0042192","1950","138 min",NA,NA,"1950s","No",NA,NA
+"The African Queen","tt0043265","1951","105 min","8","Rated on 09 Jul 2021","1950s","Yes","Feature Film","Prime"
+"Psycho","tt0054215","1960","109 min","8","Rated on 09 Jul 2021","1960s","Yes",NA,NA
+"Chinatown","tt0071315","1974","130 min",NA,NA,"1970s","No",NA,NA
+"One Flew Over the Cuckoo's Nest","tt0073486","1975","133 min",NA,NA,"1970s","No",NA,NA
+"The Grapes of Wrath","tt0032551","1940","129 min",NA,NA,"1940s","No",NA,NA
+"2001: A Space Odyssey","tt0062622","1968","149 min","10","Rated on 09 Jul 2021","1960s","Yes",NA,NA
+"The Maltese Falcon","tt0033870","1941","100 min","8","Rated on 09 Jul 2021","1940s","Yes",NA,NA
+"Raging Bull","tt0081398","1980","129 min",NA,NA,"1980s","No","Feature Film","Prime"
+"E.T. the Extra-Terrestrial","tt0083866","1982","115 min","8","Rated on 09 Jul 2021","1980s","Yes",NA,NA
+"Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb","tt0057012","1964","95 min","8","Rated on 19 Sep 2021","1960s","Yes",NA,NA
+"Bonnie and Clyde","tt0061418","1967","111 min","8","Rated on 17 Sep 2021","1960s","Yes",NA,NA
+"Apocalypse Now","tt0078788","1979","147 min","9","Rated on 09 Jul 2021","1970s","Yes",NA,NA
+"Mr. Smith Goes to Washington","tt0031679","1939","129 min",NA,NA,"1930s","No",NA,NA
+"The Treasure of the Sierra Madre","tt0040897","1948","126 min",NA,NA,"1940s","No",NA,NA
+"Annie Hall","tt0075686","1977","93 min",NA,NA,"1970s","No","Feature Film","Prime"
+"The Godfather: Part II","tt0071562","1974","202 min","9","Rated on 09 Jul 2021","1970s","Yes",NA,NA
+"High Noon","tt0044706","1952","85 min",NA,NA,"1950s","No","Feature Film","Prime"
+"To Kill a Mockingbird","tt0056592","1962","129 min","8","Rated on 09 Jul 2021","1960s","Yes",NA,NA
+"It Happened One Night","tt0025316","1934","105 min",NA,NA,"1930s","No",NA,NA
+"Midnight Cowboy","tt0064665","1969","113 min",NA,NA,"1960s","No",NA,NA
+"The Best Years of Our Lives","tt0036868","1946","170 min",NA,NA,"1940s","No",NA,NA
+"Double Indemnity","tt0036775","1944","107 min",NA,NA,"1940s","No",NA,NA
+"Doctor Zhivago","tt0059113","1965","197 min",NA,NA,"1960s","No",NA,NA
+"North by Northwest","tt0053125","1959","136 min","8","Rated on 09 Jul 2021","1950s","Yes",NA,NA
+"West Side Story","tt0055614","1961","153 min","7","Rated on 09 Jul 2021","1960s","Yes",NA,NA
+"Rear Window","tt0047396","1954","112 min","9","Rated on 09 Jul 2021","1950s","Yes",NA,NA
+"King Kong","tt0024216","1933","100 min","8","Rated on 09 Jul 2021","1930s","Yes",NA,NA
+"The Birth of a Nation","tt0004972","1915","195 min",NA,NA,"1910s","No",NA,NA
+"A Streetcar Named Desire","tt0044081","1951","122 min","9","Rated on 09 Jul 2021","1950s","Yes",NA,NA
+"A Clockwork Orange","tt0066921","1971","136 min","10","Rated on 09 Jul 2021","1970s","Yes",NA,NA
+"Taxi Driver","tt0075314","1976","114 min","9","Rated on 09 Jul 2021","1970s","Yes",NA,NA
+"Jaws","tt0073195","1975","124 min","9","Rated on 09 Jul 2021","1970s","Yes",NA,NA
+"Snow White and the Seven Dwarfs","tt0029583","1937","83 min","7","Rated on 09 Jul 2021","1930s","Yes",NA,NA
+"Butch Cassidy and the Sundance Kid","tt0064115","1969","110 min","8","Rated on 09 Jul 2021","1960s","Yes",NA,NA
+"The Philadelphia Story","tt0032904","1940","112 min","8","Rated on 09 Jul 2021","1940s","Yes",NA,NA
+"From Here to Eternity","tt0045793","1953","118 min",NA,NA,"1950s","No",NA,NA
+"Amadeus","tt0086879","1984","160 min","8","Rated on 09 Jul 2021","1980s","Yes",NA,NA
+"All Quiet on the Western Front","tt0020629","1930","152 min",NA,NA,"1930s","No",NA,NA
+"The Sound of Music","tt0059742","1965","172 min","9","Rated on 09 Jul 2021","1960s","Yes",NA,NA
+"MASH","tt0066026","1970","116 min",NA,NA,"1970s","No",NA,NA
+"The Third Man","tt0041959","1949","93 min",NA,NA,"1940s","No",NA,NA
+"Fantasia","tt0032455","1940","125 min","8","Rated on 09 Jul 2021","1940s","Yes",NA,NA
+"Rebel Without a Cause","tt0048545","1955","111 min","8","Rated on 09 Jul 2021","1950s","Yes",NA,NA
+"Indiana Jones and the Raiders of the Lost Ark","tt0082971","1981","115 min","9","Rated on 09 Jul 2021","1980s","Yes",NA,NA
+"Vertigo","tt0052357","1958","128 min","8","Rated on 09 Jul 2021","1950s","Yes",NA,NA
+"Tootsie","tt0084805","1982","116 min",NA,NA,"1980s","No",NA,NA
+"Stagecoach","tt0031971","1939","96 min",NA,NA,"1930s","No","Feature Film","Prime"
+"Close Encounters of the Third Kind","tt0075860","1977","138 min","8","Rated on 14 Aug 2021","1970s","Yes",NA,NA
+"The Silence of the Lambs","tt0102926","1991","118 min","9","Rated on 09 Jul 2021","1990s","Yes",NA,NA
+"Network","tt0074958","1976","121 min",NA,NA,"1970s","No",NA,NA
+"The Manchurian Candidate","tt0056218","1962","126 min",NA,NA,"1960s","No",NA,NA
+"An American in Paris","tt0043278","1951","114 min","6","Rated on 09 Jul 2021","1950s","Yes",NA,NA
+"Shane","tt0046303","1953","118 min",NA,NA,"1950s","No",NA,NA
+"The French Connection","tt0067116","1971","104 min",NA,NA,"1970s","No",NA,NA
+"Forrest Gump","tt0109830","1994","142 min","8","Rated on 09 Jul 2021","1990s","Yes",NA,NA
+"Ben-Hur","tt0052618","1959","212 min","8","Rated on 09 Jul 2021","1950s","Yes",NA,NA
+"Wuthering Heights","tt0032145","1939","104 min","8","Rated on 09 Jul 2021","1930s","Yes","Feature Film","Prime"
+"The Gold Rush","tt0015864","1925","95 min",NA,NA,"1920s","No","Feature Film","Prime"
+"Dances with Wolves","tt0099348","1990","181 min","7","Rated on 15 Jul 2021","1990s","Yes",NA,NA
+"City Lights","tt0021749","1931","87 min",NA,NA,"1930s","No",NA,NA
+"American Graffiti","tt0069704","1973","110 min","6","Rated on 09 Jul 2021","1970s","Yes",NA,NA
+"Rocky","tt0075148","1976","120 min","8","Rated on 09 Jul 2021","1970s","Yes",NA,NA
+"The Deer Hunter","tt0077416","1978","183 min",NA,NA,"1970s","No",NA,NA
+"The Wild Bunch","tt0065214","1969","135 min",NA,NA,"1960s","No",NA,NA
+"Modern Times","tt0027977","1936","87 min",NA,NA,"1930s","No",NA,NA
+"Giant","tt0049261","1956","201 min","7","Rated on 09 Jul 2021","1950s","Yes",NA,NA
+"Platoon","tt0091763","1986","120 min",NA,NA,"1980s","No",NA,NA
+"Fargo","tt0116282","1996","98 min","8","Rated on 11 Jul 2021","1990s","Yes",NA,NA
+"Duck Soup","tt0023969","1933","69 min",NA,NA,"1930s","No",NA,NA
+"Mutiny on the Bounty","tt0026752","1935","132 min",NA,NA,"1930s","No",NA,NA
+"Frankenstein","tt0021884","1931","70 min","7","Rated on 09 Jul 2021","1930s","Yes",NA,NA
+"Easy Rider","tt0064276","1969","95 min",NA,NA,"1960s","No",NA,NA
+"Patton","tt0066206","1970","172 min",NA,NA,"1970s","No","Feature Film","Prime"
+"The Jazz Singer","tt0018037","1927","88 min",NA,NA,"1920s","No",NA,NA
+"My Fair Lady","tt0058385","1964","170 min","7","Rated on 10 Aug 2021","1960s","Yes",NA,NA
+"A Place in the Sun","tt0043924","1951","122 min",NA,NA,"1950s","No","Feature Film","Prime"
+"The Apartment","tt0053604","1960","125 min","8","Rated on 09 Jul 2021","1960s","Yes","Feature Film","Prime"
+"Goodfellas","tt0099685","1990","146 min","9","Rated on 07 Aug 2021","1990s","Yes",NA,NA
+"Pulp Fiction","tt0110912","1994","154 min","8","Rated on 09 Jul 2021","1990s","Yes",NA,NA
+"The Searchers","tt0049730","1956","119 min",NA,NA,"1950s","No",NA,NA
+"Bringing Up Baby","tt0029947","1938","102 min","8","Rated on 09 Jul 2021","1930s","Yes",NA,NA
+"Unforgiven","tt0105695","1992","130 min",NA,NA,"1990s","No",NA,NA
+"Guess Who's Coming to Dinner","tt0061735","1967","108 min","8","Rated on 16 Sep 2021","1960s","Yes","Feature Film","Prime"
+"Yankee Doodle Dandy","tt0035575","1942","126 min",NA,NA,"1940s","No",NA,NA

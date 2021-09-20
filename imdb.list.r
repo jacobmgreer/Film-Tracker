@@ -51,6 +51,34 @@ IMDBcombinedOscars <-
   left_join(., Streaming.Available, by="IMDBid") %T>%
   write.csv(.,"Oscars/OscarsData.csv", row.names = FALSE)
 
+IMDBcombinedEbert <- 
+  left_join(IMDBebert, IMDBratings %>% select(IMDBid, Rating, Rated.Date), by="IMDBid") %>%
+  mutate(Decade = paste0(10 * floor(as.numeric(ItemYear)/10),"s")) %>%
+  mutate(Seen = ifelse(is.na(Rating), "No", "Yes")) %>%
+  left_join(., Streaming.Available, by="IMDBid") %T>%
+  write.csv(.,"GreatFilmsEbert/Data.csv", row.names = FALSE)
+
+IMDBcombinedEbert <- 
+  left_join(IMDBebert, IMDBratings %>% select(IMDBid, Rating, Rated.Date), by="IMDBid") %>%
+  mutate(Decade = paste0(10 * floor(as.numeric(ItemYear)/10),"s")) %>%
+  mutate(Seen = ifelse(is.na(Rating), "No", "Yes")) %>%
+  left_join(., Streaming.Available, by="IMDBid") %T>%
+  write.csv(.,"GreatFilmsEbert/Data.csv", row.names = FALSE)
+
+IMDBcombinedAFI1998 <- 
+  left_join(IMDBafi1998, IMDBratings %>% select(IMDBid, Rating, Rated.Date), by="IMDBid") %>%
+  mutate(Decade = paste0(10 * floor(as.numeric(ItemYear)/10),"s")) %>%
+  mutate(Seen = ifelse(is.na(Rating), "No", "Yes")) %>%
+  left_join(., Streaming.Available, by="IMDBid") %T>%
+  write.csv(.,"AFITop100/1998/Data.csv", row.names = FALSE)
+
+IMDBcombinedAFI2007 <- 
+  left_join(IMDBafi2007, IMDBratings %>% select(IMDBid, Rating, Rated.Date), by="IMDBid") %>%
+  mutate(Decade = paste0(10 * floor(as.numeric(ItemYear)/10),"s")) %>%
+  mutate(Seen = ifelse(is.na(Rating), "No", "Yes")) %>%
+  left_join(., Streaming.Available, by="IMDBid") %T>%
+  write.csv(.,"AFITop100/2007/Data.csv", row.names = FALSE)
+
 ## Oscar Data for CSV
   IMDBcombinedOscars %>% 
   #mutate(Decade = floor(as.numeric(ItemYear)/10)*10) %>%
