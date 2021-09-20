@@ -26,12 +26,12 @@ for (i in 1:ceiling(count/100)) {
 
 Streaming.Films <- 
   Films.on.Prime %>% 
-  mutate(Service = "Amazon Prime") %>%
+  mutate(Service = "Prime") %>%
   mutate(Type = "Feature Film") %>%
   spread(Service, Service)
 Streaming.Docs <- 
   Docs.on.Prime %>% 
-  mutate(Service = "Amazon Prime") %>%
+  mutate(Service = "Prime") %>%
   mutate(Type = "Documentary") %>%
   spread(Service, Service)
 Streaming.Available <- 
