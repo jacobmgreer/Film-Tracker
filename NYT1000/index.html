@@ -103,10 +103,9 @@ layout: circularstackedbarplot
   }
 
   d3.csv('https://jacobmgreer.github.io/IMDB-Tracker/NYT1000/NYT1000Data.csv',function (data) {
+    var data = data.filter(element => element.Prime === "Prime")
     var columns = ['ItemTitle','ItemYear','ItemRuntime','Seen']
-    var data = data.filter(element => element.Prime === "Y")
-    // var data = data.filter(element => element.Seen === "No")
-    tabulate(data,columns)
+    tabulate('.table-prime',data,columns)
   })
   </script>
   
