@@ -64,8 +64,8 @@ layout: circularstackedbarplot
 
 <div class="container-fluid">
   <script type="text/javascript"charset="utf-8">
-  var tabulate = function (data,columns) {
-    var table = d3.select('.table-prime')
+  var tabulate = function (tclass,data,columns) {
+    var table = d3.select(tclass)
                   .append('table')
                   .classed('table', true)
                   .classed('table-striped', true)
@@ -88,24 +88,30 @@ layout: circularstackedbarplot
     var cells = rows.selectAll('td')
         .data(function(row) {
           return columns.map(function (column) {
-            return { column: column, value: row[column] }
+            return { column: column, value: row[column], link: row["IMDBid"] }
           })
         })
-        .enter()
+      .enter()
       .append('td')
-        .text(function (d) { return d.value })
-
+      .html(function (d) { 
+      	if (d.column === "ItemTitle") {
+        	return "<a href=\"https://www.imdb.com/title/" + d.link + "\">" + d.value + "</a>"
+        }
+        else {return d.value}})
+      
     return table;
   }
 
   d3.csv('https://jacobmgreer.github.io/IMDB-Tracker/NYT1000/NYT1000Data.csv',function (data) {
-    var columns = ['ItemTitle','IMDBid','ItemYear','ItemRuntime','Seen']
+    var columns = ['ItemTitle','ItemYear','ItemRuntime','Seen']
     var data = data.filter(element => element.Prime === "Y")
     // var data = data.filter(element => element.Seen === "No")
     tabulate(data,columns)
   })
   </script>
-  <h1 class="display-3">NYT's Essential 1,000 films on Prime</h1>
+  
+  <h1 class="display-5">NYT's Essential 1,000 films on Prime</h1>
   <div class="table-prime"></div>
+  
   <br clear="all"/><br/>
 </div>
