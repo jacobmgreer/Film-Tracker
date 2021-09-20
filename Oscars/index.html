@@ -92,14 +92,16 @@ layout: circularstackedbarplot
         })
         .enter()
       .append('td')
-        if(column == "ItemTitle") {
+        if (column === "ItemTitle") {
           .append("a")
           .attr("href", function(d) {
-              return "http://test/" + d.value;
+            return "http://test/" + d.value
           })
-          .text(function (d) { return d.value })}
+          .text(function (d) { 
+            return d.value })}
         else {
-          .text(function (d) { return d.value })}
+          .text(function (d) { 
+            return d.value })}
 
     return table;
   }
