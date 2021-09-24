@@ -11,3 +11,5 @@ Oscars/.DS_Store
 *.tsv
 image.R
 OMDBpull.R
+*.webarchive
+*.numbers
