@@ -34,6 +34,7 @@ layout: circularstackedbarplot
   d3.csv("https://jacobmgreer.github.io/IMDB-Tracker/Oscars/OscarsSummary.csv", function(d, i, columns) {
     for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
     d.total = t;
+    d3.select('.movies-total').html('Seen' + d.total;
     return d;
   }, function(error, data) {
     if (error) throw error;
@@ -63,8 +64,6 @@ layout: circularstackedbarplot
           .html('<h1> ' + d.data.ItemYear + '</h1>');
       })
      .on('mouseout', function(d) {tooltip.html('<h3>Oscar Winning Films:<br/>Percentage Seen<br/>by Year Released</h3>');});
-     
-     d3.select('.movies-total').html('Seen' + d3.count(d.data));
   });
   </script>
 </div>
