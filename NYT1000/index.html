@@ -63,6 +63,12 @@ layout: circularstackedbarplot
 </div>
 
 <div class="container-fluid">
+  <div class="movie-counts">
+    <div class="movies-seen"></div>
+    <div class="movies-prime"></div>
+    <div class="movies-total"></div>
+  </div>
+  
   <script type="text/javascript"charset="utf-8">
   var tabulate = function (tclass,data,columns) {
     var table = d3.select(tclass)
@@ -103,6 +109,10 @@ layout: circularstackedbarplot
   }
 
   d3.csv('https://jacobmgreer.github.io/IMDB-Tracker/NYT1000/NYT1000Data.csv',function (data) {
+    d3.select('.movies-total').html('Total: ' + data.length); // Total count
+    d3.select('.movies-seen').html('Seen: ' + data.filter(element => element.Seen === "Yes").length); // Seen count
+    d3.select('.movies-prime').html('On Prime: ' + data.filter(element => element.Prime === "Prime").length); // Prime count
+    
     var data = data.filter(element => element.Prime === "Prime")
     var columns = ['ItemTitle','ItemYear','ItemRuntime','Seen']
     tabulate('.table-prime',data,columns)
