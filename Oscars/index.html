@@ -109,13 +109,12 @@ layout: circularstackedbarplot
 
   d3.csv('https://jacobmgreer.github.io/IMDB-Tracker/Oscars/OscarsData.csv',function (data) {
     d3.select('.movies-total').html('Total: ' + data.length); // Total count
+    d3.select('.movies-seen').html('Seen: ' + d3.count(data, element => element.Seen === "Yes")); // Seen count
+    d3.select('.movies-prime').html('On Prime: ' + d3.count(data, element => element.Prime === "Yes")); // Prime count
     
     var data = data.filter(element => element.Prime === "Prime")
     var columns = ['ItemTitle','ItemYear','ItemRuntime','Seen']
     tabulate('.table-prime',data,columns)
-    
-    d3.select('.movies-seen').html('Seen: ' + d3.count(data, element => element.Seen === "Yes")); // Seen count
-    d3.select('.movies-prime').html('On Prime: ' + d3.count(data, element => element.Prime === "Yes")); // Prime count
   })
   </script>
   
