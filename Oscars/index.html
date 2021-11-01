@@ -34,7 +34,7 @@ layout: circularstackedbarplot
   d3.csv("https://jacobmgreer.github.io/IMDB-Tracker/Oscars/OscarsSummary.csv", function(d, i, columns) {
     for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
     d.total = t;
-    d3.select('.movies-total').html('Seen' + d.total;
+    d3.select('.movies-total').html('Seen' + d.total);
     return d;
   }, function(error, data) {
     if (error) throw error;
