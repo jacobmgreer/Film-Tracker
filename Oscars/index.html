@@ -3,11 +3,6 @@ title: Oscar Winners
 layout: circularstackedbarplot
 ---
 
-<div class="movie-counts">
-  <div class="movies-seen"></div>
-  <div class="movies-total"></div>
-</div>
-
 <div class="container-fluid" style="height:960px;">
   <svg width="960" height="960" class="center"></svg>
   <div id="tooltip" class="center"><h3>Oscar Winning Films:<br/>Percentage Seen<br/>by Year Released</h3></div>
@@ -66,7 +61,13 @@ layout: circularstackedbarplot
   });
   </script>
 </div>
-<div class="container-fluid" style=>
+<div class="container-fluid">
+  <div class="movie-counts">
+    <div class="movies-seen"></div>
+    <div class="movies-prime"></div>
+    <div class="movies-total"></div>
+  </div>
+  
   <script type="text/javascript"charset="utf-8">
   var tabulate = function (tclass,data,columns) {
     var table = d3.select(tclass)
@@ -113,7 +114,8 @@ layout: circularstackedbarplot
     var columns = ['ItemTitle','ItemYear','ItemRuntime','Seen']
     tabulate('.table-prime',data,columns)
     
-    d3.select('.movies-seen').html('Seen: ' + d3.count(data, element => element.Seen === "Yes")); // Prime count
+    d3.select('.movies-seen').html('Seen: ' + d3.count(data, element => element.Seen === "Yes")); // Seen count
+    d3.select('.movies-prime').html('On Prime: ' + d3.count(data, element => element.Prime === "Yes")); // Prime count
   })
   </script>
   
