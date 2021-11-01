@@ -2,7 +2,7 @@
 "Citizen Kane","tt0033467","1941","119 min","8","Rated on 09 Jul 2021","1940s","Yes",NA,NA
 "The Godfather","tt0068646","1972","175 min","8","Rated on 09 Jul 2021","1970s","Yes",NA,NA
 "Casablanca","tt0034583","1942","102 min","9","Rated on 09 Jul 2021","1940s","Yes",NA,NA
-"Raging Bull","tt0081398","1980","129 min",NA,NA,"1980s","No","Feature Film","Prime"
+"Raging Bull","tt0081398","1980","129 min",NA,NA,"1980s","No",NA,NA
 "Singin' in the Rain","tt0045152","1952","103 min",NA,NA,"1950s","No",NA,NA
 "Gone with the Wind","tt0031381","1939","238 min",NA,NA,"1930s","No",NA,NA
 "Lawrence of Arabia","tt0056172","1962","228 min","9","Rated on 09 Jul 2021","1960s","Yes",NA,NA
@@ -15,9 +15,9 @@
 "Psycho","tt0054215","1960","109 min","8","Rated on 09 Jul 2021","1960s","Yes",NA,NA
 "2001: A Space Odyssey","tt0062622","1968","149 min","10","Rated on 09 Jul 2021","1960s","Yes",NA,NA
 "Sunset Blvd.","tt0043014","1950","110 min","8","Rated on 09 Jul 2021","1950s","Yes","Feature Film","Prime"
-"The Graduate","tt0061722","1967","106 min","8","Rated on 09 Jul 2021","1960s","Yes",NA,NA
+"The Graduate","tt0061722","1967","106 min","8","Rated on 09 Jul 2021","1960s","Yes","Feature Film","Prime"
 "The General","tt0017925","1926","67 min",NA,NA,"1920s","No","Feature Film","Prime"
-"On the Waterfront","tt0047296","1954","108 min",NA,NA,"1950s","No","Feature Film","Prime"
+"On the Waterfront","tt0047296","1954","108 min",NA,NA,"1950s","No",NA,NA
 "It's a Wonderful Life","tt0038650","1946","130 min","8","Rated on 09 Jul 2021","1940s","Yes","Feature Film","Prime"
 "Chinatown","tt0071315","1974","130 min",NA,NA,"1970s","No",NA,NA
 "Some Like It Hot","tt0053291","1959","121 min","8","Rated on 09 Jul 2021","1950s","Yes",NA,NA
@@ -34,7 +34,7 @@
 "One Flew Over the Cuckoo's Nest","tt0073486","1975","133 min",NA,NA,"1970s","No",NA,NA
 "Snow White and the Seven Dwarfs","tt0029583","1937","83 min","7","Rated on 09 Jul 2021","1930s","Yes",NA,NA
 "Annie Hall","tt0075686","1977","93 min",NA,NA,"1970s","No","Feature Film","Prime"
-"The Bridge on the River Kwai","tt0050212","1957","161 min","7","Rated on 16 Sep 2021","1950s","Yes","Feature Film","Prime"
+"The Bridge on the River Kwai","tt0050212","1957","161 min","7","Rated on 16 Sep 2021","1950s","Yes",NA,NA
 "The Best Years of Our Lives","tt0036868","1946","170 min",NA,NA,"1940s","No",NA,NA
 "The Treasure of the Sierra Madre","tt0040897","1948","126 min",NA,NA,"1940s","No",NA,NA
 "Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb","tt0057012","1964","95 min","8","Rated on 19 Sep 2021","1960s","Yes",NA,NA
@@ -71,20 +71,20 @@
 "A Clockwork Orange","tt0066921","1971","136 min","10","Rated on 09 Jul 2021","1970s","Yes",NA,NA
 "Saving Private Ryan","tt0120815","1998","169 min","9","Rated on 09 Jul 2021","1990s","Yes",NA,NA
 "The Shawshank Redemption","tt0111161","1994","142 min","8","Rated on 09 Jul 2021","1990s","Yes",NA,NA
-"Butch Cassidy and the Sundance Kid","tt0064115","1969","110 min","8","Rated on 09 Jul 2021","1960s","Yes",NA,NA
+"Butch Cassidy and the Sundance Kid","tt0064115","1969","110 min","8","Rated on 09 Jul 2021","1960s","Yes","Feature Film","Prime"
 "The Silence of the Lambs","tt0102926","1991","118 min","9","Rated on 09 Jul 2021","1990s","Yes",NA,NA
 "In the Heat of the Night","tt0061811","1967","110 min",NA,NA,"1960s","No",NA,NA
 "Forrest Gump","tt0109830","1994","142 min","8","Rated on 09 Jul 2021","1990s","Yes",NA,NA
 "All the President's Men","tt0074119","1976","138 min","8","Rated on 09 Jul 2021","1970s","Yes",NA,NA
 "Modern Times","tt0027977","1936","87 min",NA,NA,"1930s","No",NA,NA
 "The Wild Bunch","tt0065214","1969","135 min",NA,NA,"1960s","No",NA,NA
-"The Apartment","tt0053604","1960","125 min","8","Rated on 09 Jul 2021","1960s","Yes","Feature Film","Prime"
+"The Apartment","tt0053604","1960","125 min","8","Rated on 09 Jul 2021","1960s","Yes",NA,NA
 "Spartacus","tt0054331","1960","197 min","8","Rated on 09 Jul 2021","1960s","Yes",NA,NA
 "Sunrise","tt0018455","1927","94 min",NA,NA,"1920s","No",NA,NA
 "Titanic","tt0120338","1997","194 min","7","Rated on 09 Jul 2021","1990s","Yes",NA,NA
 "Easy Rider","tt0064276","1969","95 min",NA,NA,"1960s","No",NA,NA
 "A Night at the Opera","tt0026778","1935","96 min",NA,NA,"1930s","No",NA,NA
-"Platoon","tt0091763","1986","120 min","7","Rated on 14 Oct 2021","1980s","Yes",NA,NA
+"Platoon","tt0091763","1986","120 min","7","Rated on 14 Oct 2021","1980s","Yes","Feature Film","Prime"
 "12 Angry Men","tt0050083","1957","96 min","9","Rated on 09 Jul 2021","1950s","Yes",NA,NA
 "Bringing Up Baby","tt0029947","1938","102 min","8","Rated on 09 Jul 2021","1930s","Yes",NA,NA
 "The Sixth Sense","tt0167404","1999","107 min","8","Rated on 14 Jul 2021","1990s","Yes",NA,NA
