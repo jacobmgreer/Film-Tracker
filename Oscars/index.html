@@ -110,7 +110,7 @@ layout: circularstackedbarplot
   d3.csv('https://jacobmgreer.github.io/IMDB-Tracker/Oscars/OscarsData.csv',function (data) {
     d3.select('.movies-total').html('Total: ' + data.length); // Total count
     d3.select('.movies-seen').html('Seen: ' + data.filter(element => element.Seen === "Yes").length); // Seen count
-    d3.select('.movies-prime').html('On Prime: ' + data.filter(element => element.Service === "Prime").length); // Prime count
+    d3.select('.movies-prime').html('On Prime: seen ' + data.filter(element => element.Service === "Prime" && element.Seen === "Yes").length + ' out of ' + data.filter(element => element.Service === "Prime").length); // Prime count
     
     var data = data.filter(element => element.Service === "Prime")
     var columns = ['ItemTitle','ItemYear','ItemRuntime','Seen']
