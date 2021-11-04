@@ -114,7 +114,7 @@ layout: circularstackedbarplot
         + '%)'); // Total count
     d3.select('.movies-prime').html('On Prime: seen ' + 
         data.filter(element => element.Service === "Prime" && element.Seen === "Yes").length + ' out of ' + 
-        data.filter(element => element.Service === "Prime").length) + ' (' + 
+        data.filter(element => element.Service === "Prime").length + ' (' + 
         Number(((data.filter(element => element.Service === "Prime" && element.Seen === "Yes").length * 100) / data.filter(element => element.Service === "Prime").length).toFixed(2))
         + '%)');// Prime count
     
