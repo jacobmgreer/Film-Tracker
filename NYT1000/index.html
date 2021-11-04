@@ -108,8 +108,16 @@ layout: circularstackedbarplot
   }
 
   d3.csv('https://jacobmgreer.github.io/IMDB-Tracker/NYT1000/NYT1000Data.csv',function (data) {
-    d3.select('.movies-total').html('Total: seen ' + data.filter(element => element.Seen === "Yes").length + ' out of ' + data.length); // Total count
-    d3.select('.movies-prime').html('On Prime: seen ' + data.filter(element => element.Service === "Prime" && element.Seen === "Yes").length + ' out of ' + data.filter(element => element.Service === "Prime").length); // Prime count
+    d3.select('.movies-total').html('Total: seen ' + 
+        data.filter(element => element.Seen === "Yes").length + ' out of ' + 
+        data.length + ' (' + 
+        Number(((data.filter(element => element.Seen === "Yes").length * 100) / data.length).toFixed(2)) 
+        + '%)'); // Total count
+    d3.select('.movies-prime').html('On Prime: seen ' + 
+        data.filter(element => element.Service === "Prime" && element.Seen === "Yes").length + ' out of ' + 
+        data.filter(element => element.Service === "Prime").length + ' (' + 
+        Number(((data.filter(element => element.Service === "Prime" && element.Seen === "Yes").length * 100) / data.filter(element => element.Service === "Prime").length).toFixed(2))
+        + '%)');// Prime count
     
     var data = data.filter(element => element.Service === "Prime")
     var columns = ['ItemTitle','ItemYear','ItemRuntime','Seen']
