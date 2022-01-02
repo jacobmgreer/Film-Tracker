@@ -14,7 +14,7 @@
 "Airplane!","tt0080339","1980","88 min",NA,NA,"No",NA,NA
 "Aladdin","tt0103639","1992","90 min","6","Rated on 09 Jul 2021","Yes",NA,NA
 "Alexander Nevsky","tt0029850","1938","112 min",NA,NA,"No",NA,NA
-"Alice Doesn't Live Here Anymore","tt0071115","1974","112 min",NA,NA,"No",NA,NA
+"Alice Doesn't Live Here Anymore","tt0071115","1974","112 min","7","Rated on 11 Nov 2021","Yes",NA,NA
 "Alice's Restaurant","tt0064002","1969","111 min",NA,NA,"No",NA,NA
 "Aliens","tt0090605","1986","137 min","7","Rated on 09 Jul 2021","Yes",NA,NA
 "All About Eve","tt0042192","1950","138 min",NA,NA,"No",NA,NA
@@ -108,7 +108,7 @@
 "Bob le Flambeur","tt0047892","1956","98 min",NA,NA,"No",NA,NA
 "Body Heat","tt0082089","1981","113 min",NA,NA,"No",NA,NA
 "Bonnie and Clyde","tt0061418","1967","111 min","8","Rated on 17 Sep 2021","Yes",NA,NA
-"Boogie Nights","tt0118749","1997","155 min","7","Rated on 09 Jul 2021","Yes",NA,NA
+"Boogie Nights","tt0118749","1997","155 min","8","Rated on 29 Dec 2021","Yes",NA,NA
 "Born on the Fourth of July","tt0096969","1989","145 min",NA,NA,"No",NA,NA
 "Born Yesterday","tt0042276","1950","103 min",NA,NA,"No",NA,NA
 "Le Boucher","tt0064106","1970","93 min",NA,NA,"No",NA,NA
@@ -230,7 +230,7 @@
 "The Dirty Dozen","tt0061578","1967","150 min",NA,NA,"No",NA,NA
 "Dirty Harry","tt0066999","1971","102 min",NA,NA,"No",NA,NA
 "Dirty Rotten Scoundrels","tt0095031","1988","110 min",NA,NA,"No",NA,NA
-"The Discreet Charm of the Bourgeoisie","tt0068361","1972","102 min",NA,NA,"No","Prime","Feature Film"
+"The Discreet Charm of the Bourgeoisie","tt0068361","1972","102 min","8","Rated on 08 Nov 2021","Yes","Prime","Feature Film"
 "Disraeli","tt0019823","1929","90 min",NA,NA,"No",NA,NA
 "Distant Thunder","tt0069737","1973","101 min",NA,NA,"No",NA,NA
 "Diva","tt0082269","1981","117 min",NA,NA,"No",NA,NA
@@ -332,7 +332,7 @@
 "Ghost World","tt0162346","2001","111 min","7","Rated on 09 Jul 2021","Yes",NA,NA
 "Giant","tt0049261","1956","201 min","7","Rated on 09 Jul 2021","Yes",NA,NA
 "Gigi","tt0051658","1958","115 min","6","Rated on 20 Sep 2021","Yes",NA,NA
-"Gimme Shelter","tt0065780","1970","91 min","7","Rated on 20 Aug 2021","Yes",NA,NA
+"Gimme Shelter","tt0065780","1970","91 min","9","Rated on 20 Nov 2021","Yes",NA,NA
 "The Girl Can't Help It","tt0049263","1956","99 min",NA,NA,"No",NA,NA
 "Girl with a Suitcase","tt0054225","1961","96 min",NA,NA,"No",NA,NA
 "The Gleaners & I","tt0247380","2000","82 min",NA,NA,"No",NA,NA
@@ -798,7 +798,7 @@
 "The Silent World","tt0049518","1956","86 min",NA,NA,"No",NA,NA
 "Silk Stockings","tt0050972","1957","117 min",NA,NA,"No",NA,NA
 "Silkwood","tt0086312","1983","131 min",NA,NA,"No",NA,NA
-"Singin' in the Rain","tt0045152","1952","103 min",NA,NA,"No",NA,NA
+"Singin' in the Rain","tt0045152","1952","103 min","6","Rated on 04 Nov 2021","Yes",NA,NA
 "Sitting Pretty","tt0040795","1948","83 min",NA,NA,"No",NA,NA
 "Sleeper","tt0070707","1973","89 min",NA,NA,"No",NA,NA
 "A Slight Case of Murder","tt0030764","1938","85 min",NA,NA,"No",NA,NA
@@ -886,7 +886,7 @@
 "The Thin Man","tt0025878","1934","91 min","7","Rated on 09 Jul 2021","Yes",NA,NA
 "The Thin Red Line","tt0120863","1998","170 min","7","Rated on 09 Jul 2021","Yes",NA,NA
 "The Third Generation","tt0079083","1979","111 min",NA,NA,"No",NA,NA
-"The Third Man","tt0041959","1949","93 min",NA,NA,"No",NA,NA
+"The Third Man","tt0041959","1949","93 min","8","Rated on 01 Jan 2022","Yes",NA,NA
 "The 39 Steps","tt0026029","1935","86 min","8","Rated on 09 Jul 2021","Yes",NA,NA
 "Thirty Two Short Films About Glenn Gould","tt0108328","1993","98 min",NA,NA,"No",NA,NA
 "This Is Spinal Tap","tt0088258","1984","82 min",NA,NA,"No",NA,NA
@@ -958,7 +958,7 @@
 "Weekend","tt0062480","1967","105 min",NA,NA,"No",NA,NA
 "Welcome to the Dollhouse","tt0114906","1995","88 min",NA,NA,"No",NA,NA
 "The Well-Digger's Daughter","tt0033603","1940","142 min",NA,NA,"No",NA,NA
-"West Side Story","tt0055614","1961","153 min","7","Rated on 09 Jul 2021","Yes",NA,NA
+"West Side Story","tt0055614","1961","153 min","8","Rated on 29 Dec 2021","Yes",NA,NA
 "The Whales of August","tt0094315","1987","90 min",NA,NA,"No",NA,NA
 "What Ever Happened to Baby Jane?","tt0056687","1962","134 min","9","Rated on 09 Jul 2021","Yes",NA,NA
 "What's Eating Gilbert Grape","tt0108550","1993","118 min","8","Rated on 09 Jul 2021","Yes",NA,NA
