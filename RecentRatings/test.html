@@ -52,13 +52,6 @@ layout: circularstackedbarplot
         }
         else {return d.value}}
     
-    var footer = cardtext
-      .append('p')
-      .classed('card-text', true)
-      .append('small')
-      .classed('text-muted', true)
-      .html(function (d) { d["Rated.Date"] })
-    
     return carddeck;
   }
 
