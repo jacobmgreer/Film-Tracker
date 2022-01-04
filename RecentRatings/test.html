@@ -31,19 +31,16 @@ layout: circularstackedbarplot
       .classed('row', true)
       .classed('g0', true)
       
+    var image = cards
       .append('div')
       .classed('col-md-4', true)
       .html(function (d) { 
           return "<img class=\"img-fluid rounded-start\" src=\"" + d.Poster + "\">"
       })
-      
-      .append('div')
-      .classed('col-md-8', true)
-    
-    
     
     var cardtext = cards
-      .select('.col-md-8')
+      .append('div')
+      .classed('col-md-8', true)
       
       .append('div')
       .classed('card-body', true)
@@ -65,11 +62,6 @@ layout: circularstackedbarplot
         }
         else {return d.value}})
         
-      .append('p')
-      .classed('card-text', true)
-      .append('small')
-      .classed('text-muted', true)
-      .html(function (d) { "<small class=\"text\">" + d.rated + "</small>"}) 
     
     return carddeck;
   }
