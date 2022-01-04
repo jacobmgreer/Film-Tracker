@@ -41,9 +41,7 @@ layout: circularstackedbarplot
     var footer = cards
       .append('div')
       .classed('card-footer', true)
-      .html(function (d) { 
-          return "<small class=\"text\">" + row["Rated.Date"] + "</small>"
-      })    
+      .html("<small class=\"text\">" + row["Rated.Date"] + "</small>")    
     
     return carddeck;
   }
