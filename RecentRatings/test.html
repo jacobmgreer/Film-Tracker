@@ -9,13 +9,15 @@ layout: circularstackedbarplot
   var tabulate = function (data,columns) {
     var carddeck = d3.select('#cards')
     
-    var cards = carddeck.data(data).enter()
+    var cards = carddeck.selectAll('.card')
+      .data(data)
+      .enter()
       .append('div')
       .classed('col', true)
       .append('div')
       .classed('card', true)
     
-    var cells = carddeck.selectAll('.card')    
+    var cells = cards.selectAll('.card')    
       .data(function(row) {
         return columns.map(function (column) {
           return { column: column, value: row[column], link: row["IMDBid"] }
