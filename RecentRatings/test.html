@@ -17,8 +17,8 @@ layout: circularstackedbarplot
     .data(data)
     .enter()
     
-    var cells = rows.selectAll('div.card')
-    .data(function(cards) {
+    var cells = cards.selectAll('div.card')
+    .data(function(card) {
       return columns.map(function (column) {
         return { column: column, value: card[column], link: card["IMDBid"] }
       })
