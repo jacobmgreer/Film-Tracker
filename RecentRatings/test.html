@@ -47,7 +47,7 @@ layout: circularstackedbarplot
       .append('p')
       .classed('card-text', true)
       .html(function (d) { 
-        if (d.column === "ItemTitle") {return "<h5 class=\"card-title\"><a href=\"https://www.imdb.com/title/" + d.link + "\">" + d.value + "</a>" + " (" + d.release + ")>/h5>"}
+        if (d.column === "ItemTitle") {return "<h5 class=\"card-title\"><a href=\"https://www.imdb.com/title/" + d.link + "\">" + d.value + "</a>" + " (" + d.release + ")</h5>"}
         else if (d.column === "Rating") {return "My Rating: " + d.value}
         else if (d.column === "Internet Movie Database") {return "Internet Movie Database: " + d.value}
         else if (d.column === "Metacritic") {return "Metacritic: " + d.value}
