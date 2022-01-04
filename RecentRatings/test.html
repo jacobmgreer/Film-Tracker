@@ -36,14 +36,15 @@ layout: circularstackedbarplot
           return "<img class=\"img-fluid rounded-start\" src=\"" + d.Poster + "\">"
       })
     
-    var cardtext = cards
+    var cardtext = 
+      .after('.col-md-4')
       .append('div')
       .classed('col-md-8', true)
       .append('div')
       .classed('card-body', true)
       
-    
     var info = cardtext
+      .selectAll('p')
       .data(function(row) {
         return columns.map(function (column) {
           return { column: column, value: row[column], link: row["IMDBid"], release: row["Released"]}
