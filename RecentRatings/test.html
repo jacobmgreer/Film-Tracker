@@ -50,7 +50,14 @@ layout: circularstackedbarplot
         if (d.column === "ItemTitle") {
           return "<a href=\"https://www.imdb.com/title/" + d.link + "\">" + d.value + "</a>" + " (" + d.release + ")"
         }
-        else {return d.value}}
+        else {return d.value}})
+        
+     var footer = cardtext
+      .append('p')
+      .classed('card-text', true)
+      .append('small')
+      .classed('text-muted', true)
+      .html(function (d) { d["Rated.Date"] })
     
     return carddeck;
   }
@@ -59,7 +66,7 @@ d3.csv('https://jacobmgreer.github.io/Film-Tracker/RecentRatings/recentmovies.cs
   var data = data
               .filter(element => element.Title != "NA")
               .filter(element => element.Type === "movie")
-  var columns = ['ItemTitle','Rating','Internet Movie Database','Metacritic','Rotten Tomatoes','Rated.Date']
+  var columns = ['ItemTitle','Rating','Internet Movie Database','Metacritic','Rotten Tomatoes']
   tabulate(data,columns)
 })
 </script>
