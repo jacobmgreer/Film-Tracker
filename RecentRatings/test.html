@@ -17,7 +17,7 @@ layout: circularstackedbarplot
       .append('div')
       .classed('card', true)
     
-    var cells = cards.select('div.card')
+    var cells = cards.select('.card')
     .data(function(card) {
       return columns.map(function (column) {
         return { column: column, value: card[column], link: card["IMDBid"] }
