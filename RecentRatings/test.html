@@ -7,7 +7,7 @@ layout: circularstackedbarplot
   
   <script type="text/javascript"charset="utf-8">
   var tabulate = function (data,columns) {
-    var carddeck = d3.select('.cards')
+    var carddeck = d3.select('#cards')
     
     var cards = carddeck.data(data).enter()
       .append('div')
@@ -40,7 +40,7 @@ d3.csv('https://jacobmgreer.github.io/Film-Tracker/RecentRatings/recentmovies.cs
 </script>
   
   <h1 class="display-5">Recently Rated Films</h1>
-  <div class="cards row row-cols-1 row-cols-md-3 g-4"></div>
+  <div id="cards" class="row row-cols-1 row-cols-md-3 g-4"></div>
   
   <br clear="all"/><br/>
   </div>
