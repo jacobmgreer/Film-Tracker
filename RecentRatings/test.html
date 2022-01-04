@@ -38,7 +38,7 @@ layout: circularstackedbarplot
       .classed('card-text', true)
       .html(function (d) { 
         if (d.column === "ItemTitle") {
-          return "<a href=\"https://www.imdb.com/title/" + d.link + "\">" + d.value + "</a>" + "(" + d.release + ")"
+          return "<a href=\"https://www.imdb.com/title/" + d.link + "\">" + d.value + "</a>" + " (" + d.release + ")"
         }
         else {return d.value}})
     
