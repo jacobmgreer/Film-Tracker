@@ -45,6 +45,8 @@ layout: circularstackedbarplot
     var footer = cards
       .append('div')
       .classed('card-footer', true)
+      .append('small')
+      .classed('text-muted', true)
       .html(function (d) { 
           return "<small class=\"text\">" + d["Rated.Date"] + "</small>"}) 
     
