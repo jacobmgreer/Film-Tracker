@@ -3,17 +3,6 @@ title: Recently Rated Films
 layout: circularstackedbarplot
 ---
 
-  <style>
-    .img {
-      display: block;
-      margin-left:auto;
-      margin-right:auto;
-      margin-top:10px;
-      object-fit: contain;
-      height:300px;
-      width:250px;
-    }
-  </style>
   <script type="text/javascript"charset="utf-8">
   var tabulate = function (data,columns) {
     var carddeck = d3.select('#cards')
@@ -26,6 +15,7 @@ layout: circularstackedbarplot
       .classed('card', true)
       .classed('mx-auto', true)
       .style('width','600px')
+      .style('margin-top','25px')
       
       .append('div')
       .classed('row', true)
@@ -61,7 +51,12 @@ layout: circularstackedbarplot
           return "<a href=\"https://www.imdb.com/title/" + d.link + "\">" + d.value + "</a>" + " (" + d.release + ")"
         }
         else {return d.value}})
-        
+      
+      .append('p')
+      .classed('card-text', true)
+      .append('small')
+      .classed('text-muted', true)
+      .html(function (d) { "<small class=\"text\">" + d.rated + "</small>"}) 
     
     return carddeck;
   }
@@ -77,6 +72,7 @@ d3.csv('https://jacobmgreer.github.io/Film-Tracker/RecentRatings/recentmovies.cs
   
   <div class="container">
     <br/><br/>
-    <h1 class="display-5">Recently Rated Films</h1>
+    <h1 class="display-5 text-center">Recently Rated Films</h1>
+    <br/><br/>
     <div id="cards"></div>
   </div>
