@@ -59,7 +59,7 @@ d3.csv('https://jacobmgreer.github.io/Film-Tracker/RecentRatings/recentmovies.cs
   var data = data
               .filter(element => element.Title != "NA")
               .filter(element => element.Type === "movie")
-  var columns = ['ItemTitle','Rating','Internet Movie Database','Metacritic','Rotten Tomatoes']
+  var columns = ['ItemTitle','Rating','Internet Movie Database','Metacritic','Rotten Tomatoes','Rated.Date']
   tabulate(data,columns)
 })
 </script>
