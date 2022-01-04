@@ -2,11 +2,8 @@
 title: Recently Rated Films
 layout: circularstackedbarplot
 ---
-  
-  <div class="container-fluid">
-    
+
   <style>
-    .card {margin-top:25px;}
     .img {
       display: block;
       margin-left:auto;
@@ -25,16 +22,24 @@ layout: circularstackedbarplot
       .data(data)
       .enter()
       .append('div')
-      .classed('col', true)
-      .append('div')
       .classed('card', true)
+      .classed('mb-3', true)
+      .append('div')
+      .classed('row', true)
+      .classed('g0', true)
+      .style('max-width','540px')
+      .append('div')
+      .classed('col-md-4', true)
       .html(function (d) { 
-          return "<img class=\"card-img-top img\" src=\"" + d.Poster + "\">"
+          return "<img class=\"img-fluid rounded-start\" src=\"" + d.Poster + "\">"
       })    
     
     var cardtext = cards
       .append('div')
+      .classed('col-md-8', true)
+      .append('div')
       .classed('card-body', true)
+      
     
     var info = cardtext
       .selectAll('p')    
@@ -72,9 +77,7 @@ d3.csv('https://jacobmgreer.github.io/Film-Tracker/RecentRatings/recentmovies.cs
 })
 </script>
   
-  <h1 class="display-5">Recently Rated Films</h1>
   <div class="container">
-    <div id="cards" class="row row-cols-4 g-4"></div>
-  </div>
-    
+    <h1 class="display-5">Recently Rated Films</h1>
+    <div id="cards"></div>
   </div>
