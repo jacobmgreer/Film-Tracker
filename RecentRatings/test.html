@@ -12,12 +12,12 @@ layout: circularstackedbarplot
     var cards = carddeck
     .append('div')
     .classed('col', true)
+    .append('div')
+    .classed('card', true)
     .data(data)
     .enter()
     
-    var cells = cards.selectAll('div')
-    .append('div')
-    .classed('card', true)
+    var cells = cards.selectAll('div.card')
     .data(function(card) {
       return columns.map(function (column) {
         return { column: column, value: card[column], link: card["IMDBid"] }
