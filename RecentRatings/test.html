@@ -1,0 +1,48 @@
+---
+  title: Recently Rated Films
+layout: circularstackedbarplot
+---
+  
+  <div class="container-fluid">
+  
+  <script type="text/javascript"charset="utf-8">
+  var tabulate = function (tclass,data,columns) {
+    var carddeck = d3.select(tclass)
+    
+    var cards = carddeck
+    .append('div')
+    .classed('col', true)
+    .append('div')
+    .classed('card', true)
+    .data(data)
+    .enter()
+    
+    var cells = rows.selectAll('div.card')
+    .data(function(cards) {
+      return columns.map(function (column) {
+        return { column: column, value: card[column], link: card["IMDBid"] }
+      })
+    })
+    .enter()
+    .append('p')
+    .html(function (d) { 
+      if (d.column === "ItemTitle") {
+        return "<a href=\"https://www.imdb.com/title/" + d.link + "\">" + d.value + "</a>"
+      }
+      else {return d.value}})
+    
+    return table;
+  }
+
+d3.csv('https://jacobmgreer.github.io/Film-Tracker/RecentRatings/recentmovies.csv',function (data) {
+  var data = data.filter(element => element.Title != "NA")
+  var columns = ['ItemTitle','Rated.Date','Released','Rating','imdbRating','Internet Movie Database','Metacritic','Rotten Tomatoes']
+  tabulate('.cards',data,columns)
+})
+</script>
+  
+  <h1 class="display-5">Recently Rated Films</h1>
+  <div class="cards row row-cols-1 row-cols-md-3 g-4"></div>
+  
+  <br clear="all"/><br/>
+  </div>
