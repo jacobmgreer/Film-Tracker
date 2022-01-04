@@ -3,56 +3,79 @@ title: Recently Rated Films
 layout: circularstackedbarplot
 ---
 
-<div class="container-fluid">
-
   <script type="text/javascript"charset="utf-8">
-  var tabulate = function (tclass,data,columns) {
-    var table = d3.select(tclass)
-                  .append('table')
-                  .classed('table', true)
-                  .classed('table-striped', true)
-    var thead = table.append('thead')
-    var tbody = table.append('tbody')
-
-    thead.append('tr')
-      .selectAll('th')
-        .data(columns)
-        .enter()
-      .append('th')
-        .attr('scope', 'col')
-        .text(function (d) { return d })
-
-    var rows = tbody.selectAll('tr')
-        .data(data)
-        .enter()
-      .append('tr')
-
-    var cells = rows.selectAll('td')
-        .data(function(row) {
-          return columns.map(function (column) {
-            return { column: column, value: row[column], link: row["IMDBid"] }
-          })
-        })
+  var tabulate = function (data,columns) {
+    var carddeck = d3.select('#cards')
+    
+    var cards = carddeck.selectAll('.card')
+      .data(data)
       .enter()
-      .append('td')
-      .html(function (d) { 
-      	if (d.column === "ItemTitle") {
-        	return "<a href=\"https://www.imdb.com/title/" + d.link + "\">" + d.value + "</a>"
-        }
-        else {return d.value}})
       
-    return table;
+      .append('div')
+      .classed('card', true)
+      .classed('mx-auto', true)
+      .style('width','600px')
+      .style('margin-top','25px')
+      
+      .append('div')
+      .classed('row', true)
+      .classed('g0', true)
+      
+    var image = cards
+      .append('div')
+      .classed('col-md-4', true)
+      .html(function (d) { 
+          return "<img class=\"img-fluid rounded-start\" src=\"" + d.Poster + "\">"
+      })
+    
+    var cardtext = cards
+      .append('div')
+      .classed('col-md-8', true)
+      
+      .append('div')
+      .classed('card-body', true)
+      
+    var info = cardtext
+      .selectAll('p')
+      .data(function(row) {
+        return columns.map(function (column) {
+          return { column: column, value: row[column], link: row["IMDBid"], release: row["Released"]}
+        })
+      })
+      .enter()
+      
+      .append('p')
+      .classed('card-text', true)
+      .html(function (d) { 
+        if (d.column === "ItemTitle") {return "<h5 class=\"card-title\"><a href=\"https://www.imdb.com/title/" + d.link + "\">" + d.value + "</a>" + " (" + d.release + ")</h5>"}
+        else if (d.column === "Rating") {return "My Rating: " + d.value}
+        else if (d.column === "Internet Movie Database") {return "Internet Movie Database: " + d.value}
+        else if (d.column === "Metacritic") {return "Metacritic: " + d.value}
+        else if (d.column === "Rotten Tomatoes") {return "Rotten Tomatoes: " + d.value}
+        else {return d.value}})
+        
+     var footer = cardtext
+      .append('p')
+      .classed('card-text', true)
+      .append('small')
+      .classed('text-muted', true)
+      .html(function (d) { return d["Rated.Date"] })
+    
+    return carddeck;
   }
 
-  d3.csv('https://jacobmgreer.github.io/Film-Tracker/RecentRatings/recentmovies.csv',function (data) {
-    var data = data.filter(element => element.Title != "NA")
-    var columns = ['ItemTitle','Rated.Date','Released','Rating','Internet Movie Database','Metacritic','Rotten Tomatoes']
-    tabulate('.table-prime',data,columns)
-  })
-  </script>
+d3.csv('https://jacobmgreer.github.io/Film-Tracker/RecentRatings/recentmovies.csv',function (data) {
+  var data = data
+              .filter(element => element.Title != "NA")
+              .filter(element => element.Type === "movie")
+  var columns = ['ItemTitle','Rating','Internet Movie Database','Metacritic','Rotten Tomatoes']
+  tabulate(data,columns)
+})
+</script>
   
-  <h1 class="display-5">Recently Rated Films</h1>
-  <div class="table-prime"></div>
-  
-  <br clear="all"/><br/>
-</div>
+  <div class="container">
+    <br/>
+    <h1 class="display-5 text-center">Recently Rated Films</h1>
+    <br/>
+    <div id="cards"></div>
+  </div>
