@@ -10,14 +10,14 @@ layout: circularstackedbarplot
     var carddeck = d3.select(tclass)
     
     var cards = carddeck
-    .append('div')
-    .classed('col', true)
-    .append('div')
-    .classed('card', true)
-    .data(data)
-    .enter()
+      .data(data)
+      .enter()
+      .append('div')
+      .classed('col', true)
+      .append('div')
+      .classed('card', true)
     
-    var cells = cards.selectAll('div.card')
+    var cells = cards.select('div.card')
     .data(function(card) {
       return columns.map(function (column) {
         return { column: column, value: card[column], link: card["IMDBid"] }
