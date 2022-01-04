@@ -21,7 +21,7 @@ layout: circularstackedbarplot
       .classed('card', true)
       .style("width","300px")
       .html(function (d) { 
-          return "<img class=\"card-img-top\" src=\"" + d.Poster + "\">"
+          return "<img class=\"card-img-top\" style=\"max-height:250px;\" src=\"" + d.Poster + "\">"
       })    
     
     var cardtext = cards
