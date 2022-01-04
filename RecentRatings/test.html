@@ -17,6 +17,9 @@ layout: circularstackedbarplot
       .append('div')
       .classed('card', true)
       .classed('h-100', true)
+      .html(function (d) { 
+          return "<img src=\"" + d.Poster + "\">"
+      })    
       .append('div')
       .classed('card-body', true)
       
