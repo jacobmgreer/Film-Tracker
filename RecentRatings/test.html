@@ -39,9 +39,15 @@ layout: circularstackedbarplot
         else {return d.value}})
     
     var footer = cards
+      .data(function(row) {
+          return columns.map(function (column) {
+            return { column: column, value: row[column], link: row["IMDBid"] }
+          })
+        })
       .append('div')
       .classed('card-footer', true)
-      .html("<small class=\"text\">" + row["Rated.Date"] + "</small>")    
+      .html(function (d) { 
+          return "<small class=\"text\">" + d["Rated.Date"] + "</small>"})    
     
     return carddeck;
   }
