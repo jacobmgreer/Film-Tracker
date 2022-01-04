@@ -16,6 +16,7 @@ layout: circularstackedbarplot
       .classed('col', true)
       .append('div')
       .classed('card', true)
+      .classed('h-100', true)
     
     var cells = cards.selectAll('p')    
       .data(function(row) {
@@ -25,6 +26,7 @@ layout: circularstackedbarplot
       })
       .enter()
       .append('p')
+      .classed('card-text', true)
       .html(function (d) { 
         if (d.column === "ItemTitle") {
           return "<a href=\"https://www.imdb.com/title/" + d.link + "\">" + d.value + "</a>"
