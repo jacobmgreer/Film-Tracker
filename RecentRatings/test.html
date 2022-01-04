@@ -50,14 +50,14 @@ layout: circularstackedbarplot
         if (d.column === "ItemTitle") {
           return "<a href=\"https://www.imdb.com/title/" + d.link + "\">" + d.value + "</a>" + " (" + d.release + ")"
         }
-        else {return d.value}})
+        else {return d.value}}
     
     var footer = cardtext
       .append('p')
       .classed('card-text', true)
       .append('small')
       .classed('text-muted', true)
-      .html(function (d) { "<small class=\"text\">" + d["Rated.Date"] + "</small>"}) 
+      .html(function (d) { d.Rated.Date }) 
     
     return carddeck;
   }
