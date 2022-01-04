@@ -19,7 +19,7 @@ layout: circularstackedbarplot
       .classed('h-100', true)
       .classed('w-300', true)
       .html(function (d) { 
-          return "<img src=\"" + d.Poster + "\" style=\"max-height:300px;\">"
+          return "<img src=\"" + d.Poster + "\" preserveAspectRatio=\"xMidYMid\" slice style=\"max-height:300px;\">"
       })    
     
     var cardtext = cards
