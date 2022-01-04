@@ -22,10 +22,6 @@ layout: circularstackedbarplot
       })    
       .append('div')
       .classed('card-body', true)
-      .append('div')
-      .classed('card-footer', true)
-      .html(function (d) { 
-          return "<small class=\"text\">" + d["Rated.Date"] + "</small>"})    
       
     var cells = cards
       .select(".card-body")
