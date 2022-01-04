@@ -7,6 +7,13 @@ layout: circularstackedbarplot
     
   <style>
     .col {margin-top:25px;}
+    .img {
+      display: block;
+      max-width:230px;
+      max-height:95px;
+      width: auto;
+      height: auto;
+    }
   </style>
   <script type="text/javascript"charset="utf-8">
   var tabulate = function (data,columns) {
@@ -21,7 +28,7 @@ layout: circularstackedbarplot
       .classed('card', true)
       .style("width","300px")
       .html(function (d) { 
-          return "<img class=\"card-img-top center-block\" style=\"max-height:300px\" src=\"" + d.Poster + "\">"
+          return "<img class=\"card-img-top img\" src=\"" + d.Poster + "\">"
       })    
     
     var cardtext = cards
