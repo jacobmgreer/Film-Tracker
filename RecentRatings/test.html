@@ -21,25 +21,30 @@ layout: circularstackedbarplot
     var cards = carddeck.selectAll('.card')
       .data(data)
       .enter()
+      
       .append('div')
       .classed('card', true)
       .classed('mb-3', true)
       .style('max-width','540px')
+      
       .append('div')
       .classed('row', true)
       .classed('g0', true)
       
-    var cardimage = cards
       .append('div')
       .classed('col-md-4', true)
       .html(function (d) { 
           return "<img class=\"img-fluid rounded-start\" src=\"" + d.Poster + "\">"
       })
-    
-    var cardtext = 
-      .after('.col-md-4')
+      
       .append('div')
       .classed('col-md-8', true)
+    
+    
+    
+    var cardtext = cards
+      .select('.col-md-8')
+      
       .append('div')
       .classed('card-body', true)
       
