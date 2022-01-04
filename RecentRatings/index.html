@@ -44,14 +44,14 @@ layout: circularstackedbarplot
     return table;
   }
 
-  d3.csv('https://jacobmgreer.github.io/Film-Tracker/RecentlyRated/recentmovies.csv',function (data) {
+  d3.csv('https://jacobmgreer.github.io/Film-Tracker/RecentRatings/recentmovies.csv',function (data) {
     var data = data.filter(element => element.Service === "Prime")
     var columns = ['ItemTitle','Rated.Date','ItemYear','Rating','Poster']
     tabulate('.table-prime',data,columns)
   })
   </script>
   
-  <h1 class="display-5">Oscar Winning films on Amazon Prime</h1>
+  <h1 class="display-5">Recently Rated Films</h1>
   <div class="table-prime"></div>
   
   <br clear="all"/><br/>
