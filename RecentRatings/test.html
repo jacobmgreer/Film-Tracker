@@ -57,7 +57,7 @@ layout: circularstackedbarplot
       .classed('card-text', true)
       .append('small')
       .classed('text-muted', true)
-      .html(function (d) { d["Rated.Date"] })
+      .html(function (d) { return d["Rated.Date"] })
     
     return carddeck;
   }
