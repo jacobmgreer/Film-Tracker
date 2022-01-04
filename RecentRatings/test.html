@@ -6,30 +6,28 @@ layout: circularstackedbarplot
   <div class="container-fluid">
   
   <script type="text/javascript"charset="utf-8">
-  var tabulate = function (tclass,data,columns) {
-    var carddeck = d3.select(tclass)
+  var tabulate = function (data,columns) {
+    var carddeck = d3.select('.cards')
     
-    var cards = carddeck
-      .data(data)
-      .enter()
+    var cards = carddeck.data(data).enter()
       .append('div')
       .classed('col', true)
       .append('div')
       .classed('card', true)
     
-    var cells = cards.select('.card')
-    .data(function(card) {
-      return columns.map(function (column) {
-        return { column: column, value: card[column], link: card["IMDBid"] }
+    var cells = cards.selectAll('p')    
+      .data(function(card) {
+        return columns.map(function (column) {
+          return { column: column, value: card[column], link: card["IMDBid"] }
+        })
       })
-    })
-    .enter()
-    .append('p')
-    .html(function (d) { 
-      if (d.column === "ItemTitle") {
-        return "<a href=\"https://www.imdb.com/title/" + d.link + "\">" + d.value + "</a>"
-      }
-      else {return d.value}})
+      .enter()
+      .append('p')
+      .html(function (d) { 
+        if (d.column === "ItemTitle") {
+          return "<a href=\"https://www.imdb.com/title/" + d.link + "\">" + d.value + "</a>"
+        }
+        else {return d.value}})
     
     return carddeck;
   }
@@ -37,7 +35,7 @@ layout: circularstackedbarplot
 d3.csv('https://jacobmgreer.github.io/Film-Tracker/RecentRatings/recentmovies.csv',function (data) {
   var data = data.filter(element => element.Title != "NA")
   var columns = ['ItemTitle','Rated.Date','Released','Rating','imdbRating','Internet Movie Database','Metacritic','Rotten Tomatoes']
-  tabulate('.cards',data,columns)
+  tabulate(data,columns)
 })
 </script>
   
