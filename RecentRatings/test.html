@@ -18,7 +18,7 @@ layout: circularstackedbarplot
       .classed('card', true)
       .classed('h-100', true)
       .html(function (d) { 
-          return "<img src=\"" + d.Poster + "\" style=\"max-width:200px;\">"
+          return "<img src=\"" + d.Poster + "\" style=\"max-width:250px;\">"
       })    
       .append('div')
       .classed('card-body', true)
@@ -43,7 +43,7 @@ layout: circularstackedbarplot
 
 d3.csv('https://jacobmgreer.github.io/Film-Tracker/RecentRatings/recentmovies.csv',function (data) {
   var data = data.filter(element => element.Title != "NA")
-  var columns = ['ItemTitle','Rated.Date','Released','Rating','imdbRating','Internet Movie Database','Metacritic','Rotten Tomatoes']
+  var columns = ['ItemTitle','Rated.Date','Released','Rating','Internet Movie Database','Metacritic','Rotten Tomatoes']
   tabulate(data,columns)
 })
 </script>
