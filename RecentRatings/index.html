@@ -45,7 +45,7 @@ layout: circularstackedbarplot
   }
 
   d3.csv('https://jacobmgreer.github.io/Film-Tracker/RecentRatings/recentmovies.csv',function (data) {
-    var data = data.filter(element => element.Service === "Prime")
+    var data = data.filter(element => element.Title != "NA")
     var columns = ['ItemTitle','Rated.Date','ItemYear','Rating','Poster']
     tabulate('.table-prime',data,columns)
   })
