@@ -22,8 +22,12 @@ layout: circularstackedbarplot
       })    
       .append('div')
       .classed('card-body', true)
+      .append('div')
+      .classed('card-footer', true)
+      .html(function (d) { 
+          return "<small class=\"text\">" + d["Rated.Date"] + "</small>"})    
       
-    var cells = cards.selectAll('p')    
+    var cells = cards.select(".card-body").selectAll('p')    
       .data(function(row) {
         return columns.map(function (column) {
           return { column: column, value: row[column], link: row["IMDBid"] }
@@ -37,17 +41,6 @@ layout: circularstackedbarplot
           return "<a href=\"https://www.imdb.com/title/" + d.link + "\">" + d.value + "</a>"
         }
         else {return d.value}})
-    
-    var footer = cards
-      .data(function(row) {
-          return columns.map(function (column) {
-            return { column: column, value: row[column], link: row["IMDBid"] }
-          })
-        })
-      .append('div')
-      .classed('card-footer', true)
-      .html(function (d) { 
-          return "<small class=\"text\">" + d["Rated.Date"] + "</small>"})    
     
     return carddeck;
   }
