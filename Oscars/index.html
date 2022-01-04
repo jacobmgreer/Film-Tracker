@@ -26,7 +26,7 @@ layout: circularstackedbarplot
 
   var tooltip = d3.select('#tooltip');
 
-  d3.csv("https://jacobmgreer.github.io/IMDB-Tracker/Oscars/OscarsSummary.csv", function(d, i, columns) {
+  d3.csv("https://jacobmgreer.github.io/Film-Tracker/Oscars/OscarsSummary.csv", function(d, i, columns) {
     for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
     d.total = t;
     return d;
@@ -106,7 +106,7 @@ layout: circularstackedbarplot
     return table;
   }
 
-  d3.csv('https://jacobmgreer.github.io/IMDB-Tracker/Oscars/OscarsData.csv',function (data) {
+  d3.csv('https://jacobmgreer.github.io/Film-Tracker/Oscars/OscarsData.csv',function (data) {
     d3.select('.movies-total').html('Total: seen ' + 
         data.filter(element => element.Seen === "Yes").length + ' out of ' + 
         data.length + ' (' + 

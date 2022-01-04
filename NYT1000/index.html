@@ -26,7 +26,7 @@ layout: circularstackedbarplot
 
   var tooltip = d3.select('#tooltip');
 
-  d3.csv("https://jacobmgreer.github.io/IMDB-Tracker/NYT1000/NYT1000Summary.csv", function(d, i, columns) {
+  d3.csv("https://jacobmgreer.github.io/Film-Tracker/NYT1000/NYT1000Summary.csv", function(d, i, columns) {
     for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
     d.total = t;
     return d;
@@ -107,7 +107,7 @@ layout: circularstackedbarplot
     return table;
   }
 
-  d3.csv('https://jacobmgreer.github.io/IMDB-Tracker/NYT1000/NYT1000Data.csv',function (data) {
+  d3.csv('https://jacobmgreer.github.io/Film-Tracker/NYT1000/NYT1000Data.csv',function (data) {
     d3.select('.movies-total').html('Total: seen ' + 
         data.filter(element => element.Seen === "Yes").length + ' out of ' + 
         data.length + ' (' + 
