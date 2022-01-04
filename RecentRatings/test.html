@@ -25,9 +25,9 @@ layout: circularstackedbarplot
       .append('div')
       .classed('card-footer', true)
       .html(function (d) { 
-          return "<small class=\"text\">" + d["Rated.Date"] + "</small>"})    
+          return "<small class=\"text\">" + d.Rated.Date + "</small>"})    
       
-    var cells = cards.select(".card-body").selectAll('p')    
+    var cells = cards.selectAll('p')    
       .data(function(row) {
         return columns.map(function (column) {
           return { column: column, value: row[column], link: row["IMDBid"] }
