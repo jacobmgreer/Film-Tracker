@@ -7,34 +7,24 @@ layout: circularstackedbarplot
 
   <script type="text/javascript"charset="utf-8">
   var tabulate = function (tclass,data,columns) {
-    var table = d3.select(tclass)
-                  .append('table')
-                  .classed('table', true)
-                  .classed('table-striped', true)
-    var thead = table.append('thead')
-    var tbody = table.append('tbody')
+    var carddeck = d3.select(tclass)
+            
+    var cards = carddeck
+                  .append('div')
+                  .classed('col', true)
+                  .append('div')
+                  .classed('card', true)
+                  .data(data)
+                  .enter()
 
-    thead.append('tr')
-      .selectAll('th')
-        .data(columns)
-        .enter()
-      .append('th')
-        .attr('scope', 'col')
-        .text(function (d) { return d })
-
-    var rows = tbody.selectAll('tr')
-        .data(data)
-        .enter()
-      .append('tr')
-
-    var cells = rows.selectAll('td')
+    var cells = rows.selectAll('div.card')
         .data(function(row) {
           return columns.map(function (column) {
             return { column: column, value: row[column], link: row["IMDBid"] }
           })
         })
       .enter()
-      .append('td')
+      .append('p')
       .html(function (d) { 
       	if (d.column === "ItemTitle") {
         	return "<a href=\"https://www.imdb.com/title/" + d.link + "\">" + d.value + "</a>"
@@ -47,12 +37,12 @@ layout: circularstackedbarplot
   d3.csv('https://jacobmgreer.github.io/Film-Tracker/RecentRatings/recentmovies.csv',function (data) {
     var data = data.filter(element => element.Title != "NA")
     var columns = ['ItemTitle','Rated.Date','Released','Rating','imdbRating','Internet Movie Database','Metacritic','Rotten Tomatoes']
-    tabulate('.table-prime',data,columns)
+    tabulate('.cards',data,columns)
   })
   </script>
   
   <h1 class="display-5">Recently Rated Films</h1>
-  <div class="table-prime"></div>
+  <div class="cards row row-cols-1 row-cols-md-3 g-4"></div>
   
   <br clear="all"/><br/>
 </div>
