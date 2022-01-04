@@ -51,7 +51,8 @@ layout: circularstackedbarplot
           return "<a href=\"https://www.imdb.com/title/" + d.link + "\">" + d.value + "</a>" + " (" + d.release + ")"
         }
         else {return d.value}})
-      
+    
+    var footer = cardtext
       .append('p')
       .classed('card-text', true)
       .append('small')
