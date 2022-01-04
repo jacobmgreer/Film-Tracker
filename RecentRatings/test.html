@@ -69,7 +69,7 @@ layout: circularstackedbarplot
       .classed('card-text', true)
       .append('small')
       .classed('text-muted', true)
-      .html("<small class=\"text\">" + d.rated + "</small>") 
+      .html(function (d) { "<small class=\"text\">" + d.rated + "</small>"}) 
     
     return carddeck;
   }
