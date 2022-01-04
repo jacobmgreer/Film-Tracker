@@ -17,7 +17,9 @@ layout: circularstackedbarplot
       .append('div')
       .classed('card', true)
       .classed('h-100', true)
-    
+      .append('div')
+      .classed('card-body', true)
+      
     var cells = cards.selectAll('p')    
       .data(function(row) {
         return columns.map(function (column) {
