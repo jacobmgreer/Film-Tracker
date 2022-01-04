@@ -16,9 +16,9 @@ layout: circularstackedbarplot
       .classed('card', true)
     
     var cells = cards.selectAll('p')    
-      .data(function(card) {
+      .data(function(row) {
         return columns.map(function (column) {
-          return { column: column, value: card[column], link: card["IMDBid"] }
+          return { column: column, value: row[column], link: row["IMDBid"] }
         })
       })
       .enter()
