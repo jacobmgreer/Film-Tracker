@@ -25,4 +25,6 @@ for (i in 1:ceiling(IMDBoscarscount/50)) {
   IMDBnextlink <- paste0("https://www.imdb.com",link %>% html_nodes(.,'#main > div > div.desc > a.next-page') %>% html_attr("href"))
 }
 
+write.csv(IMDBoscars, "output/IMDBoscars.csv", row.names = FALSE)
+
 rm(i, page, link, IMDBnextlink, required, IMDBoscarscount)

@@ -20,4 +20,6 @@ for (i in 1:ceiling(IMDBnyt1000count/100)) {
   IMDBnyt1000 <- rbind(IMDBnyt1000, page)
 }
 
+write.csv(IMDBnyt1000, "output/IMDBnyt1000.csv", row.names = FALSE)
+
 rm(i, page, link, required, IMDBnyt1000count)

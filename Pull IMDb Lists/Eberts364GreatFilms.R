@@ -22,4 +22,6 @@ for (i in 1:ceiling(IMDBebertcount/100)) {
   IMDBebert <- rbind(IMDBebert, page)
 }
 
+write.csv(IMDBebert, "output/IMDBebert.csv", row.names = FALSE)
+
 rm(i, page, link, required, IMDBebertcount)

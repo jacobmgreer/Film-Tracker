@@ -43,4 +43,7 @@ for (i in 1:ceiling(count/250)) {
   nextlink <- paste0("https://www.imdb.com",link %>% html_nodes(.,'#main > div > div.desc > a.next-page') %>% html_attr("href"))
 }
 
+write.csv(Docs.on.Prime, "output/Prime-Docs.csv", row.names = FALSE)
+write.csv(Films.on.Prime, "output/Prime-Films.csv", row.names = FALSE)
+
 rm(nextlink, page, link, i, required, count)

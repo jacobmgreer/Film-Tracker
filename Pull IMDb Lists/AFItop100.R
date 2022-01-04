@@ -39,4 +39,7 @@ for (i in 1:ceiling(IMDBaficount/100)) {
   IMDBafi2007 <- rbind(IMDBafi2007, page)
 }
 
+write.csv(IMDBafi1998, "output/IMDBafi1998.csv", row.names = FALSE)
+write.csv(IMDBafi2007, "output/IMDBafi2007.csv", row.names = FALSE)
+
 rm(i, page, link, required, IMDBaficount)

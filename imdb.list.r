@@ -1,6 +1,14 @@
 required <- c("rvest", "tidyverse", "magrittr", "jsonlite", "qdapRegex")
 lapply(required, require, character.only = TRUE)
 
+IMDBafi1998 <- read_csv("output/IMDBafi1998.csv")
+IMDBafi2007 <- read_csv("output/IMDBafi2007.csv")
+IMDBoscars <- read_csv("output/IMDBoscars.csv")
+IMDBebert <- read_csv("output/IMDBebert.csv")
+IMDBnyt1000 <- read_csv("output/IMDBnyt1000.csv")
+Docs.on.Prime <- read_csv("output/Prime-Docs.csv")
+Films.on.Prime <- read_csv("output/Prime-Films.csv")
+
 ## load Personal Ratings on IMDB
 nextlink <- 'https://www.imdb.com/user/ur28723514/ratings/'
 count <-
@@ -75,9 +83,9 @@ IMDBcombinedAFI2007 <-
   write.csv(.,"AFITop100/2007/Data.csv", row.names = FALSE)
 
 ## Oscar Data for CSV
-  IMDBcombinedOscars %>% 
+IMDBcombinedOscars %>% 
   #mutate(Decade = floor(as.numeric(ItemYear)/10)*10) %>%
-  filter(ItemYear != "2021") %>%
+  filter(ItemYear != 2021) %>%
   group_by(ItemYear = as.numeric(ItemYear)) %>% 
   summarize(
     Y = n_distinct(IMDBid[Seen == "Yes"]),
@@ -95,3 +103,5 @@ IMDBcombinedAFI2007 <-
   write.csv(.,"NYT1000/NYT1000Summary.csv", row.names = FALSE)
 
 rm(i, page, link, nextlink, required, count)
+rm(IMDBcombinedAFI2007, IMDBcombinedEbert, IMDBcombinedOscars, IMDBcombinedNYT1000, IMDBcombinedAFI1998, Docs.on.Prime, Films.on.Prime)
+
