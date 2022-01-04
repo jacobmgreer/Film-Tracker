@@ -24,7 +24,6 @@ layout: circularstackedbarplot
       .classed('card-body', true)
       
     var cells = cards
-      .select(".card-body")
       .selectAll('p')    
       .data(function(row) {
         return columns.map(function (column) {
