@@ -28,11 +28,13 @@ layout: circularstackedbarplot
       .append('div')
       .classed('row', true)
       .classed('g0', true)
+      
+    var cardimage = cards
       .append('div')
       .classed('col-md-4', true)
       .html(function (d) { 
           return "<img class=\"img-fluid rounded-start\" src=\"" + d.Poster + "\">"
-      })    
+      })
     
     var cardtext = cards
       .append('div')
@@ -42,13 +44,13 @@ layout: circularstackedbarplot
       
     
     var info = cardtext
-      .selectAll('p')    
       .data(function(row) {
         return columns.map(function (column) {
           return { column: column, value: row[column], link: row["IMDBid"], release: row["Released"]}
         })
       })
       .enter()
+      
       .append('p')
       .classed('card-text', true)
       .html(function (d) { 
@@ -56,8 +58,7 @@ layout: circularstackedbarplot
           return "<a href=\"https://www.imdb.com/title/" + d.link + "\">" + d.value + "</a>" + " (" + d.release + ")"
         }
         else {return d.value}})
-    
-    var footer = cardtext
+        
       .append('p')
       .classed('card-text', true)
       .append('small')
