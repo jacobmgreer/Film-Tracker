@@ -6,12 +6,10 @@ layout: circularstackedbarplot
   <div class="container-fluid">
     
   <style>
-    .col {margin-top:25px;}
     .img {
       display: block;
       object-fit: contain;
-      width:300px;
-      height:400px;
+      height:300px;
     }
   </style>
   <script type="text/javascript"charset="utf-8">
@@ -25,7 +23,6 @@ layout: circularstackedbarplot
       .classed('col', true)
       .append('div')
       .classed('card', true)
-      .style("width","300px")
       .html(function (d) { 
           return "<img class=\"card-img-top img\" src=\"" + d.Poster + "\">"
       })    
