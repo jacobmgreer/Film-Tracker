@@ -1,5 +1,6 @@
 required <- c("rvest", "tidyverse", "magrittr", "jsonlite", "qdapRegex")
 lapply(required, require, character.only = TRUE)
+options(readr.show_col_types = FALSE)
 
 IMDBafi1998 <- read_csv("output/IMDBafi1998.csv")
 IMDBafi2007 <- read_csv("output/IMDBafi2007.csv")
