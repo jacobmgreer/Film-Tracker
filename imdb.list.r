@@ -58,6 +58,7 @@ OscarRatings <-
     Y = n_distinct(FilmID[Seen == "Yes"]),
     N = n_distinct(FilmID[Seen == "No"]),
     Prime = n_distinct(FilmID[Service == "Prime"])) %>%
+  arrange(Year) %>%
   write.csv(.,"Oscars/OscarsSummary.csv", row.names = FALSE)
 
 ## combine IMDBlists with IMDBratings
