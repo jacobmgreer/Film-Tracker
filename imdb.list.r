@@ -1,4 +1,4 @@
-required <- c("rvest", "tidyverse", "magrittr", "jsonlite", "qdapRegex")
+required <- c("rvest", "tidyverse", "magrittr", "jsonlite", "qdapRegex", "scales", "numform")
 lapply(required, require, character.only = TRUE)
 options(readr.show_col_types = FALSE)
 
@@ -48,11 +48,16 @@ OscarRatings <-
   filter(AwardWinner == "Winner") %>%
   select(AwardCeremony, FilmID, Rating) %>%
   distinct %>%
-  mutate(Seen = ifelse(is.na(Rating), "No", "Yes")) %>%
-  dplyr::group_by(AwardCeremony) %>% 
+  mutate(
+    Seen = ifelse(is.na(Rating), "No", "Yes"),
+    Year = sub('.*-', '', AwardCeremony),
+    Ceremony = ifelse(f_ordinal(sub("\\-.*", "", str_remove(AwardCeremony, "^0+"))) == 13, "13th", f_ordinal(sub("\\-.*", "", str_remove(AwardCeremony, "^0+"))))) %>%
+  left_join(., Streaming.Available, by=c("FilmID" = "IMDBid")) %>%
+  dplyr::group_by(Ceremony, Year) %>%
   dplyr::summarise(
     Y = n_distinct(FilmID[Seen == "Yes"]),
-    N = n_distinct(FilmID[Seen == "No"])) %>%
+    N = n_distinct(FilmID[Seen == "No"]),
+    Prime = n_distinct(FilmID[Service == "Prime"])) %>%
   write.csv(.,"Oscars/OscarsSummary.csv", row.names = FALSE)
 
 ## combine IMDBlists with IMDBratings

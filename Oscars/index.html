@@ -55,7 +55,7 @@ layout: circularstackedbarplot
       .on('mouseover', function(d) {
         tooltip
           .style('display', 'block')
-          .html('<h1> ' + d.data.AwardCeremony + '</h1>');
+          .html('<h1>' + d.data.Ceremony + ' Ceremony<br/><br/>' + d.data.Year + '</h1>');
       })
      .on('mouseout', function(d) {tooltip.html('<h3>Oscar Winning Films:<br/>Percentage Seen<br/>by Award Ceremony</h3>');});
   });
