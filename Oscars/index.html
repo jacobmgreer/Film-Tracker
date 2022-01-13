@@ -33,13 +33,16 @@ layout: circularstackedbarplot
   }, function(error, data) {
     if (error) throw error;
 
-    x.domain(data.map(function(d) { return d.Year; }));
+    x.domain(data.map(function(d) { return d.Ceremony; }));
     y.domain([0, d3.max(data, function(d) { return d.total; })]);
     z.domain(data.columns.slice(1));
 
     g.append("g")
       .selectAll("g")
-      .data(d3.stack().keys(data.columns.slice(1))(data))
+      .data(d3.stack().keys(data.columns.slice(1))(data
+      .filter(function(key) { 
+           return key !== "Year";
+      }))
       .enter().append("g")
         .attr("fill", function(d) { return z(d.key); })
       .selectAll("path")
@@ -48,8 +51,8 @@ layout: circularstackedbarplot
         .attr("d", d3.arc()
             .innerRadius(function(d) { return y(d[0]); })
             .outerRadius(function(d) { return y(d[1]); })
-            .startAngle(function(d) { return x(d.data.Year); })
-            .endAngle(function(d) { return x(d.data.Year) + x.bandwidth(); })
+            .startAngle(function(d) { return x(d.data.Ceremony); })
+            .endAngle(function(d) { return x(d.data.Ceremony) + x.bandwidth(); })
             .padAngle(0.01)
             .padRadius(innerRadius))
       .on('mouseover', function(d) {

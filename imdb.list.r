@@ -42,7 +42,6 @@ Streaming.Available <-
 
 ## combine OscarCeremonies with IMDBratings
 
-OscarRatings <- 
   left_join(OscarCeremonies, IMDBratings %>% select(IMDBid, Rating, Rated.Date), by=c("FilmID" = "IMDBid")) %>%
   filter(FilmID != "") %>%
   filter(AwardWinner == "Winner") %>%
@@ -52,12 +51,10 @@ OscarRatings <-
     Seen = ifelse(is.na(Rating), "No", "Yes"),
     Year = sub('.*-', '', AwardCeremony),
     Ceremony = ifelse(f_ordinal(sub("\\-.*", "", str_remove(AwardCeremony, "^0+"))) == 13, "13th", f_ordinal(sub("\\-.*", "", str_remove(AwardCeremony, "^0+"))))) %>%
-  left_join(., Streaming.Available, by=c("FilmID" = "IMDBid")) %>%
   dplyr::group_by(Ceremony, Year) %>%
   dplyr::summarise(
     Y = n_distinct(FilmID[Seen == "Yes"]),
-    N = n_distinct(FilmID[Seen == "No"]),
-    Prime = n_distinct(FilmID[Service == "Prime"])) %>%
+    N = n_distinct(FilmID[Seen == "No"])) %>%
   arrange(Year) %>%
   write.csv(.,"Oscars/OscarsSummary.csv", row.names = FALSE)
 
