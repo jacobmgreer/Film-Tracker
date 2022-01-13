@@ -33,7 +33,7 @@ layout: circularstackedbarplot
   }, function(error, data) {
     if (error) throw error;
 
-    x.domain(data.map(function(d) { return d.Ceremony; }));
+    x.domain(data.map(function(d) { return d.Menu; }));
     y.domain([0, d3.max(data, function(d) { return d.total; })]);
     z.domain(data.columns.slice(1));
 
@@ -48,14 +48,14 @@ layout: circularstackedbarplot
         .attr("d", d3.arc()
             .innerRadius(function(d) { return y(d[0]); })
             .outerRadius(function(d) { return y(d[1]); })
-            .startAngle(function(d) { return x(d.data.Ceremony); })
-            .endAngle(function(d) { return x(d.data.Ceremony) + x.bandwidth(); })
+            .startAngle(function(d) { return x(d.data.Menu); })
+            .endAngle(function(d) { return x(d.data.Menu) + x.bandwidth(); })
             .padAngle(0.01)
             .padRadius(innerRadius))
       .on('mouseover', function(d) {
         tooltip
           .style('display', 'block')
-          .html('<h1>' + d.data.Ceremony + ' ceremony<br/><br/>' + d.data.Year + '</h1>');
+          .html('<h1>' + d.data.Menu + '</h1>');
       })
      .on('mouseout', function(d) {tooltip.html('<h3>Oscar Winning Films:<br/>Percentage Seen<br/>by Award Ceremony</h3>');});
   });
