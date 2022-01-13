@@ -39,10 +39,7 @@ layout: circularstackedbarplot
 
     g.append("g")
       .selectAll("g")
-      .data(d3.stack().keys(data.columns.slice(1))(data
-      .filter(function(key) { 
-           return key !== "Year";
-      })))
+      .data(d3.stack().keys(data.columns.slice(1))(data))
       .enter().append("g")
         .attr("fill", function(d) { return z(d.key); })
       .selectAll("path")
