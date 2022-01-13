@@ -2,10 +2,10 @@ required <- c("rvest", "tidyverse", "magrittr", "jsonlite", "qdapRegex", "fuzzyj
 lapply(required, require, character.only = TRUE)
 
 OscarCeremonies <- NULL
-for (i in list.files("Pull IMDb Lists/IMDBOscarList/OscarsArchives", pattern="*.webarchive", include.dirs = FALSE)) {
+for (i in list.files("IMDb Lists/IMDBOscarList/OscarsArchives", pattern="*.webarchive", include.dirs = FALSE)) {
   OscarCeremonies <- bind_rows(OscarCeremonies,
          regex_left_join(
-           read_html(file.path("Pull IMDb Lists/IMDBOscarList/OscarsArchives", i)) %>% 
+           read_html(file.path("IMDb Lists/IMDBOscarList/OscarsArchives", i)) %>% 
            html_nodes('div.event-widgets__award:first-of-type div.event-widgets__award-category') %>%
            map_df(~{
              AwardCategory <- .x %>% html_nodes('div.event-widgets__award-category-name') %>% html_text
@@ -18,7 +18,7 @@ for (i in list.files("Pull IMDb Lists/IMDBOscarList/OscarsArchives", pattern="*.
            separate_rows(SecondaryName, sep = ', ') %>%
            mutate(AwardCeremony = file_path_sans_ext(i)),
          
-           read_html(file.path("Pull IMDb Lists/IMDBOscarList/OscarsArchives", i))%>%
+           read_html(file.path("IMDb Lists/IMDBOscarList/OscarsArchives", i))%>%
            html_nodes('div.event-widgets__award:first-of-type div.event-widgets__award-category') %>%
            map_df(~{
              SecondaryName <- .x %>% html_nodes('div.event-widgets__secondary-nominees') %>% html_nodes('span.event-widgets__nominee-name') %>% html_text %>% {if(length(.) == 0) NA else .}
@@ -27,11 +27,25 @@ for (i in list.files("Pull IMDb Lists/IMDBOscarList/OscarsArchives", pattern="*.
              tibble(SecondaryID, SecondaryName, AwardCategory)
            }),
          by = c("AwardCategory", "SecondaryName" = "SecondaryName")))} 
+
 colnames(OscarCeremonies)[which(names(OscarCeremonies) == "AwardCategory.x")] <- "AwardCatgory"
 colnames(OscarCeremonies)[which(names(OscarCeremonies) == "SecondaryName.x")] <- "SecondaryName"
-OscarCeremonies <- OscarCeremonies %>% distinct()
+OscarCeremonies <- 
+  OscarCeremonies %>% 
+  distinct() %>%
+  mutate(
+    FilmID = ifelse(grepl("^title",PrimaryID), str_remove(PrimaryID, "title/"), ifelse(grepl("^title",SecondaryID), str_remove(SecondaryID, "title/"), "")),
+    PersonID = ifelse(grepl("^name",PrimaryID), str_remove(PrimaryID, "name/"), ifelse(grepl("^name",SecondaryID), str_remove(SecondaryID, "name/"), "")),
+    CompanyID = ifelse(grepl("^company",PrimaryID), str_remove(PrimaryID, "company/"), ifelse(grepl("^company",SecondaryID), str_remove(SecondaryID, "company/"), ""))
+  ) %>%
+  select(-c(SecondaryName.y,AwardCategory.y))
 
 write.csv(OscarCeremonies, "output/OscarCeremonies.csv", row.names = FALSE)
+
+
+
+
+
 
 # award.connectors <- 
   # read_html("Pull IMDb Lists/IMDBOscarList/Oscar_Ceremonies/80-2008.webarchive") %>%
