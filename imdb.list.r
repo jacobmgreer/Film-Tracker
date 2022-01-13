@@ -52,7 +52,7 @@ OscarRatings <-
     Seen = ifelse(is.na(Rating), "No", "Yes"),
     Year = sub('.*-', '', AwardCeremony),
     Ceremony = ifelse(f_ordinal(sub("\\-.*", "", str_remove(AwardCeremony, "^0+"))) == 13, "13th", f_ordinal(sub("\\-.*", "", str_remove(AwardCeremony, "^0+")))), 
-    Menu = paste0(Ceremony," Academy Awards<br/><br/>",Year)) %>%
+    Menu = paste0("<h5>",Ceremony," Academy Awards</h5><h1>",Year,"</h1>")) %>%
   dplyr::group_by(Menu, Year) %>%
   dplyr::summarise(
     Y = n_distinct(FilmID[Seen == "Yes"]),
