@@ -8,6 +8,11 @@ IMDBafi2007 <- read_csv("output/IMDBafi2007.csv")
 IMDBebert <- read_csv("output/IMDBebert.csv")
 IMDBnyt1000 <- read_csv("output/IMDBnyt1000.csv")
 OscarCeremonies <- read_csv("output/OscarCeremonies.csv")
+OscarFilms <- 
+  OscarCeremonies %>% 
+  #filter(AwardWinner == "Winner") %>% 
+  dplyr::count(AwardCeremony, AwardCategory, AwardWinner, FilmName, FilmID) %>%
+  select(-n)
 
 ## load Personal Ratings on IMDB
 nextlink <- 'https://www.imdb.com/user/ur28723514/ratings/'
