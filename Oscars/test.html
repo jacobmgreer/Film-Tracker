@@ -85,7 +85,7 @@ layout: circularstackedbarplot
     
     function doSomething(d){
           
-    	var columns = ['AwardWinner','FilmName','PersonName']
+    	var columns = ['AwardWinner','FilmName','PersonName','Rating','imdbRating','imdbVotes','Rotten Tomatoes']
     
       var AwardCeremonies = d3.select('.table-prime').selectAll('div')
         .data(d)
@@ -103,6 +103,15 @@ layout: circularstackedbarplot
         .append('table')
         .classed('table', true)
         .classed('table-striped', true)
+        
+      AwardCategories.append('thead')
+       	.append('tr')
+        .selectAll('th')
+          .data(columns)
+          .enter()
+        .append('th')
+          .attr('scope', 'col')
+          .text(function (d) { return d })
       
       var data2 = function(d) {return d.values}
       
