@@ -91,14 +91,14 @@ layout: circularstackedbarplot
         .data(d)
         .enter()
         .append('div')
-        .text(function(d){return d.key})
+        .html(function(d){return "<h1>" + d.key + "</h1>"})
         
       var data1 = function(d) {return d.values}
         
       var AwardCategories = AwardCeremonies.selectAll('div')
        	.data(data1)
         .enter()
-        .append('p')
+        .append('h3')
         .text(function(d){return d.key})
         .append('table')
         .classed('table', true)
