@@ -39,6 +39,7 @@ OscarCeremonies <- read_csv("output/OscarCeremonies.raw.csv")
 ## corrections
 OscarCeremonies.corrected <-
   OscarCeremonies %>%
+  distinct() %>%
   mutate(
     FilmID = ifelse(grepl("^title",PrimaryID), str_remove(PrimaryID, "title/"), ifelse(grepl("^title",SecondaryID), str_remove(SecondaryID, "title/"), NA)),
     FilmName = ifelse(grepl("^title",PrimaryID), PrimaryTitle, ifelse(grepl("^title",SecondaryID), SecondaryName, NA)),
@@ -51,8 +52,7 @@ OscarCeremonies.corrected <-
   mutate(
     FilmID = ifelse(is.na(FilmID) & SecondaryName.list == "Birdman or (The Unexpected Virtue of Ignorance)","tt2562232",FilmID),
     FilmName = ifelse(is.na(FilmName) & SecondaryName.list == "Birdman or (The Unexpected Virtue of Ignorance)","Birdman or (The Unexpected Virtue of Ignorance)",FilmName)) %>%
-  left_join(., OscarsOMDB, by="FilmID")
-
+  left_join(., OscarsOMDB %>% select(-`Internet Movie Database`), by="FilmID")
 
 write.csv(OscarCeremonies.corrected, "output/OscarCeremonies.csv", row.names = FALSE)
 
