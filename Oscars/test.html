@@ -126,12 +126,17 @@ layout: circularstackedbarplot
       var nominee = rows.selectAll('td')
           .data(function (row) {
                 return columns.map(function (column) {
-                  return { column: column, value: row[column]}
+                  return { column: column, value: row[column], votes: row['imdbVotes']}
                 })
               })
           .enter()
           .append('td')
-          .html(function(d){return d.value})
+          .html(function(d){
+            if (d.column == 'imdbRating') {
+            	return d.value + " (" + d.votes + ")"
+            }
+            else {
+            	if(d.value != "NA") {return d.value}}})
     
      }
   }
