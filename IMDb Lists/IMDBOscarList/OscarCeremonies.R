@@ -69,5 +69,5 @@ write.csv(OscarCeremonies.corrected, "output/OscarCeremonies.csv", row.names = F
 
 #rm(list=ls(pattern="^oscars"))
 
-rm(required)
+rm(required, OscarCeremonies)
 

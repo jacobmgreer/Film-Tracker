@@ -42,12 +42,9 @@ Streaming.Available <-
 
 ## combine OscarCeremonies with IMDBratings
 
-OscarData <-
   left_join(OscarCeremonies.corrected, IMDBratings %>% select(IMDBid, Rating, Rated.Date), by=c("FilmID" = "IMDBid")) %>%
-  arrange(OscarCeremony, OscarCategory, AwardWinner) %T>%
   write.csv(.,"Oscars/OscarsTracking.csv", row.names = FALSE)
 
-OscarRatings <-  
   left_join(OscarCeremonies.corrected, IMDBratings %>% select(IMDBid, Rating, Rated.Date), by=c("FilmID" = "IMDBid")) %>%
   filter(FilmID != "") %>%
   mutate(AwardWinner = ifelse(AwardWinner == "Winner",TRUE,FALSE)) %>%
@@ -73,7 +70,7 @@ OscarRatings <-
     Nominee.Y = n_distinct(FilmID[Seen == TRUE & is.na(AwardWinner)]),
     Nominee.N = n_distinct(FilmID[Seen == FALSE & is.na(AwardWinner)])) %>%
   arrange(Year) %>%
-  select(-Year) %T>%
+  select(-Year) %>%
   write.csv(.,"Oscars/OscarsSummary.csv", row.names = FALSE)
 
 # IMDBcombinedEbert <- 
@@ -115,7 +112,8 @@ IMDBcombinedNYT1000 <-
   select(ItemYear, Y, N) %>%
   write.csv(.,"NYT1000/NYT1000Summary.csv", row.names = FALSE)
 
-#rm(i, page, link, nextlink, required, count)
-rm(IMDBafi1998, IMDBafi2007, IMDBebert, IMDBnyt1000, IMDBcombinedNYT1000, Streaming.Available)
+#rm(i, page, link, nextlink, count)
+rm(IMDBafi1998, IMDBafi2007, IMDBebert, IMDBnyt1000, IMDBcombinedNYT1000, Streaming.Available, OscarCeremonies.corrected)
 #rm(IMDBcombinedAFI2007, IMDBcombinedEbert, IMDBcombinedOscars, IMDBcombinedAFI1998)
+rm(required)
 
