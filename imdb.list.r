@@ -7,7 +7,7 @@ IMDBafi1998 <- read_csv("output/IMDBafi1998.csv")
 IMDBafi2007 <- read_csv("output/IMDBafi2007.csv")
 IMDBebert <- read_csv("output/IMDBebert.csv")
 IMDBnyt1000 <- read_csv("output/IMDBnyt1000.csv")
-OscarCeremonies <- read_csv("output/OscarCeremonies.csv")
+OscarCeremonies.corrected <- read_csv("output/OscarCeremonies.csv")
 
 ## load Personal Ratings on IMDB
 nextlink <- 'https://www.imdb.com/user/ur28723514/ratings/'
@@ -45,18 +45,19 @@ Streaming.Available <-
   left_join(OscarCeremonies, IMDBratings %>% select(IMDBid, Rating, Rated.Date), by=c("FilmID" = "IMDBid")) %>%
   write.csv(.,"Oscars/OscarsTracking.csv", row.names = FALSE)
 
-  left_join(OscarCeremonies, IMDBratings %>% select(IMDBid, Rating, Rated.Date), by=c("FilmID" = "IMDBid")) %>%
+OscarRatings <-  
+  left_join(OscarCeremonies.corrected, IMDBratings %>% select(IMDBid, Rating, Rated.Date), by=c("FilmID" = "IMDBid")) %>%
   filter(FilmID != "") %>%
-  mutate(AwardWinner = ifelse(AwardWinner == "Winner", TRUE, FALSE)) %>%
+  mutate(AwardWinner = ifelse(AwardWinner == "Winner",TRUE,FALSE)) %>%
   select(AwardCeremony, AwardWinner, FilmID, Rating) %>%
   distinct %>%
-  group_by(FilmID) %>%
-    mutate(
+  dplyr::group_by(FilmID) %>%
+    dplyr::mutate(
       filmwon=ifelse(any(AwardWinner),TRUE,FALSE),
       filmwon=ifelse(all(is.na(filmwon)),FALSE,filmwon)
     ) %>%
-    mutate(keep_row=ifelse(filmwon,AwardWinner,TRUE)) %>%
-    filter(!(filmwon == TRUE & is.na(keep_row))) %>%
+    dplyr::mutate(keep_row=ifelse(filmwon,AwardWinner,TRUE)) %>%
+    dplyr::filter(!(filmwon == TRUE & is.na(keep_row))) %>%
   ungroup %>%
   mutate(
     Seen = ifelse(is.na(Rating), FALSE, TRUE),
@@ -70,7 +71,7 @@ Streaming.Available <-
     Nominee.Y = n_distinct(FilmID[Seen == TRUE & is.na(AwardWinner)]),
     Nominee.N = n_distinct(FilmID[Seen == FALSE & is.na(AwardWinner)])) %>%
   arrange(Year) %>%
-  select(-Year) %>%
+  select(-Year) %T>%
   write.csv(.,"Oscars/OscarsSummary.csv", row.names = FALSE)
 
 # IMDBcombinedEbert <- 
