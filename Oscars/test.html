@@ -70,6 +70,7 @@ layout: circularstackedbarplot
   
   <script type="text/javascript">
   function awardTable(ceremony) {
+    $(".table-prime").empty();
     var data = [];
     d3.csv('https://raw.githubusercontent.com/jacobmgreer/Film-Tracker/master/output/OscarCeremonies.csv', function(data){
     		var data = data.filter(element => element.AwardCeremony === ceremony)
