@@ -145,10 +145,10 @@ layout: circularstackedbarplot
             if (d.column == 'imdbRating') {
             	return d.value + " (" + d.votes + " votes)"
             }
-            else if (d.column === "FilmName") {
+            else if (d.column == 'FilmName') {
             	return "<a href=\"https://www.imdb.com/title/" + d.FilmID + "\">" + d.value + "</a>"
             }
-            else if (d.column === "PersonName") {
+            else if (d.column == 'PersonName') {
             	return "<a href=\"https://www.imdb.com/name/" + d.PersonID + "\">" + d.value + "</a>"
             }
             else {
