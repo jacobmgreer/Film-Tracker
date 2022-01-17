@@ -100,12 +100,57 @@ layout: circularstackedbarplot
       
     return table;
   }
+  
+var data = [];
+d3.csv('https://raw.githubusercontent.com/jacobmgreer/Film-Tracker/master/output/OscarCeremonies.csv', function(data){
+		var data = data
+    	//.filter(element => element.AwardCeremony === "01-1929")
+    var nested_data = d3.nest()
+                        .key(function(d) { return d.AwardCeremony; })
+                        .key(function(d) { return d.AwardCategory; })
+                        .entries(data);
+                        //console.log(nested_data)
+                        //console.log(nested_data[[0]].values)
+    doSomething(nested_data);
+})
 
-  d3.csv('https://jacobmgreer.github.io/Film-Tracker/Oscars/OscarsData.csv',function (data) {
-    var data = data.filter(element => element.Service === "Prime")
-    var columns = ['ItemTitle','ItemYear','ItemRuntime','Seen']
-    tabulate('.table-prime',data,columns)
-  })
+function doSomething(d){
+      
+	var columns = ['AwardWinner','FilmName','PersonName']
+
+  var AwardCeremonies = d3.select('.table-prime').selectAll('div')
+    .data(d)
+    .enter()
+    .append('div')
+    .text(function(d){return d.key})
+    
+  var data1 = function(d) {return d.values}
+    
+  var AwardCategories = AwardCeremonies.selectAll('div')
+   	.data(data1)
+    .enter()
+    .append('p')
+    .text(function(d){return d.key})
+    .append('table')
+  
+  var data2 = function(d) {return d.values}
+  
+  var rows = AwardCategories.selectAll('tr')
+      .data(data2)
+      .enter()
+      .append('tr')
+      
+  var nominee = rows.selectAll('td')
+      .data(function (row) {
+            return columns.map(function (column) {
+              return { column: column, value: row[column]}
+            })
+          })
+      .enter()
+      .append('td')
+      .html(function(d){return d.value})
+
+ }
   </script>
   
   <h1 class="display-5">Oscar Winning films on Amazon Prime</h1>
