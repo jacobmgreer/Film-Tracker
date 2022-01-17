@@ -126,11 +126,15 @@ layout: circularstackedbarplot
       var nominee = rows.selectAll('td')
           .data(function (row) {
                 return columns.map(function (column) {
-                  return { column: column, value: row[column], votes: row['imdbVotes']}
+                  return { column: column, value: row[column], votes: row['imdbVotes'], winner: row['AwardWinner']}
                 })
               })
           .enter()
           .append('td')
+          .attr('class', function(d) {
+    				if (d.winner == "Winner") {return "table-success"}
+            else {return "nominee"}
+					})
           .html(function(d){
             if (d.column == 'imdbRating') {
             	return d.value + " (" + d.votes + " votes)"
