@@ -34,7 +34,7 @@ OscarCeremonies <- read_csv("output/OscarCeremonies.raw.csv")
 # colnames(OscarCeremonies)[which(names(OscarCeremonies) == "SecondaryName.y")] <- "SecondaryName"
 # 
 # write.csv(OscarCeremonies, "output/OscarCeremonies.raw.csv", row.names = FALSE)
-# rm(i)
+#
 
 ## corrections
 OscarCeremonies.corrected <-
@@ -49,10 +49,11 @@ OscarCeremonies.corrected <-
     CompanyID = ifelse(grepl("^company",PrimaryID), str_remove(PrimaryID, "company/"), ifelse(grepl("^company",SecondaryID), str_remove(SecondaryID, "company/"), NA)),
     CompanyName = ifelse(grepl("^company",PrimaryID), PrimaryTitle, ifelse(grepl("^company",SecondaryID), SecondaryName, NA)),
   ) %>%
-  select(-c(SecondaryName,PrimaryTitle,PrimaryID,SecondaryID)) %>%
+  select(-c(PrimaryTitle,PrimaryID,SecondaryID,SecondaryName)) %>%
   mutate(
     FilmID = ifelse(is.na(FilmID) & SecondaryName.list == "Birdman or (The Unexpected Virtue of Ignorance)","tt2562232",FilmID),
-    FilmName = ifelse(is.na(FilmName) & SecondaryName.list == "Birdman or (The Unexpected Virtue of Ignorance)","Birdman or (The Unexpected Virtue of Ignorance)",FilmName))
+    FilmName = ifelse(is.na(FilmName) & SecondaryName.list == "Birdman or (The Unexpected Virtue of Ignorance)","Birdman or (The Unexpected Virtue of Ignorance)",FilmName)) %>%
+  left_join(., OscarsOMDB, by="FilmID")
 
 
 write.csv(OscarCeremonies.corrected, "output/OscarCeremonies.csv", row.names = FALSE)

@@ -42,7 +42,9 @@ Streaming.Available <-
 
 ## combine OscarCeremonies with IMDBratings
 
-OscarRatings <-
+  left_join(OscarCeremonies, IMDBratings %>% select(IMDBid, Rating, Rated.Date), by=c("FilmID" = "IMDBid")) %>%
+  write.csv(.,"Oscars/OscarsTracking.csv", row.names = FALSE)
+
   left_join(OscarCeremonies, IMDBratings %>% select(IMDBid, Rating, Rated.Date), by=c("FilmID" = "IMDBid")) %>%
   filter(FilmID != "") %>%
   mutate(AwardWinner = ifelse(AwardWinner == "Winner", TRUE, FALSE)) %>%
@@ -68,7 +70,7 @@ OscarRatings <-
     Nominee.Y = n_distinct(FilmID[Seen == TRUE & is.na(AwardWinner)]),
     Nominee.N = n_distinct(FilmID[Seen == FALSE & is.na(AwardWinner)])) %>%
   arrange(Year) %>%
-  select(-Year) %T>%
+  select(-Year) %>%
   write.csv(.,"Oscars/OscarsSummary.csv", row.names = FALSE)
 
 # IMDBcombinedEbert <- 
