@@ -8,11 +8,6 @@ IMDBafi2007 <- read_csv("output/IMDBafi2007.csv")
 IMDBebert <- read_csv("output/IMDBebert.csv")
 IMDBnyt1000 <- read_csv("output/IMDBnyt1000.csv")
 OscarCeremonies <- read_csv("output/OscarCeremonies.csv")
-OscarFilms <- 
-  OscarCeremonies %>% 
-  #filter(AwardWinner == "Winner") %>% 
-  dplyr::count(AwardCeremony, AwardCategory, AwardWinner, FilmName, FilmID) %>%
-  select(-n)
 
 ## load Personal Ratings on IMDB
 nextlink <- 'https://www.imdb.com/user/ur28723514/ratings/'
@@ -66,14 +61,6 @@ OscarRatings <-
   select(-Year) %>%
   write.csv(.,"Oscars/OscarsSummary.csv", row.names = FALSE)
 
-## combine IMDBlists with IMDBratings
-
-IMDBcombinedNYT1000 <- 
-  left_join(IMDBnyt1000, IMDBratings %>% select(IMDBid, Rating, Rated.Date), by="IMDBid") %>%
-  mutate(Seen = ifelse(is.na(Rating), "No", "Yes")) %>%
-  left_join(., Streaming.Available, by="IMDBid") %T>%
-  write.csv(.,"NYT1000/NYT1000Data.csv", row.names = FALSE)
-
 # IMDBcombinedEbert <- 
 #   left_join(IMDBebert, IMDBratings %>% select(IMDBid, Rating, Rated.Date), by="IMDBid") %>%
 #   mutate(Decade = paste0(10 * floor(as.numeric(ItemYear)/10),"s")) %>%
@@ -97,6 +84,13 @@ IMDBcombinedNYT1000 <-
 
 #mutate(Decade = floor(as.numeric(ItemYear)/10)*10)
 
+## combine IMDBlists with IMDBratings
+IMDBcombinedNYT1000 <- 
+  left_join(IMDBnyt1000, IMDBratings %>% select(IMDBid, Rating, Rated.Date), by="IMDBid") %>%
+  mutate(Seen = ifelse(is.na(Rating), "No", "Yes")) %>%
+  left_join(., Streaming.Available, by="IMDBid") %T>%
+  write.csv(.,"NYT1000/NYT1000Data.csv", row.names = FALSE)
+
 ## NYT-1000 Data for CSV
   IMDBcombinedNYT1000 %>% 
   dplyr::group_by(ItemYear = as.numeric(ItemYear)) %>% 
@@ -107,5 +101,6 @@ IMDBcombinedNYT1000 <-
   write.csv(.,"NYT1000/NYT1000Summary.csv", row.names = FALSE)
 
 rm(i, page, link, nextlink, required, count)
-#rm(IMDBcombinedAFI2007, IMDBcombinedEbert, IMDBcombinedOscars, IMDBcombinedNYT1000, IMDBcombinedAFI1998)
+rm(IMDBafi1998, IMDBafi2007, IMDBebert, IMDBnyt1000, IMDBcombinedNYT1000, Streaming.Available)
+#rm(IMDBcombinedAFI2007, IMDBcombinedEbert, IMDBcombinedOscars, IMDBcombinedAFI1998)
 
