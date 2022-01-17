@@ -43,7 +43,8 @@ Streaming.Available <-
 ## combine OscarCeremonies with IMDBratings
 
 OscarData <-
-  left_join(OscarCeremonies.corrected, IMDBratings %>% select(IMDBid, Rating, Rated.Date), by=c("FilmID" = "IMDBid")) %T>%
+  left_join(OscarCeremonies.corrected, IMDBratings %>% select(IMDBid, Rating, Rated.Date), by=c("FilmID" = "IMDBid")) %>%
+  arrange(OscarCeremony, OscarCategory, AwardWinner) %T>%
   write.csv(.,"Oscars/OscarsTracking.csv", row.names = FALSE)
 
 OscarRatings <-  
