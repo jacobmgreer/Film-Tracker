@@ -52,7 +52,7 @@ OscarCeremonies.corrected <-
   mutate(
     FilmID = ifelse(is.na(FilmID) & SecondaryName.list == "Birdman or (The Unexpected Virtue of Ignorance)","tt2562232",FilmID),
     FilmName = ifelse(is.na(FilmName) & SecondaryName.list == "Birdman or (The Unexpected Virtue of Ignorance)","Birdman or (The Unexpected Virtue of Ignorance)",FilmName)) %>%
-  left_join(., OscarsOMDB %>% select(-`Internet Movie Database`), by="FilmID")
+  left_join(., OscarsOMDB %>% dplyr::rename(IMDb = `Internet Movie Database`, RottenTomatoes = `Rotten Tomatoes`), by="FilmID")
 
 write.csv(OscarCeremonies.corrected, "output/OscarCeremonies.csv", row.names = FALSE)
 
