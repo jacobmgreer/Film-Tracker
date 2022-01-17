@@ -4,10 +4,11 @@ layout: circularstackedbarplot
 ---
 
 <div class="container-fluid" style="height:960px;">
-  <svg width="960" height="960" class="center"></svg>
+  <svg id="legend" height=300 width=450></svg>
+  <svg width="960" height="960" class="center" id="movies"></svg>
   <div id="tooltip" class="center"><h3>Oscar Winners & Nominees:<br/>Percentage Seen<br/>by Award Ceremony</h3></div>
   <script>
-  var svg = d3.select("svg"),
+  var svg = d3.select("#movies"),
       width = +svg.attr("width"),
       height = +svg.attr("height"),
       innerRadius = 130,
@@ -63,12 +64,34 @@ layout: circularstackedbarplot
   </script>
 </div>
 <div class="container-fluid">
-  <div class="movie-counts">
-    <div class="movies-prime"></div>
-    <div class="movies-total"></div>
-  </div>
-  
   <script type="text/javascript">
+  var svg = d3.select("#legend")
+  svg.append("circle").attr("cx",200).attr("cy",130).attr("r", 6).style("fill", "#94F2D0")
+  svg.append("circle").attr("cx",200).attr("cy",160).attr("r", 6).style("fill", "#69BFA0")
+  svg.append("circle").attr("cx",200).attr("cy",190).attr("r", 6).style("fill", "#C1D9D2")
+  svg.append("circle").attr("cx",200).attr("cy",210).attr("r", 6).style("fill", "#9AA692")
+  svg.append("text")
+    .attr("x", 220).attr("y", 130)
+    .text("Oscar Winners Seen")
+    .style("font-size", "15px")
+    .attr("alignment-baseline","middle")
+  svg.append("text")
+    .attr("x", 220).attr("y", 160)
+    .text("Oscar Winners Not Seen")
+    .style("font-size", "15px")
+    .attr("alignment-baseline","middle")
+  svg.append("text")
+    .attr("x", 220).attr("y", 190)
+    .text("Oscar Nominees Seen")
+    .style("font-size", "15px")
+    .attr("alignment-baseline","middle")
+  svg.append("text")
+    .attr("x", 220).attr("y", 210)
+    .text("Oscar Nominees Not Seen")
+    .style("font-size", "15px")
+    .attr("alignment-baseline","middle")
+
+  
   function awardTable(ceremony) {
     $(".table-prime").empty();
     var data = [];
