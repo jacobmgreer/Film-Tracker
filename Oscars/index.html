@@ -5,7 +5,7 @@ layout: circularstackedbarplot
 
 <div class="container-fluid" style="height:960px;">
   <svg width="960" height="960" class="center"></svg>
-  <div id="tooltip" class="center"><h3>Oscar Winning Films:<br/>Percentage Seen<br/>by Award Ceremony</h3></div>
+  <div id="tooltip" class="center"><h3>Oscar Winners & Nominees:<br/>Percentage Seen<br/>by Award Ceremony</h3></div>
   <script>
   var svg = d3.select("svg"),
       width = +svg.attr("width"),
@@ -55,9 +55,9 @@ layout: circularstackedbarplot
       .on('mouseover', function(d) {
         tooltip
           .style('display', 'block')
-          .html(d.data.Menu);
+          .html('<h1>' + d.data.AwardCeremony + '</h1>');
       })
-     .on('mouseout', function(d) {tooltip.html('<h3>Oscar Winning Films:<br/>Percentage Seen<br/>by Award Ceremony</h3>');});
+     .on('mouseout', function(d) {tooltip.html('<h3>Oscar Winners & Nominees:<br/>Percentage Seen<br/>by Award Ceremony</h3>');});
   });
   </script>
 </div>
