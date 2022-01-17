@@ -57,8 +57,8 @@ layout: circularstackedbarplot
           .style('display', 'block')
           .html('<h1>' + d.data.AwardCeremony + '</h1>');
       })
-     .on('mouseout', function(d) {tooltip.html('<h3>Oscar Winners & Nominees:<br/>Percentage Seen<br/>by Award Ceremony</h3>');})
-     .on('click', function(d) {awardTable(d.AwardCeremony)});
+      .on('click', function(d) {awardTable(d.AwardCeremony)})
+      .on('mouseout', function(d) {tooltip.html('<h3>Oscar Winners & Nominees:<br/>Percentage Seen<br/>by Award Ceremony</h3>');})
   });
   </script>
 </div>
@@ -72,7 +72,7 @@ layout: circularstackedbarplot
   function awardTable(ceremony) {
     var data = [];
     d3.csv('https://raw.githubusercontent.com/jacobmgreer/Film-Tracker/master/output/OscarCeremonies.csv', function(data){
-    		var data = data.filter(element => element.AwardCeremony === ceremony)
+    		var data = data.filter(element => element.AwardCeremony === "01-1929")
         var nested_data = d3.nest()
                             .key(function(d) { return d.AwardCeremony; })
                             .key(function(d) { return d.AwardCategory; })
