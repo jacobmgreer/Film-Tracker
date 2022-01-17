@@ -133,7 +133,7 @@ layout: circularstackedbarplot
           .append('td')
           .html(function(d){
             if (d.column == 'imdbRating') {
-            	return d.value + " (" + d.votes + ")"
+            	return d.value + " (" + d.votes + " votes)"
             }
             else {
             	if(d.value != "NA") {return d.value}}})
