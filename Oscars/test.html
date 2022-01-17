@@ -91,7 +91,7 @@ layout: circularstackedbarplot
         .data(d)
         .enter()
         .append('div')
-        .html(function(d){return "<h1>" + d.key + "</h1>"})
+        .html(function(d){return "<h1 class=\"display-5\">" + d.key + "</h1>"})
         
       var data1 = function(d) {return d.values}
         
@@ -124,8 +124,7 @@ layout: circularstackedbarplot
      }
   }
   </script>
-  
-  <h1 class="display-5">Oscar Winning films on Amazon Prime</h1>
+
   <div class="table-prime"></div>
   
   <br clear="all"/><br/>
