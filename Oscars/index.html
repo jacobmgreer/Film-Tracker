@@ -57,7 +57,8 @@ layout: circularstackedbarplot
           .style('display', 'block')
           .html('<h1>' + d.data.AwardCeremony + '</h1>');
       })
-     .on('mouseout', function(d) {tooltip.html('<h3>Oscar Winners & Nominees:<br/>Percentage Seen<br/>by Award Ceremony</h3>');});
+      .on('click', function(d) {awardTable(d.data.AwardCeremony)})
+      .on('mouseout', function(d) {tooltip.html('<h3>Oscar Winners & Nominees:<br/>Percentage Seen<br/>by Award Ceremony</h3>');})
   });
   </script>
 </div>
@@ -68,63 +69,95 @@ layout: circularstackedbarplot
   </div>
   
   <script type="text/javascript">
-  var tabulate = function (tclass,data,columns) {
-    var table = d3.select(tclass)
-                  .append('table')
-                  .classed('table', true)
-                  .classed('table-striped', true)
-    var thead = table.append('thead')
-    var tbody = table.append('tbody')
-
-    thead.append('tr')
-      .selectAll('th')
-        .data(columns)
-        .enter()
-      .append('th')
-        .attr('scope', 'col')
-        .text(function (d) { return d })
-
-    var rows = tbody.selectAll('tr')
-        .data(data)
-        .enter()
-      .append('tr')
-
-    var cells = rows.selectAll('td')
-        .data(function(row) {
-          return columns.map(function (column) {
-            return { column: column, value: row[column], link: row["IMDBid"] }
-          })
-        })
-      .enter()
-      .append('td')
-      .html(function (d) { 
-      	if (d.column === "ItemTitle") {
-        	return "<a href=\"https://www.imdb.com/title/" + d.link + "\">" + d.value + "</a>"
-        }
-        else {return d.value}})
-      
-    return table;
-  }
-
-  d3.csv('https://jacobmgreer.github.io/Film-Tracker/Oscars/OscarsData.csv',function (data) {
-    d3.select('.movies-total').html('Total: seen ' + 
-        data.filter(element => element.Seen === "Yes").length + ' out of ' + 
-        data.length + ' (' + 
-        Number(((data.filter(element => element.Seen === "Yes").length * 100) / data.length).toFixed(2)) 
-        + '%)'); // Total count
-    d3.select('.movies-prime').html('On Prime: seen ' + 
-        data.filter(element => element.Service === "Prime" && element.Seen === "Yes").length + ' out of ' + 
-        data.filter(element => element.Service === "Prime").length + ' (' + 
-        Number(((data.filter(element => element.Service === "Prime" && element.Seen === "Yes").length * 100) / data.filter(element => element.Service === "Prime").length).toFixed(2))
-        + '%)');// Prime count
+  function awardTable(ceremony) {
+    $(".table-prime").empty();
+    var data = [];
+    d3.csv('https://jacobmgreer.github.io/Film-Tracker/Oscars/OscarsTracking.csv', function(data){
+    		var data = data.filter(element => element.AwardCeremony === ceremony)
+        var nested_data = d3.nest()
+                            .key(function(d) { return d.AwardCeremony; })
+                            .key(function(d) { return d.AwardCategory; })
+                            .entries(data);
+                            //console.log(nested_data)
+                            //console.log(nested_data[[0]].values)
+        doSomething(nested_data);
+    })
     
-    var data = data.filter(element => element.Service === "Prime")
-    var columns = ['ItemTitle','ItemYear','ItemRuntime','Seen']
-    tabulate('.table-prime',data,columns)
-  })
+    function doSomething(d){
+          
+    	var columns = ['FilmName','PersonName','Rating','imdbRating','RottenTomatoes']
+    
+      var AwardCeremonies = d3.select('.table-prime').selectAll('div')
+        .data(d)
+        .enter()
+        .append('div')
+        .html(function(d){return "<h1 class=\"display-5\">" + d.key + "</h1>"})
+        
+      var data1 = function(d) {return d.values}
+        
+      var AwardCategories = AwardCeremonies.selectAll('div')
+       	.data(data1)
+        .enter()
+        .append('div')
+        .html(function(d){return '<h3>' + d.key + '</h3>'})
+        .append('table')
+        .classed('table', true)
+        .classed('table-striped', true)
+        .style('table-layout',"fixed")
+        
+      AwardCategories.append('thead')
+       	.append('tr')
+        .selectAll('th')
+          .data(columns)
+          .enter()
+        .append('th')
+          .attr('scope', 'col')
+          .text(function (d) { return d })
+         
+      var tbody = AwardCategories.append('tbody')
+      
+      var data2 = function(d) {return d.values}
+      
+      var rows = tbody.selectAll('tr')
+          .data(data2)
+          .enter()
+          .append('tr')
+          
+      var nominee = rows.selectAll('td')
+          .data(function (row) {
+                return columns.map(function (column) {
+                  return { 
+                    column: column, 
+                    value: row[column], 
+                    votes: row['imdbVotes'], 
+                    winner: row['AwardWinner'], 
+                    FilmID: row["FilmID"],
+                    PersonID: row["PersonID"]                  }
+                })
+              })
+          .enter()
+          .append('td')
+          .attr('class', function(d) {
+    				if (d.winner == "Winner") {return "table-success"}
+            else {return "nominee"}
+					})
+          .html(function(d){
+            if (d.column == 'imdbRating') {
+            	return d.value + " (" + d.votes + " votes)"
+            }
+            else if (d.column == 'FilmName') {
+            	return "<a href=\"https://www.imdb.com/title/" + d.FilmID + "\">" + d.value + "</a>"
+            }
+            else if (d.column == 'PersonName') {
+            	return "<a href=\"https://www.imdb.com/name/" + d.PersonID + "\">" + d.value + "</a>"
+            }
+            else {
+            	if(d.value != "NA") {return d.value}}})
+    
+     }
+  }
   </script>
-  
-  <h1 class="display-5">Oscar Winning films on Amazon Prime</h1>
+
   <div class="table-prime"></div>
   
   <br clear="all"/><br/>
