@@ -101,6 +101,8 @@ layout: circularstackedbarplot
         .append('p')
         .text(function(d){return d.key})
         .append('table')
+        .classed('table', true)
+        .classed('table-striped', true)
       
       var data2 = function(d) {return d.values}
       
