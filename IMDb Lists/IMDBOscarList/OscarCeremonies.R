@@ -39,8 +39,6 @@ OscarCeremonies <- read_csv("output/OscarCeremonies.raw.csv")
 ## corrections
 OscarCeremonies.corrected <-
   OscarCeremonies %>%
-  select(-AwardCategory.y) %>%
-  distinct() %>%
   mutate(
     FilmID = ifelse(grepl("^title",PrimaryID), str_remove(PrimaryID, "title/"), ifelse(grepl("^title",SecondaryID), str_remove(SecondaryID, "title/"), NA)),
     FilmName = ifelse(grepl("^title",PrimaryID), PrimaryTitle, ifelse(grepl("^title",SecondaryID), SecondaryName, NA)),
@@ -49,7 +47,7 @@ OscarCeremonies.corrected <-
     CompanyID = ifelse(grepl("^company",PrimaryID), str_remove(PrimaryID, "company/"), ifelse(grepl("^company",SecondaryID), str_remove(SecondaryID, "company/"), NA)),
     CompanyName = ifelse(grepl("^company",PrimaryID), PrimaryTitle, ifelse(grepl("^company",SecondaryID), SecondaryName, NA)),
   ) %>%
-  select(-c(PrimaryTitle,PrimaryID,SecondaryID,SecondaryName)) %>%
+  select(-c(PrimaryTitle,PrimaryID,SecondaryID,SecondaryName,AwardCategory.y)) %>%
   mutate(
     FilmID = ifelse(is.na(FilmID) & SecondaryName.list == "Birdman or (The Unexpected Virtue of Ignorance)","tt2562232",FilmID),
     FilmName = ifelse(is.na(FilmName) & SecondaryName.list == "Birdman or (The Unexpected Virtue of Ignorance)","Birdman or (The Unexpected Virtue of Ignorance)",FilmName)) %>%
