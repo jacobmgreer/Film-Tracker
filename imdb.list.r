@@ -45,20 +45,30 @@ Streaming.Available <-
 OscarRatings <-
   left_join(OscarCeremonies, IMDBratings %>% select(IMDBid, Rating, Rated.Date), by=c("FilmID" = "IMDBid")) %>%
   filter(FilmID != "") %>%
-  filter(AwardWinner == "Winner") %>%
-  select(AwardCeremony, FilmID, Rating) %>%
+  mutate(AwardWinner = ifelse(AwardWinner == "Winner", TRUE, FALSE)) %>%
+  select(AwardCeremony, AwardWinner, FilmID, Rating) %>%
   distinct %>%
+  group_by(FilmID) %>%
+    mutate(
+      filmwon=ifelse(any(AwardWinner),TRUE,FALSE),
+      filmwon=ifelse(all(is.na(filmwon)),FALSE,filmwon)
+    ) %>%
+    mutate(keep_row=ifelse(filmwon,AwardWinner,TRUE)) %>%
+    filter(!(filmwon == TRUE & is.na(keep_row))) %>%
+  ungroup %>%
   mutate(
-    Seen = ifelse(is.na(Rating), "No", "Yes"),
+    Seen = ifelse(is.na(Rating), FALSE, TRUE),
     Year = sub('.*-', '', AwardCeremony),
     Ceremony = ifelse(f_ordinal(sub("\\-.*", "", str_remove(AwardCeremony, "^0+"))) == 13, "13th", f_ordinal(sub("\\-.*", "", str_remove(AwardCeremony, "^0+")))), 
     Menu = paste0("<h5>",Ceremony," Academy Awards</h5><h1>",Year,"</h1>")) %>%
-  dplyr::group_by(Menu, Year) %>%
+  dplyr::group_by(AwardCeremony, Year) %>%
   dplyr::summarise(
-    Y = n_distinct(FilmID[Seen == "Yes"]),
-    N = n_distinct(FilmID[Seen == "No"])) %>%
+    Winner.Y = n_distinct(FilmID[Seen == TRUE & AwardWinner == TRUE]),
+    Winner.N = n_distinct(FilmID[Seen == FALSE & AwardWinner == TRUE]),
+    Nominee.Y = n_distinct(FilmID[Seen == TRUE & is.na(AwardWinner)]),
+    Nominee.N = n_distinct(FilmID[Seen == FALSE & is.na(AwardWinner)])) %>%
   arrange(Year) %>%
-  select(-Year) %>%
+  select(-Year) %T>%
   write.csv(.,"Oscars/OscarsSummary.csv", row.names = FALSE)
 
 # IMDBcombinedEbert <- 
