@@ -5,7 +5,7 @@ layout: circularstackedbarplot
 
 <div class="container-fluid" style="height:960px;">
   <svg width="960" height="960" class="center"></svg>
-  <div id="tooltip" class="center"><h3>Oscar Winning Films:<br/>Percentage Seen<br/>by Award Ceremony</h3></div>
+  <div id="tooltip" class="center"><h3>Oscar Winners & Nominees:<br/>Percentage Seen<br/>by Award Ceremony</h3></div>
   <script>
   var svg = d3.select("svg"),
       width = +svg.attr("width"),
@@ -22,7 +22,7 @@ layout: circularstackedbarplot
       .range([innerRadius, outerRadius]);
 
   var z = d3.scaleOrdinal()
-      .range(["#A1F0D0", "#436356", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+      .range(["#94F2D0", "#69BFA0", "#C1D9D2", "#9AA692", "#a05d56", "#d0743c", "#ff8c00"]);
 
   var tooltip = d3.select('#tooltip');
 
@@ -33,7 +33,7 @@ layout: circularstackedbarplot
   }, function(error, data) {
     if (error) throw error;
 
-    x.domain(data.map(function(d) { return d.Menu; }));
+    x.domain(data.map(function(d) { return d.AwardCeremony; }));
     y.domain([0, d3.max(data, function(d) { return d.total; })]);
     z.domain(data.columns.slice(1));
 
@@ -48,20 +48,25 @@ layout: circularstackedbarplot
         .attr("d", d3.arc()
             .innerRadius(function(d) { return y(d[0]); })
             .outerRadius(function(d) { return y(d[1]); })
-            .startAngle(function(d) { return x(d.data.Menu); })
-            .endAngle(function(d) { return x(d.data.Menu) + x.bandwidth(); })
+            .startAngle(function(d) { return x(d.data.AwardCeremony); })
+            .endAngle(function(d) { return x(d.data.AwardCeremony) + x.bandwidth(); })
             .padAngle(0.01)
             .padRadius(innerRadius))
       .on('mouseover', function(d) {
         tooltip
           .style('display', 'block')
-          .html('<br/>' + d.data.Menu);
+          .html('<h1>' + d.data.AwardCeremony + '</h1>');
       })
-     .on('mouseout', function(d) {tooltip.html('<h3>Oscar Winning Films:<br/>Percentage Seen<br/>by Award Ceremony</h3>');});
+     .on('mouseout', function(d) {tooltip.html('<h3>Oscar Winners & Nominees:<br/>Percentage Seen<br/>by Award Ceremony</h3>');});
   });
   </script>
 </div>
 <div class="container-fluid">
+  <div class="movie-counts">
+    <div class="movies-prime"></div>
+    <div class="movies-total"></div>
+  </div>
+  
   <script type="text/javascript"charset="utf-8">
   var tabulate = function (tclass,data,columns) {
     var table = d3.select(tclass)
