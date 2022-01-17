@@ -4,7 +4,7 @@ layout: circularstackedbarplot
 ---
 
 <div class="container-fluid" style="height:960px;">
-  <svg id="legend" height=300 width=450></svg>
+  <svg id="legend" height=50 width=960 class="center"></svg>
   <svg width="960" height="960" class="center" id="movies"></svg>
   <div id="tooltip" class="center"><h3>Oscar Winners & Nominees:<br/>Percentage Seen<br/>by Award Ceremony</h3></div>
   <script>
@@ -66,27 +66,27 @@ layout: circularstackedbarplot
 <div class="container-fluid">
   <script type="text/javascript">
   var svg = d3.select("#legend")
-  svg.append("circle").attr("cx",200).attr("cy",130).attr("r", 6).style("fill", "#94F2D0")
-  svg.append("circle").attr("cx",200).attr("cy",160).attr("r", 6).style("fill", "#69BFA0")
-  svg.append("circle").attr("cx",200).attr("cy",190).attr("r", 6).style("fill", "#C1D9D2")
-  svg.append("circle").attr("cx",200).attr("cy",210).attr("r", 6).style("fill", "#9AA692")
+  svg.append("circle").attr("cx",0).attr("cy",10).attr("r", 6).style("fill", "#94F2D0")
+  svg.append("circle").attr("cx",100).attr("cy",10).attr("r", 6).style("fill", "#69BFA0")
+  svg.append("circle").attr("cx",200).attr("cy",10).attr("r", 6).style("fill", "#C1D9D2")
+  svg.append("circle").attr("cx",300).attr("cy",10).attr("r", 6).style("fill", "#9AA692")
   svg.append("text")
-    .attr("x", 220).attr("y", 130)
+    .attr("x", 20).attr("y", 10)
     .text("Oscar Winners Seen")
     .style("font-size", "15px")
     .attr("alignment-baseline","middle")
   svg.append("text")
-    .attr("x", 220).attr("y", 160)
+    .attr("x", 120).attr("y", 10)
     .text("Oscar Winners Not Seen")
     .style("font-size", "15px")
     .attr("alignment-baseline","middle")
   svg.append("text")
-    .attr("x", 220).attr("y", 190)
+    .attr("x", 220).attr("y", 10)
     .text("Oscar Nominees Seen")
     .style("font-size", "15px")
     .attr("alignment-baseline","middle")
   svg.append("text")
-    .attr("x", 220).attr("y", 210)
+    .attr("x", 320).attr("y", 10)
     .text("Oscar Nominees Not Seen")
     .style("font-size", "15px")
     .attr("alignment-baseline","middle")
