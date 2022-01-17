@@ -126,7 +126,13 @@ layout: circularstackedbarplot
       var nominee = rows.selectAll('td')
           .data(function (row) {
                 return columns.map(function (column) {
-                  return { column: column, value: row[column], votes: row['imdbVotes'], winner: row['AwardWinner']}
+                  return { 
+                    column: column, 
+                    value: row[column], 
+                    votes: row['imdbVotes'], 
+                    winner: row['AwardWinner'], 
+                    FilmID = row["FilmID"],
+                    PersonID = row["PersonID"]                  }
                 })
               })
           .enter()
@@ -138,6 +144,12 @@ layout: circularstackedbarplot
           .html(function(d){
             if (d.column == 'imdbRating') {
             	return d.value + " (" + d.votes + " votes)"
+            }
+            else if (d.column === "FilmName") {
+            	return "<a href=\"https://www.imdb.com/title/" + d.FilmID + "\">" + d.value + "</a>"
+            }
+            else if (d.column === "PersonName") {
+            	return "<a href=\"https://www.imdb.com/name/" + d.PersonID + "\">" + d.value + "</a>"
             }
             else {
             	if(d.value != "NA") {return d.value}}})
