@@ -10,25 +10,25 @@ IMDBnyt1000 <- read_csv("output/IMDBnyt1000.csv")
 OscarCeremonies.corrected <- read_csv("output/OscarCeremonies.csv")
 
 ## load Personal Ratings on IMDB
-# nextlink <- 'https://www.imdb.com/user/ur28723514/ratings/'
-# count <-
-#   read_html(nextlink) %>%
-#   html_nodes(., '#lister-header-current-size') %>%
-#   html_text(.) %>%
-#   parse_number(.)
-# IMDBratings <- data.frame()
-# for (i in 1:ceiling(count/100)) {
-#   link <- read_html(nextlink)
-#   page <- 
-#     data.frame(
-#       ItemTitle= link %>% html_nodes(.,'.lister-item-header a:first-of-type') %>% html_text(.) %>% gsub("^\\s+|\\s+$", "", .),
-#       IMDBid= link %>% html_nodes(.,'.lister-item-image') %>% html_attr("data-tconst"),
-#       Rating= link %>% html_nodes(.,'div.lister-item-content > div.ipl-rating-widget > div.ipl-rating-star.ipl-rating-star--other-user.small > span.ipl-rating-star__rating') %>% html_text(.),
-#       Rated.Date= link %>% html_nodes(.,'div.ipl-rating-widget + p') %>% html_text(.)
-#     )
-#   IMDBratings <- rbind(IMDBratings, page)
-#   nextlink <- paste0("https://www.imdb.com",link %>% html_nodes(.,'#ratings-container > div.footer.filmosearch > div > div > a.flat-button.lister-page-next.next-page') %>% html_attr("href"))
-# } 
+nextlink <- 'https://www.imdb.com/user/ur28723514/ratings/'
+count <-
+  read_html(nextlink) %>%
+  html_nodes(., '#lister-header-current-size') %>%
+  html_text(.) %>%
+  parse_number(.)
+IMDBratings <- data.frame()
+for (i in 1:ceiling(count/100)) {
+  link <- read_html(nextlink)
+  page <-
+    data.frame(
+      ItemTitle= link %>% html_nodes(.,'.lister-item-header a:first-of-type') %>% html_text(.) %>% gsub("^\\s+|\\s+$", "", .),
+      IMDBid= link %>% html_nodes(.,'.lister-item-image') %>% html_attr("data-tconst"),
+      Rating= link %>% html_nodes(.,'div.lister-item-content > div.ipl-rating-widget > div.ipl-rating-star.ipl-rating-star--other-user.small > span.ipl-rating-star__rating') %>% html_text(.),
+      Rated.Date= link %>% html_nodes(.,'div.ipl-rating-widget + p') %>% html_text(.)
+    )
+  IMDBratings <- rbind(IMDBratings, page)
+  nextlink <- paste0("https://www.imdb.com",link %>% html_nodes(.,'#ratings-container > div.footer.filmosearch > div > div > a.flat-button.lister-page-next.next-page') %>% html_attr("href"))
+}
 
 ## Streaming Availability
 
@@ -112,7 +112,7 @@ IMDBcombinedNYT1000 <-
   select(ItemYear, Y, N) %>%
   write.csv(.,"NYT1000/NYT1000Summary.csv", row.names = FALSE)
 
-#rm(i, page, link, nextlink, count)
+rm(i, page, link, nextlink, count)
 rm(IMDBafi1998, IMDBafi2007, IMDBebert, IMDBnyt1000, IMDBcombinedNYT1000, Streaming.Available, OscarCeremonies.corrected)
 #rm(IMDBcombinedAFI2007, IMDBcombinedEbert, IMDBcombinedOscars, IMDBcombinedAFI1998)
 rm(required)
