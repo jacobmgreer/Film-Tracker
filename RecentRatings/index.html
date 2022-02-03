@@ -64,10 +64,11 @@ layout: circularstackedbarplot
     return carddeck;
   }
 
-d3.csv('https://jacobmgreer.github.io/Film-Tracker/RecentRatings/recentmovies.csv',function (data) {
+d3.csv('https://jacobmgreer.github.io/Media-Consumption/datasets/ratings.csv',function (data) {
   var data = data
               .filter(element => element.Title != "NA")
               .filter(element => element.Type === "movie")
+              .slice(index, index + 20)
   var columns = ['ItemTitle','Rating','Internet Movie Database','Metacritic','Rotten Tomatoes']
   tabulate(data,columns)
 })

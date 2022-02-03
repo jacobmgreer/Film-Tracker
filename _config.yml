@@ -1,5 +1,5 @@
-name: IMDB Tracker
-description: Track an IMDB user's reviews against an IMDB list.
+name: Film Tracker
+description: Track my reviews against a list of films.
 
 defaults:
   - scope:

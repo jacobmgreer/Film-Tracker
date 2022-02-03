@@ -2,15 +2,9 @@
 .Rhistory
 .RData
 .Ruserdata
-IMDB-Tracker.Rproj
+Film-Tracker.Rproj
 NYT1000/.DS_Store
 js/.DS_Store
 Oscars/.DS_Store
-Oscars/.DS_Store
 .DS_Store
 *.tsv
-image.R
-OMDBpull.R
-*.webarchive
-*.numbers
-IMDb Lists/IMDBOscarList/OscarOMDb.R

@@ -27,7 +27,7 @@ layout: circularstackedbarplot
 
   var tooltip = d3.select('#tooltip');
 
-  d3.csv("https://jacobmgreer.github.io/Film-Tracker/Oscars/OscarsSummary.csv", function(d, i, columns) {
+  d3.csv("https://jacobmgreer.github.io/Media-Consumption/datasets/Oscars/OscarsSummary.csv", function(d, i, columns) {
     for (i = 1, t = 0; i < columns.length; ++i) t += d[columns[i]] = +d[columns[i]];
     d.total = t;
     return d;
@@ -95,7 +95,7 @@ layout: circularstackedbarplot
   function awardTable(ceremony) {
     $(".table-prime").empty();
     var data = [];
-    d3.csv('https://jacobmgreer.github.io/Film-Tracker/Oscars/OscarsTracking.csv', function(data){
+    d3.csv('https://jacobmgreer.github.io/Media-Consumption/datasets/Oscars/OscarsTracking.csv', function(data){
     		var data = data.filter(element => element.AwardCeremony === ceremony)
         var nested_data = d3.nest()
                             .key(function(d) { return d.AwardCeremony; })
