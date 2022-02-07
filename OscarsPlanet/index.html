@@ -38,13 +38,8 @@ layout: circularstackedbarplot
         })
       .enter()
       .append('td')
-      .classed(function (d) {
-          if (d.value === 1) {
-            return "bg-success"}
-          else {
-            return "bg-danger"
-          }
-        }, true)
+      .classed("bg-success", function(d) {if (d.value === 1) { return true;} return false;}))
+      .classed("bg-failure", function(d) {if (d.value === 0) { return true;} return false;}))
       .html(function (d) { 
       	if (d.column === "ItemTitle") {
         	return "<a href=\"https://www.imdb.com/title/" + d.link + "\">" + d.value + "</a>"
