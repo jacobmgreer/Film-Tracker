@@ -1,0 +1,55 @@
+---
+title: International Film Submissions (by Origin, by Year)
+layout: circularstackedbarplot
+---
+
+<div class="container-fluid">
+  <div class="table"></div>
+  <br clear="all"/><br/>
+</div>
+
+<script type="text/javascript"charset="utf-8">
+  var tabulate = function (tclass,data,columns) {
+    var table = d3.select(tclass)
+                  .append('table')
+                  .classed('table', true)
+                  .classed('table-striped', true)
+    var thead = table.append('thead')
+    var tbody = table.append('tbody')
+
+    thead.append('tr')
+      .selectAll('th')
+        .data(columns)
+        .enter()
+      .append('th')
+        .attr('scope', 'col')
+        .text(function (d) { return d })
+
+    var rows = tbody.selectAll('tr')
+        .data(data)
+        .enter()
+      .append('tr')
+
+    var cells = rows.selectAll('td')
+        .data(function(row) {
+          return columns.map(function (column) {
+            return { column: column, value: row[column]}
+          })
+        })
+      .enter()
+      .append('td')
+      .html(function (d) { 
+      	if (d.column === "ItemTitle") {
+        	return "<a href=\"https://www.imdb.com/title/" + d.link + "\">" + d.value + "</a>"
+        }
+        else {return d.value}})
+      
+    return table;
+  }
+    d3.csv('Country-Submissions-by-Year.csv',function (data) {
+    
+    //var data = data.filter(element => element.Service === "Prime")
+    var columns = ['name','C29','C30','C31','C32','Total']
+    tabulate('.table',data,columns)
+  })
+</script>
