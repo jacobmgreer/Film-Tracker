@@ -39,7 +39,8 @@ layout: circularstackedbarplot
       .enter()
       .append('td')
       .classed("bg-success", function(d) {if (d.value == 1) return true})
-      .classed("bg-danger", function(d) {if (d.value == 0) return true})
+      .classed("bg-secondary", function(d) {if (d.value == 0) return true})
+      .classed("bg-opacity-10", true)
       .html(function (d) { 
       	if (d.column === "name") {
         	return "<a href=\"https://www.imdb.com/title/" + d.link + "\">" + d.value + "</a>"
