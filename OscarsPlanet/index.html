@@ -48,7 +48,7 @@ layout: circularstackedbarplot
       .classed("bg-withdrawn", function(d) {if (d.value == 'WD') return true}) // withdrawn
       //.classed("bg-secondary", function(d) {if (d.value == 0) return true})
       .classed("bg-opacity-10", true)
-      .classed("text-center", true)
+      .classed("text-center", function(d) {if (!isNaN(d.value)) return true})
       .html(function (d) { 
       	if (d.column === "name") {
         	return "<a href=\"#" + d.link + "\">" + d.value + "</a>"
