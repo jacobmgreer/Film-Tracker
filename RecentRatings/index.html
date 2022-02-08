@@ -68,7 +68,7 @@ d3.csv('https://jacobmgreer.github.io/Media-Consumption/datasets/ratings.csv',fu
   var data = data
               .filter(element => element.Title != "NA")
               .filter(element => element.Type === "movie")
-              .slice(1,26)
+              .slice(0,26)
   var columns = ['ItemTitle','Rating','Internet Movie Database','Metacritic','Rotten Tomatoes']
   tabulate(data,columns)
 })
