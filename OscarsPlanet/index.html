@@ -8,7 +8,7 @@ layout: circularstackedbarplot
   <br clear="all"/><br/>
 </div>
 
-<script type="text/javascript"charset="utf-8">
+<script type="text/javascript" charset="utf-8">
   var tabulate = function (tclass,data,columns) {
     var table = d3.select(tclass)
                   .append('table')
@@ -38,8 +38,14 @@ layout: circularstackedbarplot
         })
       .enter()
       .append('td')
-      .classed("bg-success", function(d) {if (d.value == 1) return true})
-      .classed("bg-secondary", function(d) {if (d.value == 0) return true})
+      .classed("bg-success", function(d) {if (d.value == 'W') return true}) // winners
+      .classed("bg-primary", function(d) {if (d.value == 'N') return true}) // nominees
+      .classed("bg-danger", function(d) {if (d.value == 'D') return true}) // disqualified
+      .classed("bg-warning", function(d) {if (d.value == 'ND') return true}) // nominated then disqualified
+      .classed("bg-info", function(d) {if (d.value == 'X') return true}) // submission
+      .classed("bg-secondary", function(d) {if (d.value == 'NL') return true}) // not on final list
+      .classed("bg-withdrawn", function(d) {if (d.value == 'WD') return true}) // withdrawn
+      //.classed("bg-secondary", function(d) {if (d.value == 0) return true})
       .classed("bg-opacity-10", true)
       .html(function (d) { 
       	if (d.column === "name") {
