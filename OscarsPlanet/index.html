@@ -23,7 +23,10 @@ layout: circularstackedbarplot
         .enter()
       .append('th')
         .attr('scope', 'col')
-        .text(function (d) { return d })
+        .text(function (d) { 
+          if(d.column.startsWith("C") === 'C') return d.substring(1);
+          else return d;
+        })
 
     var rows = tbody.selectAll('tr')
         .data(data)
@@ -49,22 +52,23 @@ layout: circularstackedbarplot
       .classed("bg-opacity-10", true)
       .html(function (d) { 
       	if (d.column === "name") {
-        	return "<a href=\"https://www.imdb.com/title/" + d.link + "\">" + d.value + "</a>"
-        }})
+        	return "<a href=\"#" + d.link + "\">" + d.value + "</a>"
+        }
+        else if (d.row === "Totals") return d
+      })
       
     return table;
   }
     d3.csv('https://jacobmgreer.github.io/Film-Tracker/OscarsPlanet/Country-Submissions-by-Year.csv',function (data) {
     
-    //var data = data.filter(element => element.Service === "Prime")
+    var data = data.filter(element => element["1950s"] > 0)
     var columns = ['name',
-    'C29','C30','C31','C32','C33',
-    'C34','C35','C36','C37','C38',
-    'C39','C40','C41','C42',
+    'C29','C30','C31',
+    //'C32','C33','C34','C35','C36','C37','C38','C39','C40','C41','C42',
     //'C43','C44','C45','C46','C47','C48','C49','C50','C51','C52',
     //'C53','C54','C55','C56','C57','C58','C59','C60','C61','C62',
     //'C63','C64',
-    'Total']
+    '1950s']
     tabulate('.table',data,columns)
   })
 </script>
