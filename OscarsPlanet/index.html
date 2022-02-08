@@ -13,7 +13,6 @@ layout: circularstackedbarplot
     var table = d3.select(tclass)
                   .append('table')
                   .classed('table', true)
-                  .classed('table-striped', true)
     var thead = table.append('thead')
     var tbody = table.append('tbody')
 
@@ -24,10 +23,9 @@ layout: circularstackedbarplot
       .append('th')
         .attr('scope', 'col')
         .text(function (d) { 
-          if(d.column.startsWith("C") === 'C') return d.substring(1);
+          if (d.charAt(0) === 'C') return parseInt(d.substring(1)) + 1928;
           else return d;
         })
-
     var rows = tbody.selectAll('tr')
         .data(data)
         .enter()
@@ -50,11 +48,12 @@ layout: circularstackedbarplot
       .classed("bg-withdrawn", function(d) {if (d.value == 'WD') return true}) // withdrawn
       //.classed("bg-secondary", function(d) {if (d.value == 0) return true})
       .classed("bg-opacity-10", true)
+      .classed("text-center", true)
       .html(function (d) { 
       	if (d.column === "name") {
         	return "<a href=\"#" + d.link + "\">" + d.value + "</a>"
         }
-        else if (d.row === "Totals") return d
+        else if (!isNaN(d.value)) return d.value
       })
       
     return table;
