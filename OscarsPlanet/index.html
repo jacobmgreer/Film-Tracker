@@ -61,7 +61,7 @@ layout: circularstackedbarplot
   }
     d3.csv('https://jacobmgreer.github.io/Film-Tracker/OscarsPlanet/Country-Submissions-by-Year.csv',function (data) {
     
-    var data = data.filter(element => element["1950s"] > 0)
+    var data = data.filter(element => element["1960s"] > 0)
     var columns = ['name',
     //'C29','C30','C31', // 1950s
     'C32','C33','C34','C35','C36','C37','C38','C39','C40','C41', // 1960s
