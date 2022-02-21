@@ -2,10 +2,10 @@
 <html>
   <head>
     <title>{% if page.title %}{{ page.title }}{% endif %}</title>
-    {% include_relative header.html %}
+    {% include header.html %}
   </head>
   <body>
-    {% include_relative nav.html %}
+    {% include nav.html %}
 
     <main>
       {{ content }}
