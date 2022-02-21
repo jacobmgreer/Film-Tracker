@@ -53,37 +53,9 @@
       </style>
   </head>
   <body>
-    <nav class="navbar navbar-expand navbar-light bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="https://jacobmgreer.github.io/Film-Tracker/">Film Tracker</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Film Lists
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="https://jacobmgreer.github.io/Film-Tracker/RecentRatings/">Recent Ratings</a></li>
-                <li><a class="dropdown-item" href="https://jacobmgreer.github.io/Film-Tracker/Oscars">Oscar Viewing Scorecard</a></li>
-                <li><a class="dropdown-item" href="https://jacobmgreer.github.io/Film-Tracker/OscarsPlanet">Academy Award Submissions Around the Planet</a></li>
-                <li><a class="dropdown-item" href="https://jacobmgreer.github.io/Film-Tracker/NYT1000">NYT's 1,000 Essential Films</a></li>
-                <!-- <li><a class="dropdown-item disabled" href="#">AFI's 100 Best Films</a></li> --> 
-                <!-- <li><a class="dropdown-item disabled" href="#">Roger Ebert's 'Great Movies'</a></li> --> 
-                <!-- <li><a class="dropdown-item disabled" href="#">Cannes Film Festival</a></li> --> 
-                <!-- <li><a class="dropdown-item disabled" href="#">The Criterion Collection</a></li> --> 
-              </ul>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+    {% include nav.html %}
     <main>
-        
-          {{ content }}
-
+      {{ content }}
     </main>
   </body>
 </html>
