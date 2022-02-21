@@ -65,33 +65,21 @@ layout: circularstackedbarplot
 </div>
 <div class="container-fluid">
   <script type="text/javascript">
-  var svg = d3.select("#legend")
-  svg.append("circle").attr("cx",20).attr("cy",30).attr("r", 6).style("fill", "#94F2D0")
-  svg.append("circle").attr("cx",220).attr("cy",30).attr("r", 6).style("fill", "#69BFA0")
-  svg.append("circle").attr("cx",420).attr("cy",30).attr("r", 6).style("fill", "#C1D9D2")
-  svg.append("circle").attr("cx",620).attr("cy",30).attr("r", 6).style("fill", "#9AA692")
-  svg.append("text")
-    .attr("x", 30).attr("y", 30)
-    .text("Oscar Winners Seen")
-    .style("font-size", "15px")
-    .attr("alignment-baseline","middle")
-  svg.append("text")
-    .attr("x", 230).attr("y", 30)
-    .text("Oscar Winners Not Seen")
-    .style("font-size", "15px")
-    .attr("alignment-baseline","middle")
-  svg.append("text")
-    .attr("x", 430).attr("y", 30)
-    .text("Oscar Nominees Seen")
-    .style("font-size", "15px")
-    .attr("alignment-baseline","middle")
-  svg.append("text")
-    .attr("x", 630).attr("y", 30)
-    .text("Oscar Nominees Not Seen")
-    .style("font-size", "15px")
-    .attr("alignment-baseline","middle")
-
   
+  var svg = d3.select("#legend")
+  
+  svg.append("circle").attr("cx",50).attr("cy",30).attr("r", 20).style("fill", "#94F2D0")
+  svg.append("text").attr("x", 90).attr("y", 30).text("Oscar Winners Seen").classed('label', true)
+  
+  svg.append("circle").attr("cx",300).attr("cy",30).attr("r", 20).style("fill", "#69BFA0")
+  svg.append("text").attr("x", 340).attr("y", 30).text("Oscar Winners Not Seen").classed('label', true)
+  
+  svg.append("circle").attr("cx",550).attr("cy",30).attr("r", 20).style("fill", "#C1D9D2")
+  svg.append("text").attr("x", 590).attr("y", 30).text("Oscar Nominees Seen").classed('label', true)
+  
+  svg.append("circle").attr("cx",800).attr("cy",30).attr("r", 20).style("fill", "#9AA692")
+  svg.append("text").attr("x", 840).attr("y", 30).text("Oscar Nominees Not Seen").classed('label', true)
+
   function awardTable(ceremony) {
     $(".table-prime").empty();
     var data = [];
