@@ -100,7 +100,7 @@ layout: default
     
     function doSomething(d){
           
-    	var columns = ['FilmName','PersonName','Rating','imdbRating','RottenTomatoes']
+    	var columns = ['FilmName','PersonName','Rating','imdbRating','RottenTomatoes','Prime']
     
       var AwardCeremonies = d3.select('.table-prime').selectAll('div')
         .data(d)
@@ -147,7 +147,8 @@ layout: default
                     votes: row['imdbVotes'], 
                     winner: row['AwardWinner'], 
                     FilmID: row["FilmID"],
-                    PersonID: row["PersonID"]                  }
+                    PersonID: row["PersonID"]
+                  }
                 })
               })
           .enter()
