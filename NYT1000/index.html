@@ -125,8 +125,8 @@ layout: default
         Number(((data.filter(element => element.Service === "Prime Rentals" && element.Seen === "Yes").length * 100) / data.filter(element => element.Service === "Prime Rentals").length).toFixed(2))
         + '%)');// Prime Rentals count
     
-    var data = data.filter(element => element.Service === "Prime")
-    var columns = ['ItemTitle','ItemYear','ItemRuntime','Seen']
+    //var data = data.filter(element => element.Service === "Prime")
+    var columns = ['ItemTitle','ItemYear','ItemRuntime','Service']
     tabulate('.table-prime',data,columns)
   })
   </script>
