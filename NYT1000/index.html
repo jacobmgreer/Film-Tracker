@@ -65,6 +65,7 @@ layout: default
 <div class="container-fluid">
   <div class="movie-counts">
     <div class="movies-prime"></div>
+    <div class="movies-prime-rental"></div>
     <div class="movies-total"></div>
   </div>
   
@@ -117,7 +118,12 @@ layout: default
         data.filter(element => element.Service === "Prime" && element.Seen === "Yes").length + ' out of ' + 
         data.filter(element => element.Service === "Prime").length + ' (' + 
         Number(((data.filter(element => element.Service === "Prime" && element.Seen === "Yes").length * 100) / data.filter(element => element.Service === "Prime").length).toFixed(2))
-        + '%)');// Prime count
+        + '%)');// Prime Free count
+    d3.select('.movies-prime').html('On Prime Rentals: seen ' + 
+        data.filter(element => element.Service === "Prime Rentals" && element.Seen === "Yes").length + ' out of ' + 
+        data.filter(element => element.Service === "Prime Rentals").length + ' (' + 
+        Number(((data.filter(element => element.Service === "Prime Rentals" && element.Seen === "Yes").length * 100) / data.filter(element => element.Service === "Prime Rentals").length).toFixed(2))
+        + '%)');// Prime Rentals count
     
     var data = data.filter(element => element.Service === "Prime")
     var columns = ['ItemTitle','ItemYear','ItemRuntime','Seen']
