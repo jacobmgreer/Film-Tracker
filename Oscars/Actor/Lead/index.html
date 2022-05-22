@@ -6,7 +6,7 @@ layout: default
 <div class="container-fluid">
   <script type="text/javascript">
     d3.csv('https://jacobmgreer.github.io/Media-Consumption/datasets/Oscars/OscarsTracking.csv', function(data){
-    		var data = data.filter(element => element.AwardType === "Award, Lead")
+    		var data = data.filter(element => element.AwardType === 'Actor, Lead')
         var nested_data = d3.nest()
                             .key(function(d) { return d.AwardCeremony; })
                             .key(function(d) { return d.AwardCategory; })
