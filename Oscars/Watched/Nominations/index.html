@@ -7,11 +7,7 @@ layout: default
   <script type="text/javascript">
     d3.csv('https://jacobmgreer.github.io/Media-Consumption/datasets/Oscars/OscarsTracking.csv', function(data){
         var nested_data = d3.nest()
-                            .key(function(d) { return d.AwardCeremony; })
-                            .key(function(d) { return d.AwardType; })
                             .entries(data);
-                            //console.log(nested_data)
-                            //console.log(nested_data[[0]].values)
         doSomething(nested_data);
     })
 
