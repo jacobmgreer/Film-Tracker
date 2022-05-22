@@ -3,7 +3,18 @@ title: "Academy Awards - Nomination Scorecard by Award Type"
 layout: default
 ---
 
-<style>.awards thead th {transform: rotate(90deg);}</style>
+<style>
+  thead th {
+    height: 150px;
+    top: 150px;
+    position: relative;
+    -moz-transform:rotate(-90deg); 
+    -moz-transform-origin: top left;
+    -webkit-transform: rotate(-90deg);
+    -webkit-transform-origin: top left;
+    -o-transform: rotate(-90deg);
+    -o-transform-origin: top left;}
+</style>
 
 <div class="container-fluid">
   <script type="text/javascript">
@@ -14,8 +25,8 @@ layout: default
 
     function doSomething(d){
 
-    	var columns = ['AwardCeremony','Actor, Lead','Actress, Lead']
-
+    	var columns = ['AwardCeremony','Picture','Actor, Lead','Actress, Lead','Actor, Supporting','Actress, Supporting','Writing']
+    	
       var rows = d3.select('.awards tbody').selectAll('tr')
           .data(d)
           .enter()
