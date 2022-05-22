@@ -1,0 +1,99 @@
+---
+title: "Academy Awards - Award Breakdown - Lead Actor"
+layout: default
+---
+
+<div class="container-fluid">
+  <script type="text/javascript">
+    var data = [];
+    d3.csv('https://jacobmgreer.github.io/Media-Consumption/datasets/Oscars/OscarsTracking.csv', function(data){
+    		var data = data.filter(element => element.AwardType === 'Award, Lead')
+        var nested_data = d3.nest()
+                            .key(function(d) { return d.AwardCeremony; })
+                            .key(function(d) { return d.AwardCategory; })
+                            .entries(data);
+                            //console.log(nested_data)
+                            //console.log(nested_data[[0]].values)
+        doSomething(nested_data);
+    })
+
+    function doSomething(d){
+
+    	var columns = ['FilmName','PersonName','Rating','imdbRating','RottenTomatoes','Service']
+
+      var AwardCeremonies = d3.select('.table-prime').selectAll('div')
+        .data(d)
+        .enter()
+        .append('div')
+        .html(function(d){return "<h1 class=\"display-5\">" + d.key + "</h1>"})
+
+      var data1 = function(d) {return d.values}
+
+      var AwardCategories = AwardCeremonies.selectAll('div')
+       	.data(data1)
+        .enter()
+        .append('div')
+        .html(function(d){return '<h3>' + d.key + '</h3>'})
+        .append('table')
+        .classed('table', true)
+        .classed('table-striped', true)
+        .style('table-layout',"fixed")
+
+      AwardCategories.append('thead')
+       	.append('tr')
+        .selectAll('th')
+          .data(columns)
+          .enter()
+        .append('th')
+          .attr('scope', 'col')
+          .text(function (d) { return d })
+
+      var tbody = AwardCategories.append('tbody')
+
+      var data2 = function(d) {return d.values}
+
+      var rows = tbody.selectAll('tr')
+          .data(data2)
+          .enter()
+          .append('tr')
+
+      var nominee = rows.selectAll('td')
+          .data(function (row) {
+                return columns.map(function (column) {
+                  return {
+                    column: column,
+                    value: row[column],
+                    votes: row['imdbVotes'],
+                    winner: row['AwardWinner'],
+                    FilmID: row["FilmID"],
+                    PersonID: row["PersonID"]
+                  }
+                })
+              })
+          .enter()
+          .append('td')
+          .attr('class', function(d) {
+    				if (d.winner == "Winner") {return "table-success"}
+            else {return "nominee"}
+					})
+          .html(function(d){
+            if (d.column == 'imdbRating') {
+            	return d.value + " (" + d.votes + " votes)"
+            }
+            else if (d.column == 'FilmName') {
+            	return "<a href=\"https://www.imdb.com/title/" + d.FilmID + "\">" + d.value + "</a>"
+            }
+            else if (d.column == 'PersonName') {
+            	return "<a href=\"https://www.imdb.com/name/" + d.PersonID + "\">" + d.value + "</a>"
+            }
+            else {
+            	if(d.value != "NA") {return d.value}}})
+
+     }
+  </script>
+
+  <br/><br/>
+  <div class="table-prime"></div>
+
+  <br clear="all"/><br/>
+</div>
