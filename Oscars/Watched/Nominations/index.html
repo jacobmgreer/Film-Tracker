@@ -4,12 +4,20 @@ layout: default
 ---
 
 <style>
+  thead tr {height:200px;}
   thead th {
-    height: 150px;
-    top: 150px;
-    position: relative;
-    -moz-transform:rotate(-90deg); 
-    -moz-transform-origin: top left;
+    height: 240px;
+    vertical-align: bottom;
+    text-align: left;
+    line-height: 1;}
+  thead th .rotated-header-container {
+    width: 75px;}
+  thead th .rotated-header-content {
+    width: 300px;
+    transform-origin: bottom left;
+    transform: translateX(75px) rotate(-90deg);
+    -moz-transform:rotate(-90deg);
+    -moz-transform-origin: top left;vertical-align:top;
     -webkit-transform: rotate(-90deg);
     -webkit-transform-origin: top left;
     -o-transform: rotate(-90deg);
@@ -61,13 +69,41 @@ layout: default
     <table class="table table-striped awards" style="table-layout:fixed">
       <thead>
         <tr>
-          <th scope="col">Ceremony</th>
-          <th scope="col">Picture</th>
-          <th scope="col">Actor, Lead</th>
-          <th scope="col">Actress, Lead</th>
-          <th scope="col">Actor, Supporting</th>
-          <th scope="col">Actress, Supporting</th>
-          <th scope="col">Writing</th>
+          <th scope="col">
+            <div class="rotated-header-container">
+              <div class="rotated-header-content">Ceremony</div>
+            </div>
+          </th>
+          <th scope="col">
+            <div class="rotated-header-container">
+              <div class="rotated-header-content">Picture</div>
+            </div>
+          </th>
+          <th scope="col">
+            <div class="rotated-header-container">
+              <div class="rotated-header-content">Actor, Lead</div>
+            </div>
+          </th>
+          <th scope="col">
+            <div class="rotated-header-container">
+              <div class="rotated-header-content">Actress, Lead</div>
+            </div>
+          </th>
+          <th scope="col">
+            <div class="rotated-header-container">
+              <div class="rotated-header-content">Actor, Supporting</div>
+            </div>
+          </th>
+          <th scope="col">
+            <div class="rotated-header-container">
+              <div class="rotated-header-content">Actress, Supporting</div>
+            </div>
+          </th>
+          <th scope="col">
+            <div class="rotated-header-container">
+              <div class="rotated-header-content">Writing</div>
+            </div>
+          </th>
         </tr>
       </thead>
       <tbody></tbody>
