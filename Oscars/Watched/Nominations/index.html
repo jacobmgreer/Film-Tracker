@@ -14,38 +14,9 @@ layout: default
 
     	var columns = ['AwardCeremony','Actor, Lead','Actress, Lead']
 
-      var AwardCeremonies = d3.select('.table-prime').selectAll('div')
-        .data(d)
-        .enter()
-        .append('div')
-        .html(function(d){return "<h1 class=\"display-5\">" + d.key + "</h1>"})
-
-      var data1 = function(d) {return d.values}
-
-      var AwardCategories = AwardCeremonies.selectAll('div')
-       	.data(data1)
-        .enter()
-        .append('div')
-        .html(function(d){return '<h3>' + d.key + '</h3>'})
-        .append('table')
-        .classed('table', true)
-        .classed('table-striped', true)
-        .style('table-layout',"fixed")
-
-      AwardCategories.append('thead')
-       	.append('tr')
-        .selectAll('th')
-          .data(columns)
-          .enter()
-        .append('th')
-          .attr('scope', 'col')
-          .text(function (d) { return d })
-
-      var tbody = AwardCategories.append('tbody')
-
       var data2 = function(d) {return d.values}
 
-      var rows = tbody.selectAll('tr')
+      var rows = d3.select('.table-prime table').selectAll('tr')
           .data(data2)
           .enter()
           .append('tr')
@@ -75,7 +46,9 @@ layout: default
   </script>
 
   <br/><br/>
-  <div class="table-prime"></div>
+  <div class="table-prime">
+    <table class="table table-striped" style="table-layout:fixed"></table>
+  </div>
 
   <br clear="all"/><br/>
 </div>
