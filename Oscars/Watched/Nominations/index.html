@@ -14,10 +14,8 @@ layout: default
 
     	var columns = ['AwardCeremony','Actor, Lead','Actress, Lead']
 
-      var data2 = function(d) {return d.values}
-
-      var rows = d3.select('.table-prime table').selectAll('tr')
-          .data(data2)
+      var rows = d3.select('.awards').selectAll('tr')
+          .data(d)
           .enter()
           .append('tr')
 
@@ -47,7 +45,7 @@ layout: default
 
   <br/><br/>
   <div class="table-prime">
-    <table class="table table-striped" style="table-layout:fixed"></table>
+    <table class="table table-striped awards" style="table-layout:fixed"></table>
   </div>
 
   <br clear="all"/><br/>
