@@ -5,7 +5,7 @@ layout: default
 
 <div class="container-fluid">
   <script type="text/javascript">
-    d3.csv('https://jacobmgreer.github.com/Media-Consumption/datasets/Oscars/AwardTypeSummary.csv', function(data){
+    d3.csv('https://jacobmgreer.github.io/Media-Consumption/datasets/Oscars/AwardTypeSummary.csv', function(data){
         var nested_data = d3.nest().entries(data);
         doSomething(nested_data);
     })
