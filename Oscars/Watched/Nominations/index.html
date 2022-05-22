@@ -72,7 +72,7 @@ layout: default
 					})
           .html(function(d){
             if (d.column == 'AwardType') {
-            	return "<a href=\"https://www.imdb.com/title/" + d.FilmID + "\">" + d.value + "</a>"
+            	return "<a href=\"https://www.imdb.com/title/" + d.FilmID + "\">" + d.value + "</a>"}
             else {
             	if(d.value != "NA") {return d.value}}})
 
