@@ -77,10 +77,10 @@ layout: default
             else {return "nominee"}
 					})
           .html(function(d){
-            if (d.column == 'Ceremony') {
+            if (d.column == 'AwardCeremony') {
             	return "<a href=\"https://www.imdb.com/title/" + d.FilmID + "\">" + d.value + "</a>"}
             else {
-            	//if(d.value != "NA") {return "<span class=\"award\">" + d.value + "</span>"}
+            	if(d.value != "NA") {}
             	if(d.value == 0) {return "<span class=\"award award1\">" + d.value + "</span>"}
             	if(0 < d.value < .3 ) {return "<span class=\"award award2\">" + d.value + "</span>"}
             	if(.3 < d.value < .6) {return "<span class=\"award award3\">" + d.value + "</span>"}
