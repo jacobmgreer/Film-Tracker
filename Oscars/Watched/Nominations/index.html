@@ -4,20 +4,17 @@ layout: default
 ---
 
 <style>
-  thead tr {height:200px;}
   thead th {
-    height: 240px;
-    vertical-align: bottom;
-    text-align: left;
-    line-height: 1;}
+    line-height: 1;
+    height: 200px;}
   thead th .rotated-header-container {
     width: 75px;}
   thead th .rotated-header-content {
-    width: 300px;
-    transform-origin: bottom left;
-    transform: translateX(75px) rotate(-90deg);
+    width:200px;
+    transform-origin: top left;
+    transform: rotate(-90deg);
     -moz-transform:rotate(-90deg);
-    -moz-transform-origin: top left;vertical-align:top;
+    -moz-transform-origin: top left;
     -webkit-transform: rotate(-90deg);
     -webkit-transform-origin: top left;
     -o-transform: rotate(-90deg);
@@ -26,6 +23,7 @@ layout: default
     width: 45px;
     height: 45px;
     background-size: cover;
+    color:transparent;
     display:inline-block;
     background-image: url(https://jacobmgreer.github.io/Film-Tracker/Oscars/oscar.svg);}
   .award1 {
