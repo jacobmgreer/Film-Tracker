@@ -52,7 +52,7 @@ layout: default
 
     function doSomething2(d){
 
-    	var columns = ['AwardCeremony','Picture', 'Director','Actor, Lead','Actress, Lead','Actor, Supporting','Actress, Supporting','Writing']
+    	var columns = ['AwardCeremony','Picture', 'Director','Screenplay','Actor, Lead','Actress, Lead','Actor, Supporting','Actress, Supporting']
     	
       var rows = d3.select('.awards tbody').selectAll('tr')
           .data(d)
@@ -177,6 +177,7 @@ layout: default
   </script>
 
   <br/><br/>
+  <h1 class="display-5">Academy Awards - Nomination Scorecard by Award Types</h1>
   <div id="awardCategories">
     <table class="table" style="table-layout:fixed">
       <tr>
@@ -203,6 +204,11 @@ layout: default
           </th>
           <th scope="col">
             <div class="rotated-header-container">
+              <div class="rotated-header-content">Screenplay</div>
+            </div>
+          </th>
+          <th scope="col">
+            <div class="rotated-header-container">
               <div class="rotated-header-content">Actor, Lead</div>
             </div>
           </th>
@@ -219,11 +225,6 @@ layout: default
           <th scope="col">
             <div class="rotated-header-container">
               <div class="rotated-header-content">Actress, Supporting</div>
-            </div>
-          </th>
-          <th scope="col">
-            <div class="rotated-header-container">
-              <div class="rotated-header-content">Writing</div>
             </div>
           </th>
         </tr>
