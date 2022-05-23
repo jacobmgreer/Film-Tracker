@@ -65,6 +65,8 @@ layout: default
                   return {
                     column: column,
                     value: row[column],
+                    ceremony: row['AwardCeremony'],
+                    awardtype: row['AwardType']
                   }
                 })
               })
@@ -84,7 +86,7 @@ layout: default
               else {return d.value}
             }
           })
-          .on('click', function(d) {awardTable(d.data.AwardCeremony, d.date.AwardType)})
+          .on('click', function(d) {awardTable(d.ceremony, d.awardtype)})
 
      }
   function awardTable(ceremony, awardtype) {
