@@ -99,8 +99,6 @@ layout: default
         doSomething(nested_data);
     })
     
-    document.getElementById("type-details").scrollIntoView();
-    
     function doSomething(d){
           
     	var columns = ['FilmName','PersonName','Rating','imdbRating','RottenTomatoes','Service']
@@ -174,6 +172,8 @@ layout: default
             	if(d.value != "NA") {return d.value}}})
     
      }
+     
+     document.getElementById("type-details").scrollIntoView();
   }
   </script>
 
