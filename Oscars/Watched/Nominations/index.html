@@ -46,7 +46,7 @@ layout: default
 <div class="container-fluid">
   <script type="text/javascript">
     d3.csv('https://jacobmgreer.github.io/Media-Consumption/datasets/Oscars/AwardTypeSummary.csv', function(data){
-        var nested_data = d3.nest().entries(data.sort(function(a, b) { return b.value - a.value; }));
+        var nested_data = d3.nest().entries(data.sort(function (a,b) {return d3.descending(a.AwardCeremony, b.AwardCeremony);}));
         doSomething(nested_data);
     })
 
