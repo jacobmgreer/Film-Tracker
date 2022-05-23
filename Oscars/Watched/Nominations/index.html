@@ -70,15 +70,11 @@ layout: default
               })
           .enter()
           .append('td')
-          .attr('class', function(d) {
-    				if (d.winner == "Winner") {return "table-success"}
-            else {return "nominee"}
-					})
           .html(function(d){
             if (d.column == 'AwardCeremony') {
             	return "<a href=\"https://www.imdb.com/title/" + d.FilmID + "\">" + d.value + "</a>"}
             else {
-            	if(d.value != "NA") {}
+            	if(d.value == "NA") {}
             	if(d.value == 0) {return "<span class=\"award award1\">" + d.value + "</span>"}
             	if(0 < d.value < .3 ) {return "<span class=\"award award2\">" + d.value + "</span>"}
             	if(.3 < d.value < .6) {return "<span class=\"award award3\">" + d.value + "</span>"}
@@ -98,6 +94,11 @@ layout: default
           <th scope="col">
             <div class="rotated-header-container">
               <div class="rotated-header-content">Picture</div>
+            </div>
+          </th>
+          <th scope="col">
+            <div class="rotated-header-container">
+              <div class="rotated-header-content">Director</div>
             </div>
           </th>
           <th scope="col">
