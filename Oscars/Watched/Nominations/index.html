@@ -115,7 +115,7 @@ layout: default
        	.data(data1)
         .enter()
         .append('div')
-        .html(function(d){return '<h3>' + d.key + '</h3>'})
+        .html(function(d){return '<h3 id=\"type-details\">' + d.key + '</h3>'})
         .append('table')
         .classed('table', true)
         .classed('table-striped', true)
@@ -178,7 +178,7 @@ layout: default
 
   <br/><br/>
   <h1 class="display-5">Academy Awards</h1>
-  <h3 class="display-6">Nomination Scorecard by Award</h3>
+  <h3 class="display-6">Nomination Scorecard by Award Types</h3>
   <br/><br/>
   <div id="awardCategories">
     <table class="table" style="table-layout:fixed">
@@ -236,5 +236,5 @@ layout: default
     </table>
   </div>
   <div class="table-prime"></div>
-  <br clear="all" id="type-details"/><br/>
+  <br/>
 </div>
