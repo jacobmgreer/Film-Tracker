@@ -106,7 +106,7 @@ layout: default
         .data(d)
         .enter()
         .append('div')
-        .html(function(d){return "<h1 class=\"display-5\">" + d.key + "</h1>"})
+        .html(function(d){return "<h1 class=\"display-5\" id=\"type-details\">" + d.key + "</h1>"})
         
       var data1 = function(d) {return d.values}
         
@@ -169,7 +169,8 @@ layout: default
             }
             else {
             	if(d.value != "NA") {return d.value}}})
-    
+            	
+      document.getElementById("type-details").scrollIntoView();
      }
   }
   </script>
