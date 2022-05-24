@@ -37,8 +37,6 @@ layout: default
     y.domain([0, d3.max(data, function(d) { return d.total; })]);
     z.domain(data.columns.slice(1));
     
-    var columns = ['ItemTitle','ItemYear','ItemRuntime','Service']
-    
     g.append("g")
       .selectAll("g")
       .data(d3.stack().keys(data.columns.slice(1))(data))
@@ -59,7 +57,7 @@ layout: default
           .style('display', 'block')
           .html('<h1> ' + d.data.ItemYear + '</h1>');
       })
-     .on('click', function(d) {tabulate('.table-prime',data.filter(element => element.ItemYear === d.data.ItemYear),columns)})
+     .on('click', function(d) {tabulate('.table-prime',d.data.ItemYear,'Films from ' + d.data.ItemYear)})
      .on('mouseout', function(d) {tooltip.html('<h3>The New York Times<br/>Essential 1,000 Films:<br/>Percentage Seen<br/>by Year Released</h3>');});
   });
   </script>
@@ -74,44 +72,53 @@ layout: default
   <br/><br/>
   
   <script type="text/javascript"charset="utf-8">
-  var tabulate = function (tclass,data,columns,subt) {
-    $(".table-prime").empty();
-    $("#subt").text(subt);
-    var table = d3.select(tclass)
-                  .append('table')
-                  .classed('table', true)
-                  .classed('table-striped', true)
-    var thead = table.append('thead')
-    var tbody = table.append('tbody')
-
-    thead.append('tr')
-      .selectAll('th')
-        .data(columns)
-        .enter()
-      .append('th')
-        .attr('scope', 'col')
-        .text(function (d) { return d })
-
-    var rows = tbody.selectAll('tr')
-        .data(data)
-        .enter()
-      .append('tr')
-
-    var cells = rows.selectAll('td')
-        .data(function(row) {
-          return columns.map(function (column) {
-            return { column: column, value: row[column], link: row["IMDBid"] }
-          })
-        })
-      .enter()
-      .append('td')
-      .html(function (d) { 
-      	if (d.column === "ItemTitle") {
-        	return "<a href=\"https://www.imdb.com/title/" + d.link + "\">" + d.value + "</a>"
-        }
-        else {return d.value}})
+  var tabulate = function (tclass,year,subt) {
+    d3.csv('https://jacobmgreer.github.io/Media-Consumption/datasets/NYT1000/NYT1000Data.csv',function (data) {
+      if (year === null) {
+        var data = data.filter(element => element.Service === "Prime")}
+      else {
+        var data = data.filter(element => element.ItemYear === year)}
+    
+      $(".table-prime").empty()
+      $("#subt").text(subt)
       
-    return table;
+      var columns = ['ItemTitle','ItemYear','ItemRuntime','Service']
+      var table = d3.select(tclass)
+                    .append('table')
+                    .classed('table', true)
+                    .classed('table-striped', true)
+      var thead = table.append('thead')
+      var tbody = table.append('tbody')
+  
+      thead.append('tr')
+        .selectAll('th')
+          .data(columns)
+          .enter()
+        .append('th')
+          .attr('scope', 'col')
+          .text(function (d) { return d })
+  
+      var rows = tbody.selectAll('tr')
+          .data(data)
+          .enter()
+        .append('tr')
+  
+      var cells = rows.selectAll('td')
+          .data(function(row) {
+            return columns.map(function (column) {
+              return { column: column, value: row[column], link: row["IMDBid"] }
+            })
+          })
+        .enter()
+        .append('td')
+        .html(function (d) { 
+        	if (d.column === "ItemTitle") {
+          	return "<a href=\"https://www.imdb.com/title/" + d.link + "\">" + d.value + "</a>"
+          }
+          else {return d.value}})
+        
+      return table;
+      }
   }
 
   d3.csv('https://jacobmgreer.github.io/Media-Consumption/datasets/NYT1000/NYT1000Data.csv',function (data) {
@@ -130,10 +137,8 @@ layout: default
         data.filter(element => element.Service === "Prime Rentals").length + ' (' + 
         Number(((data.filter(element => element.Service === "Prime Rentals" && element.Seen === "Yes").length * 100) / data.filter(element => element.Service === "Prime Rentals").length).toFixed(2))
         + '%)');// Prime Rentals count
-  
-    var columns = ['ItemTitle','ItemYear','ItemRuntime','Service']
     
-    d3.select(window).on("load", tabulate('.table-prime',data.filter(element => element.Service === "Prime"),columns))
+    d3.select(window).on("load", tabulate('.table-prime',null,'Streaming on Amazon Prime'))
   })
   </script>
   <div id="switch">
