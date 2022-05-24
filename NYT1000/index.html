@@ -118,11 +118,10 @@ layout: default
           }
           else {return d.value}})
         
-      return table;
+      if (year != null) {document.getElementById("switch").scrollIntoView()}
       
-      if (year != null) {document.getElementById("subt").scrollIntoView()}
-      
-    })}
+      return table
+  })}
 
   d3.csv('https://jacobmgreer.github.io/Media-Consumption/datasets/NYT1000/NYT1000Data.csv',function (data) {
     d3.select('.movies-total').html('Total: seen ' + 
