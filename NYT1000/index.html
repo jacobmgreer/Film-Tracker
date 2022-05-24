@@ -3,6 +3,10 @@ title: "NYT's Essential 1,000 Films to See"
 layout: default
 ---
 
+<style>
+  td.watched {background-color:#B2BBD6;}
+</style>
+
 <div class="container-fluid" style="height:960px;">
   <svg width="960" height="960" class="center"></svg>
   <div id="tooltip" class="center"><h3>The New York Times<br/>Essential 1,000 Films:<br/>Percentage Seen<br/>by Year Released</h3></div>
@@ -113,7 +117,7 @@ layout: default
         .enter()
         .append('td')
         .attr('class', function(d) {
-    				if (d.rating != "NA") {return "table-info"}
+    				if (d.rating != "NA") {return "watched"}
             else {return "not-watched"}
 					})
         .html(function (d) { 
