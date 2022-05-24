@@ -71,7 +71,9 @@ layout: default
   <br/><br/>
   
   <script type="text/javascript"charset="utf-8">
-  var tabulate = function (tclass,data,columns) {
+  var tabulate = function (tclass,data,columns,subt) {
+    $(".table-prime").empty();
+    $("#subt").text(return subt);
     var table = d3.select(tclass)
                   .append('table')
                   .classed('table', true)
@@ -125,14 +127,15 @@ layout: default
         data.filter(element => element.Service === "Prime Rentals").length + ' (' + 
         Number(((data.filter(element => element.Service === "Prime Rentals" && element.Seen === "Yes").length * 100) / data.filter(element => element.Service === "Prime Rentals").length).toFixed(2))
         + '%)');// Prime Rentals count
-    
-    var data = data.filter(element => element.Service === "Prime")
+  
     var columns = ['ItemTitle','ItemYear','ItemRuntime','Service']
-    tabulate('.table-prime',data,columns)
   })
+  
+  d3.select(window).on("load", tabulate('.table-prime',data.filter(element => element.Service === "Prime"),columns));
   </script>
   <div id="switch">
-    <h1 class="display-5">NYT's Essential 1,000 films on Prime</h1>
+    <h1 class="display-5">NYT's Essential 1,000 films</h1>
+    <h3 class="display-6" id="subt"></h3>
     <div class="table-prime"></div>
   </div>
   
