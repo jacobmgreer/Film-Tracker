@@ -36,7 +36,9 @@ layout: default
     x.domain(data.map(function(d) { return d.ItemYear; }));
     y.domain([0, d3.max(data, function(d) { return d.total; })]);
     z.domain(data.columns.slice(1));
-
+    
+    var columns = ['ItemTitle','ItemYear','ItemRuntime','Service']
+    
     g.append("g")
       .selectAll("g")
       .data(d3.stack().keys(data.columns.slice(1))(data))
@@ -57,6 +59,7 @@ layout: default
           .style('display', 'block')
           .html('<h1> ' + d.data.ItemYear + '</h1>');
       })
+     .on('click', function(d) {tabulate('.table-prime',data.filter(element => element.ItemYear === d.data.ItemYear),columns)})
      .on('mouseout', function(d) {tooltip.html('<h3>The New York Times<br/>Essential 1,000 Films:<br/>Percentage Seen<br/>by Year Released</h3>');});
   });
   </script>
@@ -129,9 +132,9 @@ layout: default
         + '%)');// Prime Rentals count
   
     var columns = ['ItemTitle','ItemYear','ItemRuntime','Service']
+    
+    d3.select(window).on("load", tabulate('.table-prime',data.filter(element => element.Service === "Prime"),columns))
   })
-  
-  d3.select(window).on("load", tabulate('.table-prime',data.filter(element => element.Service === "Prime"),columns));
   </script>
   <div id="switch">
     <h1 class="display-5">NYT's Essential 1,000 films</h1>
