@@ -59,8 +59,8 @@ layout: default
       })
      .on('click', function(d) {tabulate(
           '.table-prime',
-          d3.csv('https://jacobmgreer.github.io/Media-Consumption/datasets/NYT1000/NYT1000Data.csv',function (data) {
-            data.filter(element => element.ItemYear === d.data.ItemYear)}),
+          d3.csv('https://jacobmgreer.github.io/Media-Consumption/datasets/NYT1000/NYT1000Data.csv',function (data2) {
+            data2.filter(element => element.ItemYear === d.data.ItemYear)}),
           'Films from ' + d.data.ItemYear)})
       .on('mouseout', function(d) {tooltip.html('<h3>The New York Times<br/>Essential 1,000 Films:<br/>Percentage Seen<br/>by Year Released</h3>');});
   });
@@ -137,8 +137,8 @@ layout: default
     
     d3.select(window).on("load", 
                           tabulate('.table-prime',
-                          d3.csv('https://jacobmgreer.github.io/Media-Consumption/datasets/NYT1000/NYT1000Data.csv',function (data) {
-                            data.filter(element => element.Service === "Prime")}),
+                          d3.csv('https://jacobmgreer.github.io/Media-Consumption/datasets/NYT1000/NYT1000Data.csv',function (data2) {
+                            data2.filter(element => element.Service === "Prime")}),
                           'Streaming on Amazon Prime'))
   })
   </script>
