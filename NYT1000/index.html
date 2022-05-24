@@ -119,6 +119,8 @@ layout: default
           else {return d.value}})
         
       return table;
+      
+      if (year != null) {document.getElementById("subt").scrollIntoView();}
     })}
 
   d3.csv('https://jacobmgreer.github.io/Media-Consumption/datasets/NYT1000/NYT1000Data.csv',function (data) {
