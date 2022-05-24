@@ -126,14 +126,15 @@ layout: default
         Number(((data.filter(element => element.Service === "Prime Rentals" && element.Seen === "Yes").length * 100) / data.filter(element => element.Service === "Prime Rentals").length).toFixed(2))
         + '%)');// Prime Rentals count
     
-    //var data = data.filter(element => element.Service === "Prime")
+    var data = data.filter(element => element.Service === "Prime")
     var columns = ['ItemTitle','ItemYear','ItemRuntime','Service']
     tabulate('.table-prime',data,columns)
   })
   </script>
-  
-  <h1 class="display-5">NYT's Essential 1,000 films</h1>
-  <div class="table-prime"></div>
+  <div id="switch">
+    <h1 class="display-5">NYT's Essential 1,000 films on Prime</h1>
+    <div class="table-prime"></div>
+  </div>
   
   <br clear="all"/><br/>
 </div>
