@@ -57,9 +57,15 @@ layout: default
           .style('display', 'block')
           .html('<h1> ' + d.data.ItemYear + '</h1>');
       })
-     .on('click', function(d) {tabulate('.table-prime',d.data.ItemYear,'Films from ' + d.data.ItemYear)})
-     .on('mouseout', function(d) {tooltip.html('<h3>The New York Times<br/>Essential 1,000 Films:<br/>Percentage Seen<br/>by Year Released</h3>');});
+     .on('click', function(d) {tabulate(
+          '.table-prime',
+          d3.csv('https://jacobmgreer.github.io/Media-Consumption/datasets/NYT1000/NYT1000Data.csv',function (data) {
+            data.filter(element => element.ItemYear === year)}),
+          'Films from ' + d.data.ItemYear)})
+      .on('mouseout', function(d) {tooltip.html('<h3>The New York Times<br/>Essential 1,000 Films:<br/>Percentage Seen<br/>by Year Released</h3>');});
   });
+  
+  // var data = data.filter(element => element.Service === "Prime")
   </script>
 </div>
 
@@ -72,13 +78,7 @@ layout: default
   <br/><br/>
   
   <script type="text/javascript"charset="utf-8">
-  var tabulate = function(tclass,year,subt) {
-    d3.csv('https://jacobmgreer.github.io/Media-Consumption/datasets/NYT1000/NYT1000Data.csv',function (data) {
-      if (year === null) {
-        var data = data.filter(element => element.Service === "Prime")}
-      else {
-        var data = data.filter(element => element.ItemYear === year)}
-    
+  var tabulate = function(tclass,data,subt) {
       $(".table-prime").empty()
       $("#subt").text(subt)
       
@@ -118,8 +118,7 @@ layout: default
           else {return d.value}})
         
       return table;
-      }
-  }
+    }
 
   d3.csv('https://jacobmgreer.github.io/Media-Consumption/datasets/NYT1000/NYT1000Data.csv',function (data) {
     d3.select('.movies-total').html('Total: seen ' + 
