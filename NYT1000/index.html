@@ -116,7 +116,7 @@ layout: default
         	if (d.column === "ItemTitle") {
           	return "<a href=\"https://www.imdb.com/title/" + d.link + "\">" + d.value + "</a>"
           }
-          else {return d.value}})
+          else {if(d.value != "NA") {return d.value}}})
         
       if (year != null) {document.getElementById("switch").scrollIntoView()}
       
