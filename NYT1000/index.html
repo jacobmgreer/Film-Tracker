@@ -57,11 +57,6 @@ layout: default
           .style('display', 'block')
           .html('<h1> ' + d.data.ItemYear + '</h1>');
       })
-     .on('click', function(d) {tabulate(
-          '.table-prime',
-          d3.csv('https://jacobmgreer.github.io/Media-Consumption/datasets/NYT1000/NYT1000Data.csv',function (data2) {
-            data2.filter(element => element.ItemYear === d.data.ItemYear)}),
-          'Films from ' + d.data.ItemYear)})
       .on('mouseout', function(d) {tooltip.html('<h3>The New York Times<br/>Essential 1,000 Films:<br/>Percentage Seen<br/>by Year Released</h3>');});
   });
   </script>
@@ -76,12 +71,20 @@ layout: default
   <br/><br/>
   
   <script type="text/javascript"charset="utf-8">
-  var tabulate = function(tclass,data,subt) {
+  function tabulate(year,subt) {
+    if (year != null) {
+      d3.csv('https://jacobmgreer.github.io/Media-Consumption/datasets/NYT1000/NYT1000Data.csv',function (data2) {
+        var data = data2.filter(element => element.ItemYear === year)})
+    } else {
+      d3.csv('https://jacobmgreer.github.io/Media-Consumption/datasets/NYT1000/NYT1000Data.csv',function (data2) {
+        data.filter(element => element.Service === "Prime")})
+    }
+
       $(".table-prime").empty()
       $("#subt").text(subt)
       
       var columns = ['ItemTitle','ItemYear','ItemRuntime','Service']
-      var table = d3.select(tclass)
+      var table = d3.select(".table-prime")
                     .append('table')
                     .classed('table', true)
                     .classed('table-striped', true)
@@ -135,11 +138,7 @@ layout: default
         Number(((data.filter(element => element.Service === "Prime Rentals" && element.Seen === "Yes").length * 100) / data.filter(element => element.Service === "Prime Rentals").length).toFixed(2))
         + '%)');// Prime Rentals count
     
-    d3.select(window).on("load", 
-                          tabulate('.table-prime',
-                          d3.csv('https://jacobmgreer.github.io/Media-Consumption/datasets/NYT1000/NYT1000Data.csv',function (data2) {
-                            data2.filter(element => element.Service === "Prime")}),
-                          'Streaming on Amazon Prime'))
+    d3.select(window).on("load", tabulate(null,'Streaming on Amazon Prime'))
   })
   </script>
   <div id="switch">
