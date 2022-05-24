@@ -107,13 +107,13 @@ layout: default
       var cells = rows.selectAll('td')
           .data(function(row) {
             return columns.map(function (column) {
-              return { column: column, value: row[column], link: row["IMDBid"] }
+              return { column: column, value: row[column], link: row["IMDBid"], rating: row["Rating"] }
             })
           })
         .enter()
         .append('td')
         .attr('class', function(d) {
-    				if (d.data.Rating != null) {return "table-success"}
+    				if (d.Rating != null) {return "table-success"}
             else {return "not-watched"}
 					})
         .html(function (d) { 
