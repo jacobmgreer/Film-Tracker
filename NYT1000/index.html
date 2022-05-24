@@ -113,7 +113,7 @@ layout: default
         .enter()
         .append('td')
         .attr('class', function(d) {
-    				if (d.rating != "NA") {return "table-success"}
+    				if (d.rating != "NA") {return "table-info"}
             else {return "not-watched"}
 					})
         .html(function (d) { 
