@@ -57,6 +57,7 @@ layout: default
           .style('display', 'block')
           .html('<h1> ' + d.data.ItemYear + '</h1>');
       })
+      .on('click', function(d) {tabulate(d.data.ItemYear,'Films from ' + d.data.ItemYear)})
       .on('mouseout', function(d) {tooltip.html('<h3>The New York Times<br/>Essential 1,000 Films:<br/>Percentage Seen<br/>by Year Released</h3>');});
   });
   </script>
