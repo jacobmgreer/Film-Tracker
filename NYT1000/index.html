@@ -73,11 +73,11 @@ layout: default
   <script type="text/javascript"charset="utf-8">
   function tabulate(year,subt) {
     if (year != null) {
-      d3.csv('https://jacobmgreer.github.io/Media-Consumption/datasets/NYT1000/NYT1000Data.csv',function (data2) {
-        var data = data2.filter(element => element.ItemYear === year)})
+      d3.csv('https://jacobmgreer.github.io/Media-Consumption/datasets/NYT1000/NYT1000Data.csv',function (data) {
+        var data = data.filter(element => element.ItemYear === year)})
     } else {
-      d3.csv('https://jacobmgreer.github.io/Media-Consumption/datasets/NYT1000/NYT1000Data.csv',function (data2) {
-        data.filter(element => element.Service === "Prime")})
+      d3.csv('https://jacobmgreer.github.io/Media-Consumption/datasets/NYT1000/NYT1000Data.csv',function (data) {
+        var data = data.filter(element => element.Service === "Prime")})
     }
 
       $(".table-prime").empty()
